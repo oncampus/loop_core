@@ -107,6 +107,7 @@ model/vrml wrl vrml
 text/calendar ics ifb
 text/css css
 text/html html htm
+text/plain ter
 text/plain txt
 text/richtext rtx
 text/rtf rtf
