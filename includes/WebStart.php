@@ -123,7 +123,19 @@ if ( defined( 'MW_CONFIG_CALLBACK' ) ) {
 	MWFunction::call( MW_CONFIG_CALLBACK );
 } else {
 	if ( !defined( 'MW_CONFIG_FILE' ) ) {
-		define( 'MW_CONFIG_FILE', MWInit::interpretedPath( 'LocalSettings.php' ) );
+    # changed by oncampus for LOOP farm functionality
+	
+		# define( 'MW_CONFIG_FILE', MWInit::interpretedPath( 'LocalSettings.php' ) );
+		
+		$servername=$_SERVER["SERVER_NAME"];
+		$servername_parts=explode('.',$servername);
+		$host=$servername_parts[0];
+		$loop_exists = file_exists( "$IP/LocalSettings/LocalSettings_".$host.".php" );
+		if (!$loop_exists) {
+			define('MW_CONFIG_FILE', MWInit::interpretedPath( 'dontexist.php' ) );
+		} else {
+			define('MW_CONFIG_FILE', MWInit::interpretedPath( 'LocalSettings.php' ) );
+		}		
 	}
 
 	# LocalSettings.php is the per site customization file. If it does not exist

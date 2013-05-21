@@ -481,7 +481,15 @@ abstract class Installer {
 		global $IP;
 
 		wfSuppressWarnings();
-		$_lsExists = file_exists( "$IP/LocalSettings.php" );
+		# changed by oncampus for LOOP farm functionality
+		
+		# $_lsExists = file_exists( "$IP/LocalSettings.php" );
+		
+		$servername=$_SERVER["SERVER_NAME"];
+		$servername_parts=explode('.',$servername);
+		$host=$servername_parts[0];
+		$_lsExists = file_exists( "$IP/LocalSettings/LocalSettings_".$host.".php" );		
+		
 		wfRestoreWarnings();
 
 		if( !$_lsExists ) {
