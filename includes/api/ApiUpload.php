@@ -88,9 +88,10 @@ class ApiUpload extends ApiBase {
 			if ( !$this->mUpload->getTitle() ) {
 				$this->dieUsage( 'Invalid file title supplied', 'internal-error' );
 			}
-		} elseif ( $this->mParams['async'] ) {
+		} elseif ( $this->mParams['async'] && $this->mParams['filekey'] ) {
 			// defer verification to background process
 		} else {
+			wfDebug( __METHOD__ . 'about to verify' );
 			$this->verifyUpload();
 		}
 
@@ -195,7 +196,12 @@ class ApiUpload extends ApiBase {
 		$chunkPath = $request->getFileTempname( 'chunk' );
 		$chunkSize = $request->getUpload( 'chunk' )->getSize();
 		if ( $this->mParams['offset'] == 0 ) {
-			$filekey = $this->performStash();
+			try {
+				$filekey = $this->performStash();
+			} catch ( MWException $e ) {
+				// FIXME: Error handling here is wrong/different from rest of this
+				$this->dieUsage( $e->getMessage(), 'stashfailed' );
+			}
 		} else {
 			$filekey = $this->mParams['filekey'];
 			/** @var $status Status */
@@ -352,6 +358,8 @@ class ApiUpload extends ApiBase {
 		}
 
 		if ( $this->mParams['chunk'] ) {
+			$this->checkChunkedEnabled();
+
 			// Chunk upload
 			$this->mUpload = new UploadFromChunks();
 			if( isset( $this->mParams['filekey'] ) ) {
@@ -645,6 +653,13 @@ class ApiUpload extends ApiBase {
 		}
 	}
 
+	protected function checkChunkedEnabled() {
+		global $wgAllowChunkedUploads;
+		if ( !$wgAllowChunkedUploads ) {
+			$this->dieUsage( 'Chunked uploads disabled', 'chunkeduploaddisabled' );
+		}
+	}
+
 	public function mustBePosted() {
 		return true;
 	}
@@ -801,6 +816,7 @@ class ApiUpload extends ApiBase {
 				array( 'code' => 'publishfailed', 'info' => 'Publishing of stashed file failed' ),
 				array( 'code' => 'internal-error', 'info' => 'An internal error occurred' ),
 				array( 'code' => 'asynccopyuploaddisabled', 'info' => 'Asynchronous copy uploads disabled' ),
+				array( 'code' => 'chunkeduploaddisabled', 'info' => 'Chunked uploads disabled' ),
 				array( 'fileexists-forbidden' ),
 				array( 'fileexists-shared-forbidden' ),
 			)

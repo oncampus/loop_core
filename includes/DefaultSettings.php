@@ -63,7 +63,7 @@ $wgConf = new SiteConfiguration;
  * MediaWiki version number
  * @since 1.2
  */
-$wgVersion = '1.21.0rc5';
+$wgVersion = '1.21.1';
 
 /**
  * Name of the site. It must be changed in LocalSettings.php
@@ -334,6 +334,13 @@ $wgAllowImageMoving = true;
  * 'AssembleUploadChunks' and 'PublishStashedFile' job types.
  */
 $wgEnableAsyncUploads = false;
+
+/**
+ * Allow chunked uploads.  This should only really be needed if you
+ * use the UploadWizard extension or allow huge file uploads.
+ * https://www.mediawiki.org/wiki/API:Upload#Chunked_uploading
+ */
+$wgAllowChunkedUploads = false;
 
 /**
  * These are additional characters that should be replaced with '-' in filenames
