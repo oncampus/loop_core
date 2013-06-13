@@ -31,8 +31,14 @@
  * @author Mij <mij@bitchx.it>
  */
 
+# edit by oncampus
+$k = array_search("--hashtag", $_SERVER['argv']);
+if($k)
+	$_SERVER['SERVER_NAME'] = strtolower($_SERVER['argv'][$k+1]).".oncampus.de";
+# end edit
+
 $optionsWithArgs = array(
-	'extensions', 'comment', 'comment-file', 'comment-ext', 'summary', 'user',
+	'hashtag', 'extensions', 'comment', 'comment-file', 'comment-ext', 'summary', 'user',
 	'license', 'sleep', 'limit', 'from', 'source-wiki-url', 'timestamp',
 );
 require_once( __DIR__ . '/commandLine.inc' );
