@@ -1157,7 +1157,7 @@ class ImageHistoryList extends ContextSource {
 			if ( $local ) {
 				$row .= Linker::userLink( $userId, $userText );
 				$row .= $this->msg( 'word-separator' )->plain();
-				$row .= '<span style="white-space: nowrap;">';
+				$row .= '<span>';
 				$row .= Linker::userToolLinks( $userId, $userText );
 				$row .= '</span>';
 			} else {
