@@ -930,7 +930,7 @@ EOT
 
 		return isset( $wgImageLimits[$option] )
 			? $wgImageLimits[$option]
-			: array( 800, 600 ); // if nothing is set, fallback to a hardcoded default
+			: array( 700, 525 ); // if nothing is set, fallback to a hardcoded default
 	}
 }
 

@@ -1117,6 +1117,7 @@ $wgXMLMimeTypes = array(
 $wgImageLimits = array(
 	array( 320, 240 ),
 	array( 640, 480 ),
+	array( 700, 525 ),
 	array( 800, 600 ),
 	array( 1024, 768 ),
 	array( 1280, 1024 )
