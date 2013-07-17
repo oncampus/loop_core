@@ -626,16 +626,22 @@ XHTML id it should only appear once and include characters that are legal
 XHTML id names.
 */
 'sidebar' => '
-* navigation
-** mainpage|mainpage-description
-** portal-url|portal
-** currentevents-url|currentevents
-** recentchanges-url|recentchanges
-** randompage-url|randompage
-** helppage|help
-* SEARCH
-* TOOLBOX
-* LANGUAGES', # do not translate or duplicate this message to other languages
+* MENULEFT
+** mainpage|mainpage
+* LOOPTOC
+* PAGETOC
+* directories
+** :Mediawiki:Loop_toc|looptoc
+** :Special:LoopFigures|loopfigures
+** :Special:LoopTables|looptables
+** :Special:LoopMedia|loopmedia
+** :Special:LoopListings|looplistings
+** :Special:LoopFormulas|loopformulas
+** {{abbreviationpage}}|loopabbreviations
+** :Special:LoopTasks|looptasks
+** {{bibliographypage}}|loopbibliography
+** :Category:{{glossarypage}}|{{glossarypage}}
+** :Special:LoopIndex|loopindex', # do not translate or duplicate this message to other languages
 
 # User preference toggles
 'tog-underline'               => 'Link underlining:',
