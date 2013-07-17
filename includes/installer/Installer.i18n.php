@@ -4260,18 +4260,18 @@ Sobald alles erledigt wurde, kann auf das '''[$2 Wiki zugegriffen werden]'''. Wi
 	'config-help' => 'Hilfe',
 	'config-nofile' => 'Die Datei „$1“ konnte nicht gefunden werden. Wurde sie gelöscht?',
 	'mainpagetext' => "'''LOOP wurde erfolgreich installiert.'''",
-	'mainpagedocfooter' => 'Hilfe zur Verwendung von LOOP finden Sie unter [[http://loop.oncampus.de|loop.oncampus.de]].
+	'mainpagedocfooter' => 'Hilfe zur Verwendung von LOOP finden Sie unter [http://loop.oncampus.de|loop.oncampus.de].
 
-Bleiben Sie auf dem Laufenden indem Sie den [[http://loop.oncampus.de/mediawiki/index.php?title=Neuerungen&action=feed&feed=rss|RSS-Feed zu Neuerungen in LOOP]] abonnieren.',
+Bleiben Sie auf dem Laufenden indem Sie den [http://loop.oncampus.de/mediawiki/index.php?title=Neuerungen&action=feed&feed=rss|RSS-Feed zu Neuerungen in LOOP] abonnieren.',
 );
 
 /** German (formal address) (Deutsch (Sie-Form)‎)
  * @author MichaelFrey
  */
 $messages['de-formal'] = array(
-	'mainpagedocfooter' => 'Hilfe zur Verwendung von LOOP finden Sie unter [[http://loop.oncampus.de|loop.oncampus.de]].
+	'mainpagedocfooter' => 'Hilfe zur Verwendung von LOOP finden Sie unter [http://loop.oncampus.de|loop.oncampus.de].
 
-Bleiben Sie auf dem Laufenden indem Sie den [[http://loop.oncampus.de/mediawiki/index.php?title=Neuerungen&action=feed&feed=rss|RSS-Feed zu Neuerungen in LOOP]] abonnieren.',
+Bleiben Sie auf dem Laufenden indem Sie den [http://loop.oncampus.de/mediawiki/index.php?title=Neuerungen&action=feed&feed=rss|RSS-Feed zu Neuerungen in LOOP] abonnieren.',
 );
 
 /** Zazaki (Zazaki)
