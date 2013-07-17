@@ -4259,27 +4259,19 @@ Sobald alles erledigt wurde, kann auf das '''[$2 Wiki zugegriffen werden]'''. Wi
 	'config-download-localsettings' => '<code>LocalSettings.php</code> herunterladen',
 	'config-help' => 'Hilfe',
 	'config-nofile' => 'Die Datei „$1“ konnte nicht gefunden werden. Wurde sie gelöscht?',
-	'mainpagetext' => "'''MediaWiki wurde erfolgreich installiert.'''",
-	'mainpagedocfooter' => 'Hilfe zur Benutzung und Konfiguration der Wiki-Software findest du im [//meta.wikimedia.org/wiki/Help:Contents Benutzerhandbuch].
+	'mainpagetext' => "'''LOOP wurde erfolgreich installiert.'''",
+	'mainpagedocfooter' => 'Hilfe zur Verwendung von LOOP finden Sie unter [[http://loop.oncampus.de|loop.oncampus.de]].
 
-== Starthilfen ==
-
-* [//www.mediawiki.org/wiki/Manual:Configuration_settings Liste der Konfigurationsvariablen]
-* [//www.mediawiki.org/wiki/Manual:FAQ MediaWiki-FAQ]
-* [https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce Mailingliste neuer MediaWiki-Versionen]
-* [//www.mediawiki.org/wiki/Localisation#Translation_resources Lokalisiere MediaWiki für deine Sprache]',
+Bleiben Sie auf dem Laufenden indem Sie den [[http://loop.oncampus.de/mediawiki/index.php?title=Neuerungen&action=feed&feed=rss|RSS-Feed zu Neuerungen in LOOP]] abonnieren.',
 );
 
 /** German (formal address) (Deutsch (Sie-Form)‎)
  * @author MichaelFrey
  */
 $messages['de-formal'] = array(
-	'mainpagedocfooter' => 'Hilfe zur Benutzung und Konfiguration der Wiki-Software finden Sie im [//meta.wikimedia.org/wiki/Help:Contents Benutzerhandbuch].
+	'mainpagedocfooter' => 'Hilfe zur Verwendung von LOOP finden Sie unter [[http://loop.oncampus.de|loop.oncampus.de]].
 
-== Starthilfen ==
-* [//www.mediawiki.org/wiki/Manual:Configuration_settings Liste der Konfigurationsvariablen]
-* [//www.mediawiki.org/wiki/Manual:FAQ MediaWiki-FAQ]
-* [https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce Mailingliste neuer MediaWiki-Versionen]',
+Bleiben Sie auf dem Laufenden indem Sie den [[http://loop.oncampus.de/mediawiki/index.php?title=Neuerungen&action=feed&feed=rss|RSS-Feed zu Neuerungen in LOOP]] abonnieren.',
 );
 
 /** Zazaki (Zazaki)
