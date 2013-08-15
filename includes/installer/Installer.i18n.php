@@ -4260,18 +4260,18 @@ Sobald alles erledigt wurde, kann auf das '''[$2 Wiki zugegriffen werden]'''. Wi
 	'config-help' => 'Hilfe',
 	'config-nofile' => 'Die Datei „$1“ konnte nicht gefunden werden. Wurde sie gelöscht?',
 	'mainpagetext' => "'''LOOP wurde erfolgreich installiert.'''",
-	'mainpagedocfooter' => 'Hilfe zur Verwendung von LOOP finden Sie unter [http://loop.oncampus.de|loop.oncampus.de].
+	'mainpagedocfooter' => 'Hilfe zur Verwendung von LOOP finden Sie unter [http://loop.oncampus.de loop.oncampus.de].
 
-Bleiben Sie auf dem Laufenden indem Sie den [http://loop.oncampus.de/mediawiki/index.php?title=Neuerungen&action=feed&feed=rss|RSS-Feed zu Neuerungen in LOOP] abonnieren.',
+Bleiben Sie auf dem Laufenden, indem Sie den [http://loop.oncampus.de/mediawiki/index.php?title=Neuerungen&action=feed&feed=rss RSS-Feed zu Neuerungen in LOOP] abonnieren.',
 );
 
 /** German (formal address) (Deutsch (Sie-Form)‎)
  * @author MichaelFrey
  */
 $messages['de-formal'] = array(
-	'mainpagedocfooter' => 'Hilfe zur Verwendung von LOOP finden Sie unter [http://loop.oncampus.de|loop.oncampus.de].
+	'mainpagedocfooter' => 'Hilfe zur Verwendung von LOOP finden Sie unter [http://loop.oncampus.de loop.oncampus.de].
 
-Bleiben Sie auf dem Laufenden indem Sie den [http://loop.oncampus.de/mediawiki/index.php?title=Neuerungen&action=feed&feed=rss|RSS-Feed zu Neuerungen in LOOP] abonnieren.',
+Bleiben Sie auf dem Laufenden, indem Sie den [http://loop.oncampus.de/mediawiki/index.php?title=Neuerungen&action=feed&feed=rss RSS-Feed zu Neuerungen in LOOP] abonnieren.',
 );
 
 /** Zazaki (Zazaki)
@@ -14730,7 +14730,7 @@ Berre bruk ASCII-bokstavar (a-z, A-Z), tal (0-9) og undestrekar (_).',
 * [https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce E-postliste med informasjon om nye MediaWiki-versjonar]',
 );
 
-/** Norwegian (bokmål)‬ (‪norsk (bokmål)‬) */
+/** Norwegian (bokmål) (norsk (bokmål)) */
 $messages['no'] = array(
 	'mainpagetext' => "'''MediaWiki-programvaren er nå installert.'''",
 );
@@ -20811,7 +20811,7 @@ $3
 * [//www.mediawiki.org/wiki/Localisation#Translation_resources MediaWiki界面本地化]',
 );
 
-/** Chinese (Hong Kong) (‪中文（香港）‬)
+/** Chinese (Hong Kong) (中文（香港）)
  * @author Mark85296341
  */
 $messages['zh-hk'] = array(
@@ -20823,7 +20823,7 @@ $messages['zh-hk'] = array(
 * [https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce MediaWiki 發佈郵件清單]',
 );
 
-/** Chinese (Taiwan) (‪中文（台灣）‬) */
+/** Chinese (Taiwan) (中文（台灣）) */
 $messages['zh-tw'] = array(
 	'mainpagedocfooter' => '請參閱 [//meta.wikimedia.org/wiki/Help:Contents 使用者手冊] 以獲得使用此 wiki 軟體的訊息！
 
