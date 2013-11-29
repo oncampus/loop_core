@@ -12,8 +12,10 @@
  * @author Evertype
  * @author Kscanne
  * @author Kwekubo
+ * @author Leftmostcat
  * @author Moilleadóir
  * @author Moydow
+ * @author Pksofttec
  * @author Reedy
  * @author Spacebirdy
  * @author Stifle
@@ -140,8 +142,8 @@ $messages = array(
 'tog-showhiddencats' => 'Taispeáin chatagóirí folaithe',
 'tog-norollbackdiff' => 'Fág an difr ar lár tar éis athruithe a rolladh siar',
 
-'underline-always' => 'Ar siúl i gcónaí',
-'underline-never' => 'Múchta',
+'underline-always' => 'I gcónaí',
+'underline-never' => 'Riamh',
 'underline-default' => 'Mar atá réamhshocraithe sa bhrabhsálaí',
 
 # Font style option in Special:Preferences
@@ -175,8 +177,8 @@ $messages = array(
 'august' => 'Lúnasa',
 'september' => 'Meán Fómhair',
 'october' => 'Deireadh Fómhair',
-'november' => 'Mí na Samhna',
-'december' => 'Mí na Nollag',
+'november' => 'Samhain',
+'december' => 'Nollaig',
 'january-gen' => 'Eanáir',
 'february-gen' => 'Feabhra',
 'march-gen' => 'an Mhárta',
@@ -219,14 +221,14 @@ $messages = array(
 'listingcontinuesabbrev' => 'ar lean.',
 'index-category' => 'Leathanaigh innéacsaithe',
 
-'linkprefix' => '/^(.*?)([a-zA-Z\\x80-\\xff]+)$/sD',
+'linkprefix' => '/^((?>.*(?<![a-zA-Z\\\\x80-\\\\xff])))(.+)$/sD',
 
 'about' => 'Maidir leis',
 'article' => 'Leathanach ábhair',
 'newwindow' => '(a osclófar i bhfuinneog nua)',
 'cancel' => 'Cealaigh',
 'moredotdotdot' => 'Tuilleadh...',
-'mypage' => 'Mo leathanach',
+'mypage' => 'Leathanach',
 'mytalk' => 'Plé',
 'anontalk' => 'Plé don seoladh IP seo',
 'navigation' => 'Nascleanúint',
@@ -477,6 +479,8 @@ An fáth ná ''$2''.",
 
 Is féidir leat an {{SITENAME}} a úsáid fós gan ainm, nó is féidir leat <span class='plainlinks'>[$1 logáil isteach arís]</span> mar an úsáideoir céanna, nó mar úsáideoir eile.
 Tabhair faoi deara go taispeáinfear roinnt leathanaigh mar atá tú logáilte isteach fós, go dtí go ghlanfá amach do taisce líonleitheora.",
+'welcomeuser' => 'Fáilte, $1!',
+'welcomecreation-msg' => 'Cruthaíodh do chuntas.',
 'yourname' => "D'ainm úsáideora",
 'yourpassword' => "D'fhocal faire",
 'yourpasswordagain' => "Athiontráil d'fhocal faire",
@@ -565,7 +569,7 @@ Iontráil seoladh dea-fhormáidte le do thoil, nó glan an réimse sin.',
 'resetpass_announce' => "Tá tú logáilte isteach le cód sealadach a seoladh chugat i r-phost.
 Chun d'iarratas logáil isteach a chríochnú, caithfidh tú focal faire nua a roghnú anseo:",
 'resetpass_text' => '<!-- Cur téacs anseo -->',
-'resetpass_header' => 'Athshocraigh pasfhocail chuntais',
+'resetpass_header' => 'Athraigh focal faire an chuntais',
 'oldpassword' => 'Focal faire reatha:',
 'newpassword' => 'Focal faire nua:',
 'retypenew' => 'Athiontráil an focal nua faire:',
@@ -578,8 +582,11 @@ Chun d'iarratas logáil isteach a chríochnú, caithfidh tú focal faire nua a r
 
 # Special:PasswordReset
 'passwordreset-username' => 'Ainm úsáideora:',
+'passwordreset-email' => 'Seoladh ríomhphoist:',
 
 # Special:ChangeEmail
+'changeemail-none' => '(neamhní)',
+'changeemail-password' => "D'fhocal faire {{SITENAME}}:",
 'changeemail-cancel' => 'Cealaigh',
 
 # Edit page toolbar
@@ -752,6 +759,7 @@ Treoir: (rth) = difríocht ón leagan reatha, (rmh) = difríocht ón leagan roim
 'logdelete-selected' => "'''{{PLURAL:$1|Teagmhas log roghnaithe|Teagmhais log roghnaithe}}:'''",
 'revdelete-hide-text' => 'Folaigh leagan téacs',
 'revdelete-radio-same' => 'ná hathraigh',
+'revdelete-radio-set' => 'Is ea',
 'revdelete-radio-unset' => 'Ní',
 'revdel-restore' => 'athraigh infheictheacht',
 'pagehist' => 'Stair leathanach',
@@ -1484,8 +1492,8 @@ Is an téacs as na leagan scriosta seo ar fáil do riarthóirí amháin.',
 'sp-contributions-submit' => 'Cuardaigh',
 
 # What links here
-'whatlinkshere' => 'Naisc go dtí an lch seo',
-'whatlinkshere-title' => 'Naisc chuig $1',
+'whatlinkshere' => 'Naisc leis an lch seo',
+'whatlinkshere-title' => 'Naisc le $1',
 'whatlinkshere-page' => 'Leathanach:',
 'linkshere' => "Tá nasc chuig '''[[:$1]]''' ar na leathanaigh seo a leanas:",
 'nolinkshere' => "Níl leathanach ar bith ann a bhfuil nasc chuig '''[[:$1]]''' air.",
@@ -1659,7 +1667,7 @@ Sa dara cás, is féidir leat nasc a úsáid, mar shampla [[{{#Special:Export}}/
 'allmessagesdefault' => 'Téacs réamhshocraithe',
 'allmessagescurrent' => 'Téacs reatha',
 'allmessagestext' => 'Is liosta é seo de theachtaireachtaí córais atá le fáil san ainmspás MediaWiki.
-Tabhair cuairt ar [//www.mediawiki.org/wiki/Localisation MediaWiki Localisation] agus [//translatewiki.net translatewiki.net] le do thoil más mian leat cur leis an logánú ginearálta MediaWiki.',
+Tabhair cuairt ar [https://www.mediawiki.org/wiki/Localisation MediaWiki Localisation] agus [//translatewiki.net translatewiki.net] le do thoil más mian leat cur leis an logánú ginearálta MediaWiki.',
 'allmessagesnotsupportedDB' => "Ní féidir an leathanach seo a úsáid dá bharr gur díchumasaíodh '''\$wgUseDatabaseMessages'''.",
 'allmessages-filter-all' => 'Uile',
 'allmessages-language' => 'Teanga:',
@@ -1778,6 +1786,9 @@ ní féidir uaslódála staire díreacha a dhéanamh faoi láthair.",
 iarradh sábháil. Is dócha gur nasc chuig suíomh seachtrach ba chúis leis.',
 'spamprotectionmatch' => 'Truicear ár scagaire dramhála ag an téacs seo a leanas: $1',
 'spambot_username' => 'MediaWiki turscar glanadh',
+
+# Info page
+'pageinfo-toolboxlink' => 'Faoin leathanach seo',
 
 # Skin names
 'skinname-standard' => 'Clasaiceach',
@@ -2112,7 +2123,7 @@ cúlra i bhfócas)',
 
 # External editor support
 'edit-externally' => 'Athraigh an comhad seo le feidhmchlár seachtrach',
-'edit-externally-help' => '(Féach ar na [//www.mediawiki.org/wiki/Manual:External_editors treoracha cumraíochta] as Béarla le tuilleadh eolais)',
+'edit-externally-help' => '(Féach ar na [https://www.mediawiki.org/wiki/Manual:External_editors treoracha cumraíochta] as Béarla le tuilleadh eolais)',
 
 # 'all' in various places, this might be different for inflected languages
 'watchlistall2' => 'an t-iomlán',

@@ -1246,7 +1246,7 @@ Cиягьда авай анжах (* лишандихъ галаз эгечIза
 
 # External editor support
 'edit-externally' => 'И файл патан программа куьмекдалди дуьзар хъувун',
-'edit-externally-help' => '(Алава малумат патал [//www.mediawiki.org/wiki/Manual:External_editors эцигунин регьбервилиз] килига)',
+'edit-externally-help' => '(Алава малумат патал [https://www.mediawiki.org/wiki/Manual:External_editors эцигунин регьбервилиз] килига)',
 
 # 'all' in various places, this might be different for inflected languages
 'watchlistall2' => 'вири',
@@ -1306,7 +1306,7 @@ Cиягьда авай анжах (* лишандихъ галаз эгечIза
 'version-other' => 'Муькуьбур',
 
 # Special:SpecialPages
-'specialpages' => 'КьетIен  ччинар',
+'specialpages' => 'КьетӀен ччинар',
 
 # External image whitelist
 'external_image_whitelist' => ' #И цӀар авайд хьиз тур<pre>
@@ -1326,10 +1326,10 @@ Cиягьда авай анжах (* лишандихъ галаз эгечIза
 'compare-page1' => 'Чар 1',
 
 # New logging system
-'logentry-move-move' => '$3 макъаладин тӀвар $4 -диз масакӀа хъувуна',
-'logentry-move-move-noredirect' => '$3 макъаладин тӀвар, ракъурунин винелай $4 -диз масакӀа хъувуна',
-'logentry-move-move_redir' => '$3 макъаладин тӀвар, ракъурун тун тавуна $4 -диз масакӀа хъувуна',
-'logentry-move-move_redir-noredirect' => '$3 макъаладин тӀвар, ракъурун тун тавуна ва ракъурунин винелай $4 -диз масакӀа хъувуна',
+'logentry-move-move' => '$1 $3 макъаладин тӀвар $4 -диз масакӀа хъувуна',
+'logentry-move-move-noredirect' => '$1 $3 макъаладин тӀвар, ракъурунин винелай $4 -диз масакӀа хъувуна',
+'logentry-move-move_redir' => '$1 $3 макъаладин тӀвар, ракъурун тун тавуна $4 -диз масакӀа хъувуна',
+'logentry-move-move_redir-noredirect' => '$1 $3 макъаладин тӀвар, ракъурун тун тавуна ва ракъурунин винелай $4 -диз масакӀа хъувуна',
 'logentry-newusers-autocreate' => 'Уртахдин $1 учётдин кхьин автоматиквилели туькӀуьр хьанва',
 'rightsnone' => '(садни)',
 

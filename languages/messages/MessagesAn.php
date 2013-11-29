@@ -266,7 +266,7 @@ $messages = array(
 'cancel' => 'Cancelar',
 'moredotdotdot' => 'Más...',
 'mypage' => 'A mía pachina',
-'mytalk' => 'Pachina de descusión',
+'mytalk' => 'Pachina de discusión',
 'anontalk' => "Pachina de descusión d'ista IP",
 'navigation' => 'Navego',
 'and' => '&#32;y',
@@ -749,8 +749,8 @@ Diferents usuarios pueden compartir una mesma adreza IP.
 Si vusté ye un usuario anonimo y creye que l'han escrito comentarios no relevants, [[Special:UserLogin/signup|creye una cuenta]] u [[Special:UserLogin/signup|identifique-se]] ta privar confusions futuras con atros usuarios anonimos.''",
 'noarticletext' => 'Por agora no bi ha garra texto en ista pachina. Puet [[Special:Search/{{PAGENAME}}|mirar o títol d\'ista pachina]] en atras pachinas, <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} mirar os rechistros relacionatos] u [{{fullurl:{{FULLPAGENAME}}|action=edit}} escribir ista pachina]</span>.',
 'noarticletext-nopermission' => 'Por l\'inte no i hai garra texto en ista pachina.
-Puet [[Special:Search/{{PAGENAME}}|mirar iste títol]] en atras páginas,
-u bien <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} mirar en os rechistros relacionatos]</span>.',
+Puede [[Special:Search/{{PAGENAME}}|mirar iste titol]] en atras pachinas,
+u bien <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} mirar en os rechistros relacionatos]</span>, pero no tien permiso ta creyar ista pachina.',
 'userpage-userdoesnotexist' => 'A cuenta d\'usuario "<nowiki>$1</nowiki>" no ye rechistrada. Piense si quiere creyar u editar ista pachina.',
 'userpage-userdoesnotexist-view' => 'A cuenta d\'usuario "$1" no ye rechistrada.',
 'blocked-notice-logextract' => "Ista cuenta d'usuario ye actualment bloqueyata.
@@ -773,7 +773,7 @@ A zaguera dentrada d'o rechistro de bloqueyos s'amuestra contino:",
 'userinvalidcssjstitle' => "'''Pare cuenta:''' No bi ha garra aparencia clamata \"\$1\". Remere que as pachinas presonalizatas .css y .js tienen un títol en minusclas, p.e. {{ns:user}}:Foo/vector.css en cuenta de {{ns:user}}:Foo/Vector.css.",
 'updated' => '(Esviellato)',
 'note' => "'''Nota:'''",
-'previewnote' => "'''Pare cuenta que isto no ye que l'anvista previa d'a pachina; os cambeos encara no s'ha alzato!'''",
+'previewnote' => "'''Pare cuenta que isto no ye que l'anvista previa.''' Os cambeos encara no s'ha alzato!",
 'previewconflict' => "L'anvista previa li amostrará l'aparencia d'o texto dimpués d'alzar os cambeos.",
 'session_fail_preview' => "'''Ya lo sentimos, pero no hemos puesto alzar a suya edición por una perda d'os datos de sesion. Por favor, prebe de fer-lo una atra vez, y si encara no funciona, [[Special:UserLogout|salga d'a sesión]] y torne a identificar-se.'''",
 'session_fail_preview_html' => "'''Ya lo sentimos, pero no s'ha puesto procesar a suya edición por haber-se trafegato os datos de sesión.'''
@@ -887,8 +887,8 @@ A razón indicada por $3 ye ''$2''",
 Leyenda: '''({{int:cur}})''' = esferencias con a versión actual, '''({{int:last}})''' = esferencias con a versión anterior, '''{{int:minoreditletter}}''' = edición menor",
 'history-fieldset-title' => 'Mirar en o historial',
 'history-show-deleted' => 'Nomás os borratos',
-'histfirst' => 'Primeras contrebucions',
-'histlast' => 'Zagueras',
+'histfirst' => 'primeras',
+'histlast' => 'zagueras',
 'historysize' => '({{PLURAL:$1|1 byte|$1 bytes}})',
 'historyempty' => '(buedo)',
 
@@ -1415,7 +1415,7 @@ Habría de tener menos de $1 {{PLURAL:$1|carácter|carácters}}.',
 'rc_categories_any' => 'Todas',
 'rc-change-size-new' => "$1 {{PLURAL:$1|byte|bytes}} dimpués d'o cambio",
 'newsectionsummary' => 'Nueva sección: /* $1 */',
-'rc-enhanced-expand' => 'Amostrar detalles (cal JavaScript)',
+'rc-enhanced-expand' => 'Amostrar detalles',
 'rc-enhanced-hide' => 'Amagar detalles',
 
 # Recent changes linked
@@ -2253,9 +2253,9 @@ $1",
 'blanknamespace' => '(Prencipal)',
 
 # Contributions
-'contributions' => "Contrebucions de l'usuario",
+'contributions' => "Contribucions de {{GENDER:$1|l'usuario|la usuaria}}",
 'contributions-title' => "Contribucions de l'usuario $1",
-'mycontris' => 'Contrebucions',
+'mycontris' => 'Contribucions',
 'contribsub2' => 'De $1 ($2)',
 'nocontribs' => "No s'han trobato cambeos que concordasen con ixos criterios",
 'uctop' => '(zaguer cambeo)',
@@ -2559,7 +2559,7 @@ En iste zaguer caso tamién puede usar un vinclo, por eixemplo [[{{#Special:Expo
 'allmessagesdefault' => 'texto por defecto',
 'allmessagescurrent' => 'texto actual',
 'allmessagestext' => "Ista ye una lista de totz os mensaches disponibles en o espacio de nombres MediaWiki.
-Vesite por favor [//www.mediawiki.org/wiki/Localisation a pachina sobre localización de MediaWiki] y  [//translatewiki.net translatewiki.net] si deseya contrebuyir t'a localización cheneral de MediaWiki.",
+Vesite por favor [https://www.mediawiki.org/wiki/Localisation a pachina sobre localización de MediaWiki] y  [//translatewiki.net translatewiki.net] si deseya contrebuyir t'a localización cheneral de MediaWiki.",
 'allmessagesnotsupportedDB' => 'Ista pachina no ye disponible porque wgUseDatabaseMessages ye desactivato.',
 'allmessages-filter-legend' => 'Filtro',
 'allmessages-filter' => 'Filtrar por estau de personalización:',
@@ -3281,7 +3281,7 @@ Os campos de metadatos d'a imachen que amaneixen en iste mensache s'amostrarán 
 
 # External editor support
 'edit-externally' => 'Editar iste fichero fendo servir una aplicación externa',
-'edit-externally-help' => '(Ta más información, leiga as [//www.mediawiki.org/wiki/Manual:External_editors instruccions de configuración])',
+'edit-externally-help' => '(Ta más información, leiga as [https://www.mediawiki.org/wiki/Manual:External_editors instruccions de configuración])',
 
 # 'all' in various places, this might be different for inflected languages
 'watchlistall2' => 'totz',
@@ -3459,7 +3459,7 @@ Tamién puede fer servir o [[Special:EditWatchlist|editor estándar]].",
 'version-hook-subscribedby' => 'Suscrito por',
 'version-version' => '(Versión $1)',
 'version-license' => 'Licencia',
-'version-poweredby-credits' => "Iste wiki funciona gracias a '''[//www.mediawiki.org/ MediaWiki]''', copyright © 2001-$1 $2.",
+'version-poweredby-credits' => "Iste wiki funciona gracias a '''[https://www.mediawiki.org/ MediaWiki]''', copyright © 2001-$1 $2.",
 'version-poweredby-others' => 'atros',
 'version-license-info' => "MediaWiki ye software libre, puet redistribuyir-lo y/u modificar-lo baixo os terminos d'a Licencia Publica Cheneral GNU publicada por a Free Software Foundation, ya siga d'a suya versión 2 u (a la suya esleción) qualsiquier versión posterior. 
 

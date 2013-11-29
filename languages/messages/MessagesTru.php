@@ -809,7 +809,7 @@ Others will be hidden by default.
 
 # External editor support
 'edit-externally' => 'Edit this file using an external application',
-'edit-externally-help' => '(See the [//www.mediawiki.org/wiki/Manual:External_editors setup instructions] for more information)',
+'edit-externally-help' => '(See the [https://www.mediawiki.org/wiki/Manual:External_editors setup instructions] for more information)',
 
 # 'all' in various places, this might be different for inflected languages
 'watchlistall2' => 'kulle',
@@ -854,8 +854,7 @@ Others will be hidden by default.
 'compare-page2' => 'Faṭo 2',
 
 # Database error messages
-'dberr-problems' => 'Şubqono!
-iFaṭaṭe u3do kitla Qaṫre.',
+'dberr-problems' => 'Şubqono! iFaṭaṭe u3do kitla Qaṫre.',
 
 # HTML forms
 'htmlform-submit' => 'Mqayad',
