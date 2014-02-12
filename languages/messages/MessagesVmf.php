@@ -83,10 +83,6 @@ $messages = array(
 'tog-shownumberswatching' => 'Dii andsôôl dr beoobachdâr ôôdsajchn',
 'tog-oldsig' => 'foorschau fon dr agduäln signaduur:',
 'tog-fancysig' => 'Signaduur is dhägsd in wighi-sindhags (alsâ ned audomaadisch â lingg)',
-'tog-externaleditor' => 'Schdandardwäässich an ägsdhärnân eedidhâr neemn (nôr for di sich ausghenn, dâdsuu
-mus mr ufm ajchnen rächnâr was ajrichdn gehnn)',
-'tog-externaldiff' => 'Â ägsdhärns Brogram dsum ôôdsjachn fon dâ wärsjoons-undârschiid neemn (nôr fir dii sich
-ausghenn, mr mus dâdsuu ufm ajchnen rächnâr was âjrichdn ghenn)',
 'tog-uselivepreview' => 'Schnäl-foorschau benudsn (brauchd JavaScript) (ärschd ân fârsuuch)',
 'tog-forceeditsummary' => 'Sich erinärn lasn, wemmâr ghâ dsusamnfasung gschriiwn had',
 'tog-watchlisthideown' => 'Ajchne bearbajdungn ned in dr beoobachdungs-lischdn uffiirn',
@@ -254,7 +250,7 @@ sajdn ham woln. Ward n'bôôr minuudn un brobiir's dan nochâmôôl.
 
 $1",
 
-# All link text and link target definitions of links into project namespace that get used by other message strings, with the exception of user group pages (see grouppage) and the disambiguation template definition (see disambiguations).
+# All link text and link target definitions of links into project namespace that get used by other message strings, with the exception of user group pages (see grouppage).
 'aboutsite' => 'Was {{SITENAME}} is',
 'aboutpage' => 'Project:Iibär',
 'copyright' => 'Was hiir schdäd däfmâr benudsn nach $1',
@@ -264,7 +260,6 @@ $1",
 'disclaimers' => 'Imbräsum',
 'disclaimerpage' => 'Project:Imbräsum',
 'edithelp' => 'Hilfe dsum beärbâdn',
-'edithelppage' => 'Help:Beärbâdn',
 'helppage' => 'Help:Inhalds-fârdsajchnis',
 'mainpage' => 'Haubdsajdn',
 'mainpage-description' => 'Haubdsajdn',
@@ -329,16 +324,6 @@ S'ghend aa â brogramiirfäälâr in dr sofdwäâr sâj, dii baj {{SITENAME}} le
 # General errors
 'error' => 'Feelâr',
 'databaseerror' => 'Feelâr fon dr Daadnbangg',
-'dberrortext' => 'Bam abfrôôchn fon dr daadnbangg is was schiif gangn.
-Filajchd weechn am brogramiir-feelâr?
-Jeednfals wôôr di ledsd abfrôôchn:
-<blockquote><tt>$1</tt></blockquote>
-aus dr fungdsjoon „<tt>$2</tt>“.
-Un dôôdruf had dan di daadnbangg den feelâr „<tt>$3: $4</tt>“ gmeld.',
-'dberrortextcl' => 'Dii daadnbangg-abfrôôchn wôôr falsch gschriiwn.
-Di abfrôôchn wôôr neemlich
-<blockquote><tt>$1</tt></blockquote>
-aus dr fungdsjoon "<tt>$2</tt>". Un dôôdruf had dan di daadnbangg den feelâr „$3: $4“ gmeld.',
 'laggedslavemode' => "'''Achdung:''' Filajchd dsajchd dii sajdn noch ned ales, was indswischn gändârd wôrn is.",
 'readonly' => 'Di daadnbangg is gschbärd.',
 'enterlockreason' => 'Bide schrajb, wisoo dii daadnbangg gschbärd wärn sol, un wi lang des dan dauârn mechd.',
@@ -551,14 +536,6 @@ Zu deiner Informadion folchd des Lösch- un Verschäibungs-Logbuch miid der Begr
 'search-external' => 'Ägsdärne suach',
 'searchdisabled' => 'Diâ {{SITENAME}}-suâch ist ausgschald. Duu ghâusch so lang mid Google suâchn. Dengg drâu, des was mr dôô fir {{SITENAME}} find, ghâu iwârhoold saj.',
 
-# Quickbar
-'qbsettings' => 'Sajdn-lajsdn',
-'qbsettings-none' => 'Ghane',
-'qbsettings-fixedleft' => 'Lings, feschd',
-'qbsettings-fixedright' => 'Rächds, feschd',
-'qbsettings-floatingleft' => 'Lings, schwääbnd',
-'qbsettings-floatingright' => 'Rächds, schwääbnd',
-
 # Preferences page
 'preferences' => 'ajschdelunga',
 'mypreferences' => 'Ajschdelunga',
@@ -586,7 +563,6 @@ Zu deiner Informadion folchd des Lösch- un Verschäibungs-Logbuch miid der Begr
 'resetprefs' => 'Nigs iwârneemn',
 'restoreprefs' => 'Uf dii uur-ajschdelungn dsrig',
 'prefs-editing' => 'Bearbajdungs-fenschdâr',
-'prefs-edit-boxsize' => 'Grees fom bearbajdungs-fenschdâr:',
 'rows' => 'Soofiil dsajln:',
 'columns' => 'Soofiil schbaldn',
 'searchresultshead' => 'Suuchn',
@@ -832,7 +808,7 @@ Wenns'd dii sajdn irchendwan amôl nimä fârfolchn wilsd, musd bloos af „{{in
 'contributions' => 'Eichne Beidrääch',
 'contributions-title' => 'Bajdrääch fo „$1“',
 'mycontris' => 'Bajdreech',
-'contribsub2' => 'Fär $1 ($2)',
+'contribsub2' => 'Von {{GENDER:$3|$1}} ($2)',
 'uctop' => '(agduell)',
 'month' => 'bis moonad:',
 'year' => 'bis dsum jôôr:',
@@ -984,17 +960,11 @@ Bidde gug's mi´m foorschau-gnobf ôô fôrm schbajchan",
 
 # Stylesheets
 'common.css' => '/* CSS hiir beâjflusd ale schelfn */',
-'standard.css' => "/* CSS hiir beâjflusd nôr dii Klassik-schelfn. Wen'd ale uf ôômôôl beâjflusn wilsch, muâsch an [[MediaWiki:Common.css]] was ändârn. */",
-'nostalgia.css' => "/* CSS hiir beâjflusd nôr dii Nostalgia-schelfn. Wen'd ale uf ôômôôl beâjflusn wilsch, muâsch an MediaWiki:Common.css was ändârn. */",
 'cologneblue.css' => "/* CSS hiir beâjflusd nôr dii Kölnisch-Blau-schelfn. Wen'd ale uf ôômôôl beâjflusn wilsch, muâsch an MediaWiki:Common.css was ändârn. */",
 'monobook.css' => "/* CSS hiir beâjflusd nôr dii Monobook-schelfn. Wen'd ale uf ôômôôl beâjflusn wilsch, muâsch an MediaWiki:Common.css was ändârn. */",
-'myskin.css' => "/* CSS hiir beâjflusd nôr dii MySkin-schelfn. Wen'd ale uf ôômôôl beâjflusn wilsch, muâsch an MediaWiki:Common.css was ändârn. */",
-'chick.css' => "/* CSS hiir beâjflusd nôr dii Küken-schelfn. Wen'd ale uf ôômôôl beâjflusn wilsch, muâsch an MediaWiki:Common.css was ändârn. */",
-'simple.css' => "/* CSS hiir beâjflusd nôr dii Simple-schelfn. Wen'd ale uf ôômôôl beâjflusn wilsch, muâsch an MediaWiki:Common.css was ändârn. */",
 'modern.css' => "/* CSS hiir beâjflusd nôr dii Modern-schelfn. Wen'd ale uf ôômôôl beâjflusn wilsch, muâsch an MediaWiki:Common.css was ändârn. */",
 'vector.css' => "/* CSS hiir beâjflusd nôr dii Vector-schelfn. Wen'd ale uf ôômôôl beâjflusn wilsch, muâsch an MediaWiki:Common.css was ändârn. */",
 'print.css' => '/* CSS hiir beâjflusd nôr dii drugausgaawe. */',
-'handheld.css' => '/* CSS hiir beâjflusd nôr dii handgerääde, jee nachdeem, welche schelfn in $wgHandheldStyle âjgeschdeld is. */',
 
 # Scripts
 'common.js' => '/* Des folchende JavaScript wird fir ale benudsâr glôôdn un fir ale sajdn, dii se ôôgugn. */',
@@ -1034,13 +1004,13 @@ Bloos  dsajln, dii mi´m dsajchn * ôôfanga, wärn berigsichdichd. Un dä ärsc
 * gpslongitude
 * gpsaltitude',
 
-# EXIF tags
+# Exif tags
 'exif-imagewidth' => 'brajdn',
 'exif-imagelength' => 'Heen',
 
 # External editor support
 'edit-externally' => 'Dii dadaj mid an ägsdärna brogram ändârn',
-'edit-externally-help' => '(Määr un genauârs dâdsuu baj den [https://www.mediawiki.org/wiki/Manual:External_editors Inschdaladsjoonsanwajsungn])',
+'edit-externally-help' => '(Määr un genauârs dâdsuu baj den [//www.mediawiki.org/wiki/Manual:External_editors Inschdaladsjoonsanwajsungn])',
 
 # 'all' in various places, this might be different for inflected languages
 'watchlistall2' => 'ale',

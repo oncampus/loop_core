@@ -100,17 +100,6 @@ class BitmapHandler extends ImageHandler {
 	}
 
 	/**
-	 * Function that returns the number of pixels to be thumbnailed.
-	 * Intended for animated GIFs to multiply by the number of frames.
-	 *
-	 * @param File $image
-	 * @return int
-	 */
-	function getImageArea( $image ) {
-		return $image->getWidth() * $image->getHeight();
-	}
-
-	/**
 	 * @param $image File
 	 * @param  $dstPath
 	 * @param  $dstUrl
@@ -131,7 +120,7 @@ class BitmapHandler extends ImageHandler {
 			# The size of the image on the page
 			'clientWidth' => $params['width'],
 			'clientHeight' => $params['height'],
-			# Comment as will be added to the EXIF of the thumbnail
+			# Comment as will be added to the Exif of the thumbnail
 			'comment' => isset( $params['descriptionUrl'] ) ?
 				"File source: {$params['descriptionUrl']}" : '',
 			# Properties of the original image
@@ -288,27 +277,27 @@ class BitmapHandler extends ImageHandler {
 			$wgMaxAnimatedGifArea,
 			$wgImageMagickTempDir, $wgImageMagickConvertCommand;
 
-		$quality = '';
-		$sharpen = '';
+		$quality = array();
+		$sharpen = array();
 		$scene = false;
-		$animation_pre = '';
-		$animation_post = '';
-		$decoderHint = '';
+		$animation_pre = array();
+		$animation_post = array();
+		$decoderHint = array();
 		if ( $params['mimeType'] == 'image/jpeg' ) {
-			$quality = "-quality 80"; // 80%
+			$quality = array( '-quality', '80' ); // 80%
 			# Sharpening, see bug 6193
 			if ( ( $params['physicalWidth'] + $params['physicalHeight'] )
 					/ ( $params['srcWidth'] + $params['srcHeight'] )
 					< $wgSharpenReductionThreshold ) {
-				$sharpen = "-sharpen " . wfEscapeShellArg( $wgSharpenParameter );
+				$sharpen = array( '-sharpen', $wgSharpenParameter );
 			}
 			if ( version_compare( $this->getMagickVersion(), "6.5.6" ) >= 0 ) {
 				// JPEG decoder hint to reduce memory, available since IM 6.5.6-2
-				$decoderHint = "-define jpeg:size={$params['physicalDimensions']}";
+				$decoderHint = array( '-define', "jpeg:size={$params['physicalDimensions']}" );
 			}
 
 		} elseif ( $params['mimeType'] == 'image/png' ) {
-			$quality = "-quality 95"; // zlib 9, adaptive filtering
+			$quality = array( '-quality', '95' ); // zlib 9, adaptive filtering
 
 		} elseif ( $params['mimeType'] == 'image/gif' ) {
 			if ( $this->getImageArea( $image ) > $wgMaxAnimatedGifArea ) {
@@ -318,15 +307,15 @@ class BitmapHandler extends ImageHandler {
 
 			} elseif ( $this->isAnimatedImage( $image ) ) {
 				// Coalesce is needed to scale animated GIFs properly (bug 1017).
-				$animation_pre = '-coalesce';
+				$animation_pre = array( '-coalesce' );
 				// We optimize the output, but -optimize is broken,
 				// use optimizeTransparency instead (bug 11822)
 				if ( version_compare( $this->getMagickVersion(), "6.3.5" ) >= 0 ) {
-					$animation_post = '-fuzz 5% -layers optimizeTransparency';
+					$animation_post = array( '-fuzz', '5%', '-layers', 'optimizeTransparency' );
 				}
 			}
 		} elseif ( $params['mimeType'] == 'image/x-xcf' ) {
-			$animation_post = '-layers merge';
+			$animation_post = array( '-layers', 'merge' );
 		}
 
 		// Use one thread only, to avoid deadlock bugs on OOM
@@ -338,31 +327,33 @@ class BitmapHandler extends ImageHandler {
 		$rotation = $this->getRotation( $image );
 		list( $width, $height ) = $this->extractPreRotationDimensions( $params, $rotation );
 
-		$cmd =
-			wfEscapeShellArg( $wgImageMagickConvertCommand ) .
+		$cmd = call_user_func_array( 'wfEscapeShellArg', array_merge(
+			array( $wgImageMagickConvertCommand ),
+			$quality,
 			// Specify white background color, will be used for transparent images
 			// in Internet Explorer/Windows instead of default black.
-			" {$quality} -background white" .
-			" {$decoderHint} " .
-			wfEscapeShellArg( $this->escapeMagickInput( $params['srcPath'], $scene ) ) .
-			" {$animation_pre}" .
+			array( '-background', 'white' ),
+			$decoderHint,
+			array( $this->escapeMagickInput( $params['srcPath'], $scene ) ),
+			$animation_pre,
 			// For the -thumbnail option a "!" is needed to force exact size,
 			// or ImageMagick may decide your ratio is wrong and slice off
 			// a pixel.
-			" -thumbnail " . wfEscapeShellArg( "{$width}x{$height}!" ) .
+			array( '-thumbnail', "{$width}x{$height}!" ),
 			// Add the source url as a comment to the thumb, but don't add the flag if there's no comment
 			( $params['comment'] !== ''
-				? " -set comment " . wfEscapeShellArg( $this->escapeMagickProperty( $params['comment'] ) )
-				: '' ) .
-			" -depth 8 $sharpen " .
-			" -rotate -$rotation " .
-			" {$animation_post} " .
-			wfEscapeShellArg( $this->escapeMagickOutput( $params['dstPath'] ) ) . " 2>&1";
+				? array( '-set', 'comment', $this->escapeMagickProperty( $params['comment'] ) )
+				: array() ),
+			array( '-depth', 8 ),
+			$sharpen,
+			array( '-rotate', "-$rotation" ),
+			$animation_post,
+			array( $this->escapeMagickOutput( $params['dstPath'] ) ) ) );
 
 		wfDebug( __METHOD__ . ": running ImageMagick: $cmd\n" );
 		wfProfileIn( 'convert' );
 		$retval = 0;
-		$err = wfShellExec( $cmd, $retval, $env );
+		$err = wfShellExecWithStderr( $cmd, $retval, $env );
 		wfProfileOut( 'convert' );
 
 		if ( $retval !== 0 ) {
@@ -398,7 +389,7 @@ class BitmapHandler extends ImageHandler {
 					$im->sharpenImage( $radius, $sigma );
 				}
 				$im->setCompressionQuality( 80 );
-			} elseif( $params['mimeType'] == 'image/png' ) {
+			} elseif ( $params['mimeType'] == 'image/png' ) {
 				$im->setCompressionQuality( 95 );
 			} elseif ( $params['mimeType'] == 'image/gif' ) {
 				if ( $this->getImageArea( $image ) > $wgMaxAnimatedGifArea ) {
@@ -467,12 +458,12 @@ class BitmapHandler extends ImageHandler {
 		$dst = wfEscapeShellArg( $params['dstPath'] );
 		$cmd = $wgCustomConvertCommand;
 		$cmd = str_replace( '%s', $src, str_replace( '%d', $dst, $cmd ) ); # Filenames
-		$cmd = str_replace( '%h', $params['physicalHeight'],
-			str_replace( '%w', $params['physicalWidth'], $cmd ) ); # Size
+		$cmd = str_replace( '%h', wfEscapeShellArg( $params['physicalHeight'] ),
+			str_replace( '%w', wfEscapeShellArg( $params['physicalWidth'] ), $cmd ) ); # Size
 		wfDebug( __METHOD__ . ": Running custom convert command $cmd\n" );
 		wfProfileIn( 'convert' );
 		$retval = 0;
-		$err = wfShellExec( $cmd, $retval );
+		$err = wfShellExecWithStderr( $cmd, $retval );
 		wfProfileOut( 'convert' );
 
 		if ( $retval !== 0 ) {
@@ -712,24 +703,6 @@ class BitmapHandler extends ImageHandler {
 		imagejpeg( $dst_image, $thumbPath, 95 );
 	}
 
-	/**
-	 * On supporting image formats, try to read out the low-level orientation
-	 * of the file and return the angle that the file needs to be rotated to
-	 * be viewed.
-	 *
-	 * This information is only useful when manipulating the original file;
-	 * the width and height we normally work with is logical, and will match
-	 * any produced output views.
-	 *
-	 * The base BitmapHandler doesn't understand any metadata formats, so this
-	 * is left up to child classes to implement.
-	 *
-	 * @param $file File
-	 * @return int 0, 90, 180 or 270
-	 */
-	public function getRotation( $file ) {
-		return 0;
-	}
 
 	/**
 	 * Returns whether the current scaler supports rotation (im and gd do)
@@ -765,20 +738,20 @@ class BitmapHandler extends ImageHandler {
 	public function rotate( $file, $params ) {
 		global $wgImageMagickConvertCommand;
 
-		$rotation = ( $params[ 'rotation' ] + $this->getRotation( $file ) ) % 360;
+		$rotation = ( $params['rotation'] + $this->getRotation( $file ) ) % 360;
 		$scene = false;
 
 		$scaler = self::getScalerType( null, false );
 		switch ( $scaler ) {
 			case 'im':
 				$cmd = wfEscapeShellArg( $wgImageMagickConvertCommand ) . " " .
-					wfEscapeShellArg( $this->escapeMagickInput( $params[ 'srcPath' ], $scene ) ) .
-					" -rotate -$rotation " .
-					wfEscapeShellArg( $this->escapeMagickOutput( $params[ 'dstPath' ] ) ) . " 2>&1";
+					wfEscapeShellArg( $this->escapeMagickInput( $params['srcPath'], $scene ) ) .
+					" -rotate " . wfEscapeShellArg( "-$rotation" ) . " " .
+					wfEscapeShellArg( $this->escapeMagickOutput( $params['dstPath'] ) );
 				wfDebug( __METHOD__ . ": running ImageMagick: $cmd\n" );
 				wfProfileIn( 'convert' );
 				$retval = 0;
-				$err = wfShellExec( $cmd, $retval, $env );
+				$err = wfShellExecWithStderr( $cmd, $retval, $env );
 				wfProfileOut( 'convert' );
 				if ( $retval !== 0 ) {
 					$this->logErrorForExternalProcess( $retval, $err, $cmd );

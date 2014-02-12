@@ -22,8 +22,8 @@ $namespaceNames = array(
 	NS_SPECIAL          => 'Лӱмын_ыштыме',
 	NS_TALK             => 'Каҥашымаш',
 	NS_USER             => 'Пайдаланыше',
-	NS_USER_TALK        => 'Пайдаланышын_каҥашымаш',
-	NS_PROJECT_TALK     => '$1ын_каҥашымаш',
+	NS_USER_TALK        => 'Пайдаланышын_каҥашымашыже',
+	NS_PROJECT_TALK     => '$1ын_каҥашымашыже',
 	NS_FILE             => 'Файл',
 	NS_FILE_TALK        => 'Файл_шотышто_каҥашымаш',
 	NS_TEMPLATE         => 'Кышкар',
@@ -53,6 +53,8 @@ $namespaceAliases = array(
 	'Обсуждение_категории'               => NS_CATEGORY_TALK,
 
 	// Namspace changes
+	'Пайдаланышын_каҥашымаш'    => NS_USER_TALK,
+	'$1ын_каҥашымаш'            => NS_PROJECT_TALK,
 	'Файлын_каҥашымаш'          => NS_FILE_TALK,
 	'Ямдылык'                   => NS_TEMPLATE,
 	'Ямдылык_шотышто_каҥашымаш' => NS_TEMPLATE_TALK,
@@ -65,6 +67,12 @@ $namespaceAliases = array(
 $namespaceGenderAliases = array();
 
 $specialPageAliases = array(
+	'Blankpage'                 => array( 'Пуста_лаштык' ),
+	'BrokenRedirects'           => array( 'Кӱрылтшӧ__вес_вере_колтымаш-влак' ),
+	'Categories'                => array( 'Категорий-влак' ),
+	'ComparePages'              => array( 'Лаштык-влакым_тергымаш' ),
+	'Emailuser'                 => array( 'Пайдаланышылан_серышым_колташ' ),
+	'Longpages'                 => array( 'Кужу_лаштык-влак' ),
 	'Preferences'               => array( 'Келыштарымаш' ),
 	'Recentchanges'             => array( 'Пытартыш_тӧрлатымаш-влак' ),
 	'Search'                    => array( 'Кычалмаш' ),
@@ -81,6 +89,7 @@ $magicWords = array(
 	'img_top'                   => array( '1', 'кӱшычын', 'сверху', 'top' ),
 	'img_middle'                => array( '1', 'покшелне', 'посередине', 'middle' ),
 	'img_bottom'                => array( '1', 'ӱлычын', 'снизу', 'bottom' ),
+	'sitename'                  => array( '1', 'САЙТЛӰМ', 'НАЗВАНИЕ_САЙТА', 'SITENAME' ),
 );
 
 $messages = array(
@@ -107,7 +116,6 @@ $messages = array(
 'tog-enotifwatchlistpages' => 'Мыйын эскерыме лӱмер гыч лаштыкыште тӧрлатымыш нерген электрон почто гоч шижтараш',
 'tog-enotifusertalkpages' => 'Мыйын каҥашымаш лаштыкыште тӧрлатымыш нерген электрон почто гоч шижтараш',
 'tog-oldsig' => 'Кызытсе кидпале',
-'tog-showjumplinks' => '"Куснаш …" ешартыш кылверым чӱкташ',
 'tog-watchlisthideown' => 'Эскерыме лӱмер гыч мыйын тӧрлатымашым кораҥдаш',
 'tog-watchlisthidebots' => 'Эскерыме лӱмер гыч бот-влакын тӧрлатымашыштым кораҥдаш',
 'tog-watchlisthideminor' => 'Эскерыме лӱмер гыч изи тӧрлатымаш-влакым кораҥдаш',
@@ -222,7 +230,7 @@ $messages = array(
 'errorpagetitle' => 'Йоҥылыш',
 'returnto' => '$1 деке пӧртылаш.',
 'tagline' => '{{SITENAME}} гыч',
-'help' => 'Полшыш',
+'help' => 'Полшык',
 'search' => 'Кычалмаш',
 'searchbutton' => 'Кычалаш',
 'go' => 'Куснаш',
@@ -254,7 +262,7 @@ $messages = array(
 'userpage' => 'Пайдаланышын лаштыкым ончалаш',
 'imagepage' => 'Файлын лаштыкым ончалаш',
 'templatepage' => 'Ямдылыкын лаштыкым ончалаш',
-'viewhelppage' => 'Полыш лаштыкым ончалаш',
+'viewhelppage' => 'Полшык лаштыкым ончалаш',
 'categorypage' => 'Категорийын лаштыкым ончалаш',
 'viewtalkpage' => 'Ончалаш каҥашымашым',
 'otherlanguages' => 'Вес йылме дене',
@@ -267,7 +275,7 @@ $messages = array(
 'jumptosearch' => 'кычалмаш',
 'pool-errorunknown' => 'Палыдыме йоҥылыш',
 
-# All link text and link target definitions of links into project namespace that get used by other message strings, with the exception of user group pages (see grouppage) and the disambiguation template definition (see disambiguations).
+# All link text and link target definitions of links into project namespace that get used by other message strings, with the exception of user group pages (see grouppage).
 'aboutsite' => '{{SITENAME}} нерген',
 'aboutpage' => 'Project:Нерген',
 'copyright' => 'Лаштыкыште возымо $1 йӧн дене почмо.',
@@ -277,7 +285,6 @@ $messages = array(
 'disclaimers' => 'Вуйшиймаш деч кораҥмаш',
 'disclaimerpage' => 'Project:Вуйшиймаш деч кораҥмаш',
 'edithelp' => 'Тӧрлатымаш полыш',
-'edithelppage' => 'Help:Тӧрлымаш',
 'helppage' => 'Help:Полшык',
 'mainpage' => 'Тӱҥ лаштык',
 'mainpage-description' => 'Тӱҥ лаштык',
@@ -348,23 +355,22 @@ $messages = array(
 'virus-unknownscanner' => 'палыдыме антивирус:',
 
 # Login and logout pages
-'welcomeuser' => 'Пагален ӱжына, $1!',
 'yourname' => 'Пайдаланышын лӱмжӧ:',
 'yourpassword' => 'Шолыпмут:',
 'yourpasswordagain' => 'Шолыпмутым угыч пуртымаш:',
 'remembermypassword' => 'Тиде компьютерыште мыйым шарнаш (эн шуко $1 {{PLURAL:$1|кечылан|кечылан}})',
 'yourdomainname' => 'Тендан домен:',
-'login' => 'Шке денет палдаре',
+'login' => 'Шке денет палымым ыште',
 'nav-login-createaccount' => 'Пураш/Регистрацийым эрте',
-'loginprompt' => '{{SITENAME}} шке денет палдарыме деч ончыч компьютерыштет «cookies»-ым чӱктыман.',
-'userlogin' => 'Пураш/Регистрацийым эрташ',
+'loginprompt' => '{{SITENAME}} тый денет палыме лиймашлан, cookies чӱкталтын улшаш.',
+'userlogin' => 'Шке денет палымым ыште/Регистрацийым эрте',
 'logout' => 'Лекташ',
 'userlogout' => 'Лекташ',
 'nologin' => "Тый регистрацийым эше эртен отыл? '''$1'''.",
 'nologinlink' => 'Регистрацийым эрте',
 'createaccount' => 'Регистрацийым эрте',
 'gotaccount' => "Тый регистрацийым эртенат? '''$1'''.",
-'gotaccountlink' => 'Шке денет палдаре',
+'gotaccountlink' => 'Шке денет палымым ыште',
 'userlogin-resetlink' => 'Лӱмдам але шолыпмутдам монденда?',
 'createaccountmail' => 'Кӱчык жаплан чокым ыштыме шолыпмутым мылам e-mail дене колташ',
 'nosuchuser' => '"$1" лӱман пайдаланыше уке.
@@ -525,7 +531,6 @@ $messages = array(
 'shown-title' => 'Лаштыкыште $1 {{PLURAL:$1|возымаш|возымашым}} ончыкташ',
 'viewprevnext' => 'Ончал ($1 {{int:pipe-separator}} $2) ($3)',
 'searchmenu-new' => "'''Тиде вики-проектыште «[[:$1]]» лӱман лаштыкым ышташ!'''",
-'searchhelp-url' => 'Help:Вуйлымаш',
 'searchprofile-articles' => 'Возымо лаштык-влак',
 'searchprofile-project' => 'Полыш да проект лаштык',
 'searchprofile-images' => 'Мультимедий',
@@ -667,7 +672,6 @@ $messages = array(
 'recentchangeslinked-feed' => 'Ваш кылдалтше тӧрлатымаш-влак',
 'recentchangeslinked-toolbox' => 'Ваш кылдалтше тӧрлатымаш-влак',
 'recentchangeslinked-title' => '"$1" лаштык дене кылдалтше тӧрлатымаш-влак',
-'recentchangeslinked-noresult' => 'Ончыктымо пагытыште кылдалтше лаштыклаште вашталтыш лийын огыл.',
 'recentchangeslinked-summary' => "Это список недавних изменений в страницах, на которые ссылается указанная страница (или входящих в указанную категорию).
 Страницы, входящие в [[Special:Watchlist|ваш список наблюдения]] '''выделены'''.",
 'recentchangeslinked-page' => 'Лаштыкын лӱмжӧ:',
@@ -993,7 +997,7 @@ $messages = array(
 'tooltip-pt-preferences' => 'Мыйын келыштарымашем',
 'tooltip-pt-watchlist' => 'Мыйын эскерыме лаштык-влак лӱмер',
 'tooltip-pt-mycontris' => 'Тыйын пашатым эскерыме лаштык',
-'tooltip-pt-login' => 'Тыште регистрацийым эртен кертат. Регистраций деч поснаат пашам ышташ лиеш.',
+'tooltip-pt-login' => 'Шке денет палымым ыштет гын сайрак лиеш; такшым тидым ыштыдеат кертат.',
 'tooltip-pt-logout' => 'Системе гыч лекташ',
 'tooltip-ca-talk' => 'Лаштыкыште возымым каҥашаш',
 'tooltip-ca-edit' => 'Тый тиде лаштыкым тӧрлатен кертат. Лаштыкым аралыме деч ончыч тудым тергаш ит мондо.',
@@ -1016,7 +1020,7 @@ $messages = array(
 'tooltip-n-currentevents' => 'Мо лийме нерген нерген пытартыш увер',
 'tooltip-n-recentchanges' => 'Пытартыш вашталтымаш лӱмер',
 'tooltip-n-randompage' => 'Лаштыкым чокым ойыраш',
-'tooltip-n-help' => 'Википедийым кучылтмо да тӧрлатыме шотышто полыш.',
+'tooltip-n-help' => 'Википедийым кучылтмо да тӧрлатыме шотышто полшык.',
 'tooltip-t-whatlinkshere' => 'Тышке кондышо лаштык-влакын лӱмерышт',
 'tooltip-t-recentchangeslinked' => 'Тиде лаштык дене кылдалтше пытартыш тӧрлатымаш-влак',
 'tooltip-feed-rss' => 'Тиде лаштыклан RSS-кыл',
@@ -1090,7 +1094,7 @@ $messages = array(
 
 # External editor support
 'edit-externally' => 'Файлым ӧрдыж программыште тӧрлаташ',
-'edit-externally-help' => '(Сайрак палашлан ончал [https://www.mediawiki.org/wiki/Manual:External_editors шындымаш нерген туныктымашым])',
+'edit-externally-help' => '(Сайрак палашлан ончал [//www.mediawiki.org/wiki/Manual:External_editors шындымаш нерген туныктымашым])',
 
 # 'all' in various places, this might be different for inflected languages
 'watchlistall2' => 'чыла',
@@ -1123,9 +1127,6 @@ $messages = array(
 
 # Special:Version
 'version-specialpages' => 'Лӱмын ыштыме лаштык-влак',
-
-# Special:FilePath
-'filepath-page' => 'Файл:',
 
 # Special:FileDuplicateSearch
 'fileduplicatesearch-submit' => 'Кычалаш',

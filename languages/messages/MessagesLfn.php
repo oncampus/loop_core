@@ -63,7 +63,6 @@ $messages = array(
 'tog-enotifrevealaddr' => 'Descovre la me adirije de eposta en postas de nota',
 'tog-shownumberswatching' => 'Mostra la numero de usores oservante',
 'tog-fancysig' => 'Sinias simple (sin lia automatica)',
-'tog-externaleditor' => 'Usa costumal editadores esterna',
 'tog-watchlisthideown' => 'Asconde me editas de la lista de pajes oservada',
 'tog-watchlisthidebots' => 'Asconde editas par bot de la lista de pajes oservada',
 'tog-watchlisthideminor' => 'Asconde editas minor de la lista de pajes oservada',
@@ -208,7 +207,7 @@ $messages = array(
 'jumptonavigation' => 'naviga',
 'jumptosearch' => 'xerca',
 
-# All link text and link target definitions of links into project namespace that get used by other message strings, with the exception of user group pages (see grouppage) and the disambiguation template definition (see disambiguations).
+# All link text and link target definitions of links into project namespace that get used by other message strings, with the exception of user group pages (see grouppage).
 'aboutsite' => 'Supra {{SITENAME}}',
 'aboutpage' => 'Project:Supra',
 'copyrightpage' => '{{ns:project}}:Diretos de autor',
@@ -217,7 +216,6 @@ $messages = array(
 'disclaimers' => 'Negas de respondablia',
 'disclaimerpage' => 'Project:Nega jeneral de respondablia',
 'edithelp' => 'Aida con edita',
-'edithelppage' => 'Help:Edita',
 'helppage' => 'Help:Contenis',
 'mainpage' => 'Paje Prima',
 'mainpage-description' => 'Paje Prima',
@@ -437,7 +435,6 @@ La arcivo de sutraes per esta paje es asi per conveni:",
 'prevn' => '{{PLURAL:$1|$1}} presedente',
 'nextn' => '{{PLURAL:$1|$1}} seguente',
 'viewprevnext' => 'Vide ($1 {{int:pipe-separator}} $2) ($3)',
-'searchhelp-url' => 'Help:Contenis',
 'search-result-size' => '$1 ({{PLURAL:$2|1 parola|$2 parolas}})',
 'search-section' => '(sesion $1)',
 'search-interwiki-default' => 'Resultas de $1:',
@@ -530,7 +527,6 @@ La arcivo de sutraes per esta paje es asi per conveni:",
 'recentchangeslinked-feed' => 'Cambias relateda',
 'recentchangeslinked-toolbox' => 'Cambias relateda',
 'recentchangeslinked-title' => 'Cambias relatada a "$1"',
-'recentchangeslinked-noresult' => 'No cambias de pajes liada entre esta periodo.',
 'recentchangeslinked-summary' => "Esta lista conteni la cambias plu resente de la pajes liada a otra (o de la membros de un categoria).
 Pajes a [[Special:Watchlist|tu lista de pajes oservada]] es en leteras '''forte'''.",
 'recentchangeslinked-page' => 'Nom de la paje:',
@@ -582,8 +578,6 @@ Pajes a [[Special:Watchlist|tu lista de pajes oservada]] es en leteras '''forte'
 
 # Statistics
 'statistics' => 'Statisticas',
-
-'disambiguations' => 'Pajes desambiguinte',
 
 'doubleredirects' => 'Redirijes duple',
 
@@ -931,7 +925,7 @@ Si la fix ia es cambiada de se stato orijinal, alga detalias pote no es clara en
 * gpslongitude
 * gpsaltitude',
 
-# EXIF tags
+# Exif tags
 'exif-exposuretime-format' => '$1 sec. ($2)',
 
 # External editor support
@@ -954,9 +948,6 @@ Si la fix ia es cambiada de se stato orijinal, alga detalias pote no es clara en
 # Special:Version
 'version' => 'Varia',
 'version-version' => '(Varia $1)',
-
-# Special:FilePath
-'filepath-page' => 'Fix:',
 
 # Special:FileDuplicateSearch
 'fileduplicatesearch-submit' => 'Xerca',

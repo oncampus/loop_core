@@ -13,7 +13,6 @@
  * @author Kaganer
  * @author Reedy
  * @author Sahran
- * @author Tel'et
  */
 
 $rtl = true;
@@ -23,17 +22,27 @@ $namespaceNames = array(
 	NS_SPECIAL          => 'ئالاھىدە',
 	NS_TALK             => 'مۇنازىرە',
 	NS_USER             => 'ئىشلەتكۈچى',
-	NS_USER_TALK        => 'ئىشلەتكۈچى مۇنازىرىسى',
-	NS_PROJECT_TALK     => 'مۇنازىرىسى$1',
+	NS_USER_TALK        => 'ئىشلەتكۈچى_مۇنازىرىسى',
+	NS_PROJECT_TALK     => '$1مۇنازىرىسى',
 	NS_FILE             => 'ھۆججەت',
-	NS_FILE_TALK        => 'ھۆججەت مۇنازىرىسى',
-	NS_MEDIAWIKI_TALK   => 'MediaWiki مۇنازىرىسى',
+	NS_FILE_TALK        => 'ھۆججەت_مۇنازىرىسى',
+	NS_MEDIAWIKI_TALK   => 'MediaWiki_مۇنازىرىسى',
 	NS_TEMPLATE         => 'قېلىپ',
-	NS_TEMPLATE_TALK    => 'قېلىپ مۇنازىرىسى',
+	NS_TEMPLATE_TALK    => 'قېلىپ_مۇنازىرىسى',
 	NS_HELP             => 'ياردەم',
-	NS_HELP_TALK        => 'ياردەم مۇنازىرىسى',
+	NS_HELP_TALK        => 'ياردەم_مۇنازىرىسى',
 	NS_CATEGORY         => 'تۈر',
-	NS_CATEGORY_TALK    => 'تۈر مۇنازىرىسى',
+	NS_CATEGORY_TALK    => 'تۈر_مۇنازىرىسى',
+);
+
+$namespaceAliases = array(
+	'مۇنازىرىسى$1' => NS_PROJECT_TALK,
+);
+
+$specialPageAliases = array(
+	'Allmessages'               => array( 'بارلىق_خەۋەرلەر' ),
+	'Allpages'                  => array( 'بارلىق_بەتلەر' ),
+	'Ancientpages'              => array( 'كونا_بەتلەر' ),
 );
 
 $messages = array(
@@ -46,10 +55,10 @@ $messages = array(
 'tog-extendwatchlist' => 'كۈچەيتىلگەن كۆزەت تىزىملىكىدە يېقىنقى ئۆزگەرتىشنىلا كۆرسەتمەي بەلكى ھەممە ئۆزگەرتىشنى كۆرسەت',
 'tog-usenewrc' => 'بەت گۇرۇپپىلىنىشىغا ئاساسەن يېقىنقى ئۆزگەرتىش ۋە كۆزەت تىزىمى (JavaScript زۆرۈر)',
 'tog-numberheadings' => 'ماۋزۇغا ئۆزلۈكىدىن تەرتىپ نومۇرى قوش',
-'tog-showtoolbar' => 'تەھرىر قورال بالداقنى كۆرسەت',
-'tog-editondblclick' => 'قوش چەككەندە بەت تەھرىرلە',
+'tog-showtoolbar' => 'تەھرىر قورال بالداقنى كۆرسەت (JavaScript زۆرۈر)',
+'tog-editondblclick' => 'قوش چەككەندە بەت تەھرىرلە (JavaScript زۆرۈر)',
 'tog-editsection' => '[تەھرىر] ئۇلانمىسىنى چېكىپ ئابزاس تەھرىرلەشكە يول قوي',
-'tog-editsectiononrightclick' => 'تېمىنى ئوڭ چېكىپ ئابزاس تەھرىرلەشكە يول قوي',
+'tog-editsectiononrightclick' => 'ماۋزۇنى چاشقىنەكتە ئوڭ چېكىپ ئابزاس تەھرىرلەشكە يول قوي (JavaScript زۆرۈر)',
 'tog-showtoc' => 'مەزمۇن جەدۋىلى كۆرسەت (بىر بەتتە 3 تىن ئارتۇق ماۋزۇ بار بەتكە قارىتىلغان)',
 'tog-rememberpassword' => 'بۇ كومپيۇتېردا كىرگىنىمنى ئەستە ساقلا(ئەڭ ئۇزۇن بولغاندا $1 {{PLURAL:$1|كۈن|كۈن}})',
 'tog-watchcreations' => 'مەن قۇرغان بەت ۋە يۈكلىگەن ھۆججەتلەرنى كۆزەت تىزىملىكىمگە قوش',
@@ -67,11 +76,7 @@ $messages = array(
 'tog-shownumberswatching' => 'بۇ بەتنى كۆزىتىۋاتقان ئىشلەتكۈچى سانىنى كۆرسەت',
 'tog-oldsig' => 'نۆۋەتتىكى ئىمزا:',
 'tog-fancysig' => 'ئىمزاغا wiki تېكستى سۈپىتىدە مۇئامىلە قىل (ئۆزلۈكىدىن ئۇلانما ھاسىل بولمايدۇ)',
-'tog-externaleditor' => 'كۆڭۈلدىكى ئەھۋالدا سىرتقى تەھرىرلىگۈچ ئىشلىتىدۇ (ئالىي ئىشلەتكۈچىگە تەمىنلىنىدۇ، كومپيۇتېرىڭىزدا بىر قىسىم ئالاھىدە تەڭشەش ئېلىپ بېرىشىڭىز لازىم
-[//www.mediawiki.org/wiki/Manual:External_editors تېخىمۇ كۆپ ئۇچۇر.])',
-'tog-externaldiff' => 'كۆڭۈلدىكى ئەھۋالدا سىرتقى پەرق تەھلىلى ئىشلىتىدۇ (ئالىي ئىشلەتكۈچىگە تەمىنلىنىدۇ، كومپيۇتېرىڭىزدا بىر قىسىم ئالاھىدە تەڭشەش ئېلىپ بېرىشىڭىز لازىم. [//www.mediawiki.org/wiki/Manual:External_editors تېخىمۇ كۆپ ئۇچۇر.])',
-'tog-showjumplinks' => '"ئاتلا" زىيارەت ئۇلانمىسىنى قوزغات',
-'tog-uselivepreview' => 'جانلىق ئالدىن كۆزىتىشنى ئىشلەت (سىناق)',
+'tog-uselivepreview' => 'رىئال ۋاقىتلىق ئالدىن كۆزىتىشنى ئىشلەت (JavaScript زۆرۈر) (سىناق)',
 'tog-forceeditsummary' => 'ئۈزۈندە كىرگۈزمىگەندە مېنى ئەسكەرت',
 'tog-watchlisthideown' => 'كۆزەت تىزىملىكىدىن مېنىڭ تەھرىرلىگىنىمنى يوشۇر',
 'tog-watchlisthidebots' => 'كۆزەت تىزىملىكىدىن ماشىنا ئادەم تەھرىرلىگەننى يوشۇر',
@@ -168,14 +173,14 @@ $messages = array(
 'broken-file-category' => 'ھۆججەت ئۇلىنىشى بۇزۇلغان بەتلەر',
 'categoryviewer-pagedlinks' => '($1) ($2)',
 
-'linkprefix' => '/^((?>.*(?<![a-zA-Z\\\\x80-\\\\xff])))(.+)$/sD',
+'linkprefix' => '/^((?>.*(?<![a-zA-Z\\x80-\\xff])))(.+)$/sD',
 
 'about' => 'ھەققىدە',
 'article' => 'مۇندەرىجە',
 'newwindow' => '(يېڭى كۆزنەكتە ئاچ)',
 'cancel' => 'ۋاز كەچ',
 'moredotdotdot' => 'تەپسىلىي…',
-'morenotlisted' => 'بۇ تىزىملىك تولۇق ئەمەس.',
+'morenotlisted' => 'تەپسىلاتى كۆرسىتىلمىگەنلىرى…',
 'mypage' => 'بەتىم',
 'mytalk' => 'مۇنازىرە بېتىم',
 'anontalk' => 'بۇ IP نىڭ مۇنازىرە بېتى',
@@ -247,7 +252,7 @@ $messages = array(
 'articlepage' => 'مەزمۇن بېتىنى كۆرسەت',
 'talk' => 'مۇنازىرە',
 'views' => 'كۆرۈنۈش',
-'toolbox' => 'قوراللار',
+'toolbox' => 'قورال ساندۇقى',
 'userpage' => 'ئىشلەتكۈچى بېتىنى كۆرسەت',
 'projectpage' => 'قۇرۇلۇش بېتىنى كۆرسەت',
 'imagepage' => 'ھۆججەت بېتىنى كۆرسەت',
@@ -274,7 +279,7 @@ $1',
 'pool-queuefull' => 'قاچا ئۆچرىتى توشتى',
 'pool-errorunknown' => 'نامەلۇم خاتالىق',
 
-# All link text and link target definitions of links into project namespace that get used by other message strings, with the exception of user group pages (see grouppage) and the disambiguation template definition (see disambiguations).
+# All link text and link target definitions of links into project namespace that get used by other message strings, with the exception of user group pages (see grouppage).
 'aboutsite' => '{{SITENAME}} ھەققىدە',
 'aboutpage' => 'Project:ھەققىدە',
 'copyright' => 'بۇ بېكەتتىكى بارلىق تېكست مەزمۇنى $1 ماددىسىغا ئاساسەن تەمىنلىنىدۇ.',
@@ -284,7 +289,6 @@ $1',
 'disclaimers' => 'جاۋابكارلىقنى كەچۈرۈم قىلىش باياناتى',
 'disclaimerpage' => 'Project:ئادەتتىكى جاۋابكارلىقنى كەچۈرۈم قىلىش باياناتى',
 'edithelp' => 'تەھرىرلەش ياردىمى',
-'edithelppage' => 'Help:تەھرىرلەۋاتىدۇ',
 'helppage' => 'Help:مەزمۇنلار',
 'mainpage' => 'باش بەت',
 'mainpage-description' => 'باش بەت',
@@ -317,7 +321,6 @@ $1',
 'newmessagesdifflinkplural' => 'ئاخىرقى $1 {{PLURAL:$1|ئۆزگەرتىش|ئۆزگەرتىش}}',
 'youhavenewmessagesmulti' => '$1 يېڭى ئۇچۇرىڭىز بار',
 'editsection' => 'تەھرىر',
-'editsection-brackets' => '[$1]',
 'editold' => 'تەھرىر',
 'viewsourceold' => 'مەنبەنى كۆرسەت',
 'editlink' => 'تەھرىر',
@@ -372,17 +375,6 @@ URL نى خاتا كىرگۈزۈپ قالدىڭىز ياكى خاتا ئۇلان
 # General errors
 'error' => 'خاتالىق',
 'databaseerror' => 'ساندان خاتالىقى',
-'dberrortext' => 'ساندان سۈرۈشتۈرۈشتە گرامماتىكىلىق خاتالىق يۈز بەردى.
-يۇمشاق دېتالنىڭ ئۆزىدىكى خاتالىقتىن كېلىپ چىققان بولۇشى مۇمكىن.
-ئاخىرقى قېتىملىق ساندان سۈرۈشتۈرۈش بۇيرۇقى:
-<blockquote><code>$1</code></blockquote>
- "<code>$2</code>"فۇنكسىيىدىن كەلگەن.
-ساندان قايتۇرغان خاتالىق "<samp>$3: $4</samp>".',
-'dberrortextcl' => 'ساندان سۈرۈشتۈرۈشتە گرامماتىكىلىق خاتالىق يۈز بەردى.
-ئاخىرقى قېتىملىق ساندان سۈرۈشتۈرۈش بۇيرۇقى:
-"$1"
-"$2" فۇنكسىيىدىن كەلگەن.
-MySQL قايتۇرغان خاتالىقى"$3: $4"',
 'laggedslavemode' => 'ئاگاھلاندۇرۇش: بەت يېقىنقى يېڭىلاشنى ئۆز ئىچىگە ئالمىغان بولۇشى مۇمكىن.',
 'readonly' => 'ساندان قۇلۇپلانغان',
 'enterlockreason' => 'قۇلۇپلىنىش سەۋەبىنى كىرگۈزۈڭ، قايتا ئېچىشنىڭ مۆلچەر ۋاقتىنىمۇ ئۆز ئىچىگە ئالىدۇ',
@@ -447,7 +439,6 @@ MySQL قايتۇرغان خاتالىقى"$3: $4"',
 بۇ بەت ئۆزگەرتىلسە باشقا ئىشلەتكۈچىلەرنىڭ كۆرۈنۈش ئۇسلۇبىغا تەسىر كۆرسىتىدۇ.
 
 مەسىلەن ئەگەر تەرجىمە قىلسىڭىز [//translatewiki.net/wiki/Main_Page?setlang=ug translatewiki.net] ئۇنداقتا MediaWiki يەرلىكلەشتۈرۈش پىلانىنى ئىشلىتىشنى ئويلىشىڭ.",
-'sqlhidden' => '(SQL سۈرۈشتۈرۈش يوشۇرۇلدى)',
 'cascadeprotected' => 'بۇ بەت قوغدالغان چۈنكى تۆۋەندىكى {{PLURAL:$1|بىر|بىر قانچە}} بەت مەزكۇر بەتنى ئۆز ئىچىگە ئېلىش بىلەن بىللە "زەنجىرسىمان قوغداش" قوزغىتىلغان.
 
 $2',
@@ -481,10 +472,9 @@ $2',
 
 [[Special:Preferences|{{SITENAME}} تەڭشىكىڭىزنى تەڭشەشنى ئۇنتۇپ قالماڭ]].',
 'yourname' => 'ئىشلەتكۈچى ئاتى:',
-'yourpassword' => 'پارول:',
+'yourpassword' => 'ئىم:',
 'yourpasswordagain' => 'ئاچقۇچنى قايتا بەسىڭ:',
 'remembermypassword' => 'بۇ كومپيۇتېردا كىرگىنىمنى ئەستە ساقلا(ئەڭ ئۇزۇن بولغاندا $1 {{PLURAL:$1|كۈن|كۈن}})',
-'securelogin-stick-https' => 'تىزىمغا كىرگەندىن كېيىن HTTPS باغلىنىشنى داۋاملاشتۇر',
 'yourdomainname' => 'دائىرە ئاتىڭىز:',
 'password-change-forbidden' => 'بۇ ۋىكىدىكى ئىمنى ئۆزگەرتەلمەيسىز.',
 'externaldberror' => 'بۇ سانداننى دەلىللەش خاتالىقى ياكى سىرتقى ھېساباتىڭىزنى يېڭىلاشنى چەكلىگەنلىكتىن بولغان بولۇشى مۇمكىن.',
@@ -504,7 +494,7 @@ $2',
 'userlogin-resetlink' => 'تىزىمغا كىرىش تەپسىلاتىنى ئۇنۇتتىڭىز؟',
 'createaccountmail' => 'ۋاقىتلىق ئىختىيارىي بىر ئېمنى ئىشلىتىدۇ ھەمدە تۆۋەندىكى بەلگىلەنگەن تورخەت ئادرېسىغا ئەۋەتىدۇ',
 'createaccountreason' => 'سەۋەب:',
-'badretype' => 'سىز كىرگۈزگەن پارول ماس كەلمىدى.',
+'badretype' => 'سىز كىرگۈزگەن ئىم ماس كەلمىدى.',
 'userexists' => 'كىرگۈزگەن ئىشلەتكۈچى ئاتى ئىشلىتىلىۋاتىدۇ.
 باشقا ئاتنى تاللاڭ.',
 'loginerror' => 'تىزىمغا كىرىش خاتالىقى',
@@ -534,15 +524,15 @@ cookies نى قوزغاتقانلىقىڭىزنى جەزملەڭ، بۇ بەتن
 كىرگۈزگىنىڭىزنى تەكشۈرۈڭ.',
 'nouserspecified' => 'ئىشلەتكۈچى ئاتىدىن بىرنى بەلگىلەڭ.',
 'login-userblocked' => 'بۇ ئىشلەتكۈچى چەكلەنگەن. تىزىمغا كىرىشكە يول قويۇلمايدۇ.',
-'wrongpassword' => 'كىرگۈزگەن پارول خاتا.
+'wrongpassword' => 'كىرگۈزگەن ئىم خاتا.
 قايتا سىناڭ.',
-'wrongpasswordempty' => 'پارول كىرگۈزمىدىڭىز
+'wrongpasswordempty' => 'ئىم كىرگۈزمىدىڭىز
 قايتا سىناڭ.',
 'passwordtooshort' => 'ئىم ئاز دېگەندە {{PLURAL:$1|1 ھەرپ|$1 ھەرپ}} بولۇشى لازىم.',
-'password-name-match' => 'پارولىڭىز ئىشلەتكۈچى نامىڭىزدىن پەرقلىنىشى لازىم.',
-'password-login-forbidden' => 'بۇ ئىشلەتكۈچى نامى ۋە پارول چەكلەنگەن.',
+'password-name-match' => 'ئىم ئىشلەتكۈچى ئاتىڭىزدىن پەرقلىنىشى لازىم.',
+'password-login-forbidden' => 'بۇ ئىشلەتكۈچى ئاتى ۋە ئىم چەكلەنگەن.',
 'mailmypassword' => 'يېڭى ئىمنى ئېخەتكە ئەۋەت',
-'passwordremindertitle' => '{{SITENAME}} ئۈچۈن يېڭى ۋاقىتلىق پارول',
+'passwordremindertitle' => '{{SITENAME}} ئۈچۈن يېڭى ۋاقىتلىق ئىم',
 'passwordremindertext' => 'باشقىلار (بەلكىم سىز، IP ئادرېسى $1)
 {{SITENAME}} بېكەتنىڭ يېڭى ئىم ($4) نى ئىلتىماس قىلدى .
  "$2" ئىشلەتكۈچىنىڭ يېڭى ۋاقىتلىق ئىمنى "$3" غا تەڭشىدى.
@@ -564,7 +554,7 @@ cookies نى قوزغاتقانلىقىڭىزنى جەزملەڭ، بۇ بەتن
 'mailerror' => 'ئېلخەت يوللىغاندا خاتالىق كۆرۈلدى:$1',
 'acct_creation_throttle_hit' => 'Wiki ئىشلىتىدىغان زىيارەتچى IP ئادرېسىڭىزنى ئىشلىتىپ {{PLURAL:$1|1 ھېسابات|$1 ھېسابات}} قۇردى.
 مۇشۇ پەيتتە يەنە ھېسابات قۇرالمايسىز.',
-'emailauthenticated' => 'ئېلخەت ئادرېسىڭىز $2 سائەت $3 دە دەلىللەندى.',
+'emailauthenticated' => 'ئېلخەت ئادرېسىڭىز $2 $3 ئىناۋەتلىك ئىكەنلىكى دەلىللەندى.',
 'emailnotauthenticated' => 'ئېلخەت ئادرېسىڭىز تېخى دەلىللەنمىدى.
 تۆۋەندىكى ئىقتىدارى ھېچقانداق ئېلخەت ئەۋەتمەيدۇ.',
 'noemailprefs' => 'بۇ ئىقتىدارنى ئىشلىتىش ئۈچۈن مايىللىق تەڭشىكىڭىزدە ئېلخەت ئادرېسى بەلگىلەڭ.',
@@ -593,32 +583,30 @@ cookies نى قوزغاتقانلىقىڭىزنى جەزملەڭ، بۇ بەتن
 'user-mail-no-body' => 'بوش ياكى مەزمۇنى قىسقا مۇۋاپىق بولمىغان تورخەت ئەۋەتىشنى سىنىدى.',
 
 # Change password dialog
-'resetpass' => 'پارولنى ئۆزگەرتىش',
+'resetpass' => 'ئىم ئۆزگەرت',
 'resetpass_announce' => 'سىز ۋاقىتلىق ئېلخەت جەزملەش كودىدا تىزىمغا كىرگەن.
 تىزىمغا كىرىشنى تاماملاشتا، بۇ جايدا يېڭى ئىم بەلگىلىشىڭىز لازىم:',
 'resetpass_text' => '<!-- بۇ يەرگە تېكست قوشۇڭ -->',
 'resetpass_header' => 'ھېسابات ئىمنى ئۆزگەرت',
-'oldpassword' => 'كونا پارول:',
-'newpassword' => 'يېڭى پارول:',
-'retypenew' => 'يېڭى پارولنى قايتا كىرگۈزۈڭ:',
-'resetpass_submit' => 'پارول بەلگىلەپ تىزىمغا كىرىڭ',
-'resetpass_success' => 'سىز ئىمنى مۇۋەپپەقىيەتلىك ئۆزگەرتتىڭىز!
+'oldpassword' => 'كونا ئىم:',
+'newpassword' => 'يېڭى ئىم:',
+'retypenew' => 'يېڭى ئىمنى قايتا كىرگۈزۈڭ:',
+'resetpass_submit' => 'ئىم بەلگىلەپ تىزىمغا كىرىڭ',
+'changepassword-success' => 'سىز ئىمنى مۇۋەپپەقىيەتلىك ئۆزگەرتتىڭىز!
  تىزىمغا كىرىۋاتىسىز…',
 'resetpass_forbidden' => 'ئىمنى ئۆزگەرتەلمىدى',
 'resetpass-no-info' => 'سىز تىزىمغا كىرگەندىن كېيىن بىۋاسىتە بۇ بەتكە كىرىشىڭىز لازىم.',
-'resetpass-submit-loggedin' => 'پارولنى ئۆزگەرتىش',
+'resetpass-submit-loggedin' => 'ئىم ئۆزگەرت',
 'resetpass-submit-cancel' => 'ۋاز كەچ',
 'resetpass-wrong-oldpass' => 'ۋاقىتلىق ياكى نۆۋەتتىكى ئىم ئىناۋەتسىز.
 
 ئىمنى ئاللىبۇرۇن ئۆزگەرتىپ بولدىڭىز ياكى يېڭى ۋاقىتلىق ئىم ئىلتىماس قىلدىڭىز.',
-'resetpass-temp-password' => 'ۋاقىتلىق پارول:',
+'resetpass-temp-password' => 'ۋاقىتلىق ئىم:',
 
 # Special:PasswordReset
 'passwordreset' => 'ئىمنى ئەسلىگە قايتۇرماق',
-'passwordreset-text' => 'بۇ جەدۋەل تاماملانسا ھېسابات تەپسىلاتىڭىزنى ئېلخەتىڭىزدە تاپشۇرۇۋالىسىز.',
 'passwordreset-legend' => 'ئىمنى ئەسلىگە قايتۇرماق',
 'passwordreset-disabled' => 'بۇ ۋىكىدا ئىمنى ئەسلىگە قايتۇرۇش چەكلەنگەن.',
-'passwordreset-pretext' => '{{PLURAL:$1||تۆۋەندىكى سانلىق مەلۇماتتىن بىرنى كىرگۈزۈڭ}}',
 'passwordreset-username' => 'ئىشلەتكۈچى ئاتى:',
 'passwordreset-domain' => 'دائىرە:',
 'passwordreset-capture' => 'ھاسىل قىلىنغان ئېلخەتنى كۆرسىتەمدۇ؟',
@@ -656,7 +644,7 @@ $2
 'changeemail-oldemail' => 'نۆۋەتتىكى ئېلخەت ئادرېسى:',
 'changeemail-newemail' => 'يېڭى ئېلخەت ئادرېسى:',
 'changeemail-none' => '(يوق)',
-'changeemail-password' => '{{SITENAME}} دىكى پارولىڭىز:',
+'changeemail-password' => '{{SITENAME}} دىكى ئىم:',
 'changeemail-submit' => 'ئېلخەت ئۆزگەرت',
 'changeemail-cancel' => 'ۋاز كەچ',
 
@@ -737,7 +725,7 @@ $2
 'loginreqtitle' => 'تىزىمغا كىرىڭ',
 'loginreqlink' => 'تىزىمغا كىر',
 'loginreqpagetext' => '$1 بولغاندىلا ئاندىن باشقا بەتلەرنى كۆرەلەيسىز.',
-'accmailtitle' => 'پارول يوللاندى.',
+'accmailtitle' => 'ئىم يوللاندى.',
 'accmailtext' => "[[User talk:$1|$1]] ئىختىيارىي قۇرۇلغان ئىم  $2 غا يوللاندى.
 
 يېڭى ھېساباتقا قۇرغان ئىمنى تىزىمغا كىرىپ''[[Special:ChangePassword|ئىم ئۆزگەرت]]'' بېتىدىن ئۆزگەرتەلەيسىز.",
@@ -934,8 +922,8 @@ $3 تەمىنلىگەن چەكلەش سەۋەبى ''$2''",
  '''{{int:minoreditletter}}''' ئازراقلا ئۆزگەرتىش.",
 'history-fieldset-title' => 'كۆز يۈگۈرتۈش تارىخى',
 'history-show-deleted' => 'ئۆچۈرۈلگەنلا',
-'histfirst' => 'ئەڭ كونا',
-'histlast' => 'ئەڭ يېڭى',
+'histfirst' => 'تۇنجى',
+'histlast' => 'ئاخىرقى',
 'historysize' => '$1 {{PLURAL:$1|بايت|بايت}}',
 'historyempty' => '(بوش)',
 
@@ -1001,7 +989,7 @@ $3 تەمىنلىگەن چەكلەش سەۋەبى ''$2''",
 'revdelete-hide-image' => 'ھۆججەت مەزمۇنىنى يوشۇر',
 'revdelete-hide-name' => 'مەشغۇلات ۋە نىشاننى يوشۇر',
 'revdelete-hide-comment' => 'تەھرىر ئىزاھاتىنى يوشۇر',
-'revdelete-hide-user' => 'تەھرىرلىگۈچىنىڭ نامى/IP ئادرېسىنى يوشۇر',
+'revdelete-hide-user' => 'تەھرىرلىگۈچىنىڭ ئىشلەتكۈچى ئاتى/IP ئادرېس يوشۇر',
 'revdelete-hide-restricted' => 'مەشغۇلاتچى ۋە باشقا ئىشلەتكۈچىنىڭ سانلىق مەلۇمات كۆرۈشىنىمۇ چەكلە',
 'revdelete-radio-same' => '(ئۆزگەرتمە)',
 'revdelete-radio-set' => 'ھەئە',
@@ -1113,7 +1101,6 @@ $1",
 'searchmenu-legend' => 'ئىزدەش تاللانما',
 'searchmenu-exists' => "'''بۇ wiki دا  \"[[:\$1]]\" ئاتلىق بەت بار '''",
 'searchmenu-new' => "'''بۇ wiki دا  \"[[:\$1]]\" ئاتلىق بەت قۇر!'''",
-'searchhelp-url' => 'Help:مەزمۇنلار',
 'searchmenu-prefix' => '[[Special:PrefixIndex/$1| بۇنى ئالدى قوشۇلغۇچى قىلغان بەتكە كۆز يۈگۈرت ]]',
 'searchprofile-articles' => 'مەزمۇن بېتى',
 'searchprofile-project' => 'ياردەم ۋە قۇرۇلۇش بەتلەر',
@@ -1135,7 +1122,7 @@ $1",
 'search-interwiki-default' => '$1 نەتىجە:',
 'search-interwiki-more' => '(تېخىمۇ كۆپ)',
 'search-relatedarticle' => 'ئالاقىدار',
-'mwsuggest-disable' => 'ئىزدەش تەكلىپىنى چەكلە',
+'mwsuggest-disable' => 'AJAX تەكلىپىنى چەكلە',
 'searcheverything-enable' => 'ھەممە ئات بوشلۇقىدىن ئىزدە',
 'searchrelated' => 'ئالاقىدار',
 'searchall' => 'ھەممىسى',
@@ -1157,22 +1144,13 @@ $1",
 'searchdisabled' => '{{SITENAME}} نىڭ ئىزدىشى چەكلەنگەن. سىز ھازىرچە Google ئىشلىتىپ ئىزدەپ تۇرۇڭ،.
 دىققەت ئۇلار ئىندېكسلىغان {{SITENAME}} مەزمۇنىنىڭ ۋاقتى ئۆتكەن بولۇشى مۇمكىن.',
 
-# Quickbar
-'qbsettings' => 'تېز يولباشچى ستونى',
-'qbsettings-none' => 'يوق',
-'qbsettings-fixedleft' => 'سول تەرەپ مۇقىم',
-'qbsettings-fixedright' => 'ئوڭ تەرەپ مۇقىم',
-'qbsettings-floatingleft' => 'سول تەرەپ لەيلىمە',
-'qbsettings-floatingright' => 'ئوڭ تەرەپ لەيلىمە',
-'qbsettings-directionality' => 'تىلىڭىزدىكى تېكىست ۋە قوليازمىنىڭ يۆنىلىشىگە ئاساسەن مۇقىملاشتۇرىدۇ.',
-
 # Preferences page
 'preferences' => 'مايىللىق',
 'mypreferences' => 'مايىللىق',
 'prefs-edits' => 'تەھرىر سانى:',
 'prefsnologin' => 'تىزىمغا كىرمىدى',
 'prefsnologintext' => 'سىز ئالدى بىلەن <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} تىزىمغا كىر]</span>سىڭىز ئاندىن ئىشلەتكۈچى مايىللىقنى تەڭشىيەلەيسىز.',
-'changepassword' => 'پارولنى ئۆزگەرتىش',
+'changepassword' => 'ئىم ئۆزگەرت',
 'prefs-skin' => 'تېرە',
 'skin-preview' => 'ئالدىن كۆزەت',
 'datedefault' => 'مايىللىق يوق',
@@ -1189,7 +1167,7 @@ $1",
 'prefs-watchlist-edits-max' => 'ئەڭ كۆپ سانى: 1000',
 'prefs-watchlist-token' => 'كۆزەت تىزىملىك نىشانى:',
 'prefs-misc' => 'ئارىلاشما تۈر',
-'prefs-resetpass' => 'پارولنى ئۆزگەرتىش',
+'prefs-resetpass' => 'ئىم ئۆزگەرت',
 'prefs-changeemail' => 'ئېلخەت ئۆزگەرت',
 'prefs-setemail' => 'ئېلخەت ئادرېس تەڭشەك',
 'prefs-email' => 'ئېلخەت تاللانما',
@@ -1198,7 +1176,6 @@ $1",
 'resetprefs' => 'ساقلىمىغان ئۆزگەرتىشلەرنى تازىلا',
 'restoreprefs' => 'بارلىق كۆڭۈلدىكى تەڭشەكنى ئەسلىگە كەلتۈر',
 'prefs-editing' => 'تەھرىرلەۋاتىدۇ',
-'prefs-edit-boxsize' => 'تەھرىرلەش كۆزنىكىنىڭ چوڭلۇقى',
 'rows' => 'قۇر:',
 'columns' => 'ستون:',
 'searchresultshead' => 'ئىزدە',
@@ -1209,9 +1186,6 @@ $1",
 'recentchangesdays-max' => 'ئەڭ چوڭ $1 {{PLURAL:$1|كۈن|كۈن}}',
 'recentchangescount' => 'كۆرسىتىدىغان تەھرىرنىڭ كۆڭۈلدىكى سانى:',
 'prefs-help-recentchangescount' => 'بۇ يېقىنقى ئۆزگەرتىش، بەت تارىخى ۋە خاتىرىنى ئۆز ئىچىگە ئالىدۇ،',
-'prefs-help-watchlist-token' => 'بۇ سۆز بۆلىكىگە تولدۇرغان شىفىرلىق ئاچقۇچ كۆزەت تىزىملىكىڭىزنىڭ RSS قانىلىنى ھاسىل قىلالايدۇ.
-بۇ سۆز بۆلىكىنىڭ شىفىرلىق ئاچقۇچىنى بىلىدىغان ھەر قانداق كىشى سىزنىڭ كۆزەت تىزىملىكىڭىزنى ئوقۇيالايدۇ، شۇڭلاشقا بىخەتەر قىممەت ئىشلىتىڭ.
-بۇ جايدا ئىختىيارى ھاسىل قىلىنغان سانلىق قىممەت پايدىلىنىشىڭىز ئۈچۈن تەمىنلەندى: $1',
 'savedprefs' => 'مايىللىق تەڭشىكىڭىز ساقلاندى.',
 'timezonelegend' => 'ۋاقىت رايونى:',
 'localtime' => 'يەرلىك ۋاقىت:',
@@ -1242,7 +1216,6 @@ $1",
 'prefs-reset-intro' => 'سىز بۇ بەتنى ئىشلىتىپ تەڭشەكلىرىڭىزنى تور بېكەتنىڭ كۆڭۈلدىكى قىممىتىگە تەڭشىيەلەيسىز.
 بۇ مەشغۇلاتتىن يانغىلى بولمايدۇ.',
 'prefs-emailconfirm-label' => 'ئېلخەت جەزملەش:',
-'prefs-textboxsize' => 'تەھرىر كۆزنەك چوڭلۇقى',
 'youremail' => 'ئېلخەت:',
 'username' => '{{GENDER:$1|ئىشلەتكۇچى ئىسمى}}:',
 'uid' => '{{GENDER:$1|ئىشلەتكۇچى}} كىملىك:',
@@ -1484,7 +1457,7 @@ HTML بەلگىسىنى تەكشۈرۈڭ.',
 'rc-change-size' => '$1',
 'rc-change-size-new' => 'ئۆزگەرتكەندىن كېيىن $1 {{PLURAL:$1|بايت}}',
 'newsectionsummary' => '* $1 * يېڭى ئابزاس',
-'rc-enhanced-expand' => 'تەپسىلاتىنى كۆرسەت',
+'rc-enhanced-expand' => 'تەپسىلاتىنى كۆرسەت (JavaScript قوللىشى زۆرۈر)',
 'rc-enhanced-hide' => 'تەپسىلاتىنى يوشۇر',
 'rc-old-title' => 'ئەڭ دەسلەپتە "$1" سۈپىتىدە قۇرۇلغان',
 
@@ -1493,7 +1466,6 @@ HTML بەلگىسىنى تەكشۈرۈڭ.',
 'recentchangeslinked-feed' => 'مۇناسىۋەتلىك ئۆزگەرتىشلەر',
 'recentchangeslinked-toolbox' => 'مۇناسىۋەتلىك ئۆزگەرتىشلەر',
 'recentchangeslinked-title' => '"$1" مۇناسىۋەتلىك ئۇلانما ئۆزگەردى',
-'recentchangeslinked-noresult' => 'بېرىلگەن ۋاقىتتا ئۇلانغان بەتلەردە ئۆزگىرىش يوق.',
 'recentchangeslinked-summary' => "بۇ ئالاھىدە بەت يۈزى كۆرسەتكەن بەتتىن ئۇلىنىپ چىققان يېقىنقى ئۆزگەرتىش تىزىملىكى (ياكى ئالاھىدە تۈرنىڭ ئەزاسى).
  [[Special:Watchlist|كۆزەت تىزىملىكىڭىز]] دىكى بەت يۈزى '''توم''' كۆرسىتىلىدۇ.",
 'recentchangeslinked-page' => 'بەت ئاتى:',
@@ -1727,7 +1699,6 @@ https://www.mediawiki.org/wiki/Manual:Image_Authorization',
 'http-read-error' => 'HTTP ئوقۇش خاتالىقى.',
 'http-timed-out' => 'HTTP ئىلتىماسى ۋاقىت ھالقىدى.',
 'http-curl-error' => 'URL ئاجراتقاندا خاتالىق كۆرۈلدى: $1',
-'http-host-unreachable' => 'URL غا ئۇلىشالمىدى.',
 'http-bad-status' => 'HTTP ئىلتىماس قىلغاندا مەسىلە كۆرۈلدى: $1 $2',
 
 # Some likely curl errors. More could be added from <http://curl.haxx.se/libcurl/c/libcurl-errors.html>
@@ -1880,12 +1851,6 @@ URL نىڭ توغرىلىقى ۋە تور بېكەتنى زىيارەت قىلى
 'statistics-users-active' => 'ئاكتىپ ئىشلەتكۈچى',
 'statistics-users-active-desc' => 'ئالدىنقى {{PLURAL:$1|كۈن|$1 كۈن}} دىكى مەشغۇلات قىلغان ئىشلەتكۈچىلەر',
 'statistics-mostpopular' => 'ئەڭ كۆپ كۆرۈلگەن بەتلەر',
-
-'disambiguations' => 'ئىككى بىسلىق بەتكە ئۇلانغلىكبەتلەر.',
-'disambiguationspage' => 'Template:ئىككى بىسلىق بەت',
-'disambiguations-text' => "تۆۋەندىكى بەتلەر '''ئىككى بىسلىق بەت'''كە ئۇلانغان.
-ئەمما ئۇلار مۇۋاپىق ماۋزۇغا ئۇلىنىشى كېرەك ئىدى.<br />
-ئەگەر بىر بەت [[MediaWiki:Disambiguationspage]] غا ئۇلانغان بولسا ئىككى بىسلىق بەت دەپ قارىلىدۇ.",
 
 'doubleredirects' => 'قوش قايتا نىشانلانغان بەت',
 'doubleredirectstext' => 'بۇ بەتتە قايتا نىشانلانغان بەت يەنە بىر قايتا نىشانلانغان بەتنى نىشانغانلىق تىزىملىكى كۆرسىتىلدى.
@@ -2137,10 +2102,9 @@ URL نىڭ توغرىلىقى ۋە تور بېكەتنى زىيارەت قىلى
 'unwatchthispage' => 'كۆزەتنى توختات',
 'notanarticle' => 'مەزمۇن بېتى ئەمەس',
 'notvisiblerev' => 'تۈزىتىلگەن نەشرى ئۆچۈرۈلدى',
-'watchnochange' => 'كۆرسەتكەن ۋاقىت بۆلىكىدە سىزنىڭ كۆزەت بېتىڭىزدە ئۆزگىرىش بولمىدى.',
 'watchlist-details' => 'كۆزەت تىزىملىكىڭىزدە {{PLURAL:$1|$1 بەت|$1 بەت}}  بار، مۇنازىرە بېتىنى ئۆز ئىچىگە ئالمايدۇ.',
-'wlheader-enotif' => '* ئېلخەتتە ئەسكەرتىش ئىقتىدارى قوزغىتىلدى.',
-'wlheader-showupdated' => "* سىز ئالدىنقى قېتىم كۆرگەندىن كېيىن ئۆزگەرتىلگەن بەتلەر '''توم''' كۆرۈنىدۇ",
+'wlheader-enotif' => 'ئېلخەتتە ئەسكەرتىش ئىقتىدارى قوزغىتىلدى.',
+'wlheader-showupdated' => "سىز ئالدىنقى قېتىم كۆرگەندىن كېيىن ئۆزگەرتىلگەن بەتلەر '''توم''' كۆرۈنىدۇ",
 'watchmethod-recent' => 'كۆزىتىۋاتقان بەتنىڭ يېقىنقى ئۆزگەرتىشىنى تەكشۈر',
 'watchmethod-list' => 'كۆزىتىۋاتقان بەتنىڭ يېقىنقى ئۆزگەرتىشىنى تەكشۈر',
 'watchlistcontains' => 'كۆزەت تىزىملىكىڭىزدە $1 {{PLURAL:$1|بەت|بەت}} بار.',
@@ -2395,7 +2359,7 @@ $1',
 'mycontris' => 'تۆھپە',
 'contribsub2' => '$1 نىڭ تۆھپىسى ($2)',
 'nocontribs' => 'بۇ ئۆلچەمگە ماس كېلىدىغان ئۆزگەرتىش تېپىلمىدى.',
-'uctop' => '(نۆۋەتتىكى)',
+'uctop' => '(ئۈستى)',
 'month' => 'ئايدىن بۇيان (ياكى ئىلگىرى):',
 'year' => 'يىلدىن بۇيان (ياكى ئىلگىرى):',
 
@@ -2554,12 +2518,9 @@ $1',
 ئەمما ئۇ $2 نىڭ چەكلەش دائىرىسى ئىچىدە، بۇ دائىرىنى چەكلەشتىن بىكار قىلغىلى بولىدۇ.',
 'ip_range_invalid' => 'IP دائىرىسى ئىناۋەتسىز.',
 'ip_range_toolarge' => '/$1 دىن چوڭ بولغان چەكلەش دائىرىسىگە يول قويۇلمايدۇ.',
-'blockme' => 'مېنى چەكلە',
 'proxyblocker' => 'ۋاكالەتچىنى چەكلىگۈچى',
-'proxyblocker-disabled' => 'بۇ ئىقتىدار چەكلەنگەن.',
 'proxyblockreason' => 'IP ئادرېسىڭىز ئوچۇق ۋاكالەتچى، ئۇ ئاللىبۇرۇن چەكلەنگەن.
 ئىنتېرنېت مۇلازىمىتى تەمىنلىگۈچى سودىگەر ياكى تېخنىكىلىق قوللىغۇچى بىلەن ئالاقىلىشىڭ ھەمدە ئۇلارغا بۇ ئېغىر بىخەتەرلىك مەسىلىسىنى ئۇقتۇرۇڭ.',
-'proxyblocksuccess' => 'تامام',
 'sorbs' => 'DNSBL',
 'sorbsreason' => 'IP ئادرېسىڭىز {{SITENAME}} دا DNSBL تەرىپىدىن ئوچۇق ۋاكالەتچى تىزىملىكىگە قوشۇلغان.',
 'sorbs_create_account_reason' => 'IP ئادرېسىڭىز {{SITENAME}} دا DNSBL تەرىپىدىن ئوچۇق ۋاكالەتچى تىزىملىكىگە قوشۇلغان.
@@ -2717,7 +2678,7 @@ $1',
 'allmessagesdefault' => 'كۆڭۈلدىكى ئۇچۇر تېكستى',
 'allmessagescurrent' => 'نۆۋەتتىكى ئۇچۇر تېكستى',
 'allmessagestext' => 'بۇ جايدا تەڭشىگىلى بولىدىغان ھەممە سىستېما كۆرۈنۈش ئۇچۇرلىرى كۆرسىتىلدى.
-ئەگەر ھەقىقىي يەرلەشتۈرۈلگەن MediaWiki غا تۆھپە قوشماقچى بولسىڭىز[https://www.mediawiki.org/wiki/Localisation MediaWiki يەرلىكلەشتۈرۈش] ۋە [//translatewiki.net translatewiki.net] نى زىيارەت قىلىڭ.',
+ئەگەر ھەقىقىي يەرلەشتۈرۈلگەن MediaWiki غا تۆھپە قوشماقچى بولسىڭىز[//www.mediawiki.org/wiki/Localisation MediaWiki يەرلىكلەشتۈرۈش] ۋە [//translatewiki.net translatewiki.net] نى زىيارەت قىلىڭ.',
 'allmessagesnotsupportedDB' => "بۇ بەتنى ئىشلەتكىلى بولمايدۇ، سەۋەبى '''\$wgUseDatabaseMessages''' چەكلەنگەن.",
 'allmessages-filter-legend' => 'سۈزگۈچ',
 'allmessages-filter' => 'ئىختىيارىچە سۈزگۈچ ھالىتى:',
@@ -2887,13 +2848,8 @@ $1',
 
 # Stylesheets
 'common.css' => '/* CSS placed here will be applied to all skins */',
-'standard.css' => '/* CSS placed here will affect users of the Standard skin */',
-'nostalgia.css' => '/* CSS placed here will affect users of the Nostalgia skin */',
 'cologneblue.css' => '/* CSS placed here will affect users of the Cologne Blue skin */',
 'monobook.css' => '/* CSS placed here will affect users of the Monobook skin */',
-'myskin.css' => '/* CSS placed here will affect users of the MySkin skin */',
-'chick.css' => '/* CSS placed here will affect users of the Chick skin */',
-'simple.css' => '/* CSS placed here will affect users of the Simple skin */',
 'modern.css' => '/* CSS placed here will affect users of the Modern skin */',
 'vector.css' => '/* CSS placed here will affect users of the Vector skin */',
 'print.css' => '/* CSS placed here will affect the print output */',
@@ -2905,13 +2861,8 @@ $1',
 
 # Scripts
 'common.js' => '/* Any JavaScript here will be loaded for all users on every page load. */',
-'standard.js' => '/* Any JavaScript here will be loaded for users using the Standard skin */',
-'nostalgia.js' => '/* Any JavaScript here will be loaded for users using the Nostalgia skin */',
 'cologneblue.js' => '/* Any JavaScript here will be loaded for users using the Cologne Blue skin */',
 'monobook.js' => '/* Any JavaScript here will be loaded for users using the MonoBook skin */',
-'myskin.js' => '/* Any JavaScript here will be loaded for users using the MySkin skin */',
-'chick.js' => '/* Any JavaScript here will be loaded for users using the Chick skin */',
-'simple.js' => '/* Any JavaScript here will be loaded for users using the Simple skin */',
 'modern.js' => '/* Any JavaScript here will be loaded for users using the Modern skin */',
 'vector.js' => '/* Any JavaScript here will be loaded for users using the Vector skin */',
 'group-autoconfirmed.js' => '/* Any JavaScript here will be loaded for autoconfirmed users only */',
@@ -2957,8 +2908,8 @@ $1',
 'pageinfo-article-id' => 'بەت ID',
 'pageinfo-language' => 'بەت مەزمۇن تىلى',
 'pageinfo-robot-policy' => 'ئىزدەش ماتور ھالىتى',
-'pageinfo-robot-index' => 'چەكلەنمىگەن',
-'pageinfo-robot-noindex' => 'چەكلەنگەن',
+'pageinfo-robot-index' => 'ئىندېكىسلاشچان',
+'pageinfo-robot-noindex' => 'ئىندېكىسلانمايدىغان',
 'pageinfo-views' => 'كۆرۈنۈش سانى',
 'pageinfo-watchers' => 'بەت كۆزەتكۈچىلەر سانى',
 'pageinfo-redirects-name' => 'بۇ بەتكە قايتا نىشانلايدۇ',
@@ -2991,13 +2942,8 @@ $1',
 'pageinfo-category-files' => 'ھۆججەت سانى',
 
 # Skin names
-'skinname-standard' => 'Classic',
-'skinname-nostalgia' => 'Nostalgia',
 'skinname-cologneblue' => 'Cologne Blue',
 'skinname-monobook' => 'MonoBook',
-'skinname-myskin' => 'MySkin',
-'skinname-chick' => 'Chick',
-'skinname-simple' => 'Simple',
 'skinname-modern' => 'Modern',
 'skinname-vector' => 'Vector',
 
@@ -3148,7 +3094,7 @@ Variants for Chinese language
 * gpslongitude
 * gpsaltitude',
 
-# EXIF tags
+# Exif tags
 'exif-imagewidth' => 'كەڭلىك',
 'exif-imagelength' => 'ئېگىزلىك',
 'exif-bitspersample' => 'ھەر بىر نۇقتىنىڭ بىت سانى',
@@ -3326,14 +3272,14 @@ Variants for Chinese language
 'exif-originalimageheight' => 'كېسىشتىن ئىلگىرىكى سۈرەتنىڭ ئېگىزلىكى',
 'exif-originalimagewidth' => 'كېسىشتىن ئىلگىرىكى سۈرەتنىڭ كەڭلىكى',
 
-# EXIF attributes
+# Exif attributes
 'exif-compression-1' => 'پرىسلانمىغان',
 'exif-compression-2' => 'CCITT 3-گۇرۇپپا بىر ئۆلچەملىك ئۆزگەرتىلگەن خۇفمان ئىجرا كودلىنىشى',
 'exif-compression-3' => 'CCITT نىڭ 3-گۇرۇپپا فاكس كودلىنىشى',
 'exif-compression-4' => 'CCITT نىڭ 4-گۇرۇپپا فاكس كودلىنىشى',
 
 'exif-copyrighted-true' => 'نەشر ھوقۇقى',
-'exif-copyrighted-false' => 'نەشىر ھوقۇقى ھالىتى بېكىتىلمىگەن',
+'exif-copyrighted-false' => 'ئاممىۋى دائىرە',
 
 'exif-unknowndate' => 'نامەلۇم چېسلا',
 
@@ -3539,7 +3485,7 @@ Variants for Chinese language
 
 # External editor support
 'edit-externally' => 'بۇ ھۆججەتنى سىرتقى قوللىنىشچان پروگراممىدا تەھرىرلە',
-'edit-externally-help' => '( [https://www.mediawiki.org/wiki/Manual:External_editors تەڭشەك قەدىمى] نى كۆرۈپ تەپسىلاتىنى چۈشىنىڭ)',
+'edit-externally-help' => '( [//www.mediawiki.org/wiki/Manual:External_editors تەڭشەك قەدىمى] نى كۆرۈپ تەپسىلاتىنى چۈشىنىڭ)',
 
 # 'all' in various places, this might be different for inflected languages
 'watchlistall2' => 'ھەممىسى',
@@ -3717,14 +3663,13 @@ $5
 'version-other' => 'باشقا',
 'version-mediahandlers' => 'ۋاسىتە بىر تەرەپ قىلغۇچ',
 'version-hooks' => 'ئىلمەك',
-'version-extension-functions' => 'تەھلىلچى فونكسىيە',
 'version-parser-extensiontags' => 'تەھلىلچى كېڭەيتىلمە خەتكۈچ',
 'version-parser-function-hooks' => 'تەھلىلچى فونكسىيە ئىلمىكى',
 'version-hook-name' => 'ئىلمەك ئاتى',
 'version-hook-subscribedby' => 'ئىمزا قويغۇچى',
 'version-version' => '(نەشرى $1)',
 'version-license' => 'ئىجازەتنامە',
-'version-poweredby-credits' => "بۇ ۋىكىنى '''[https://www.mediawiki.org/ MediaWiki]''' تېخنىكىلىق قوللايدۇ، نەشر ھوقۇقى © 2001-$1 $2",
+'version-poweredby-credits' => "بۇ ۋىكىنى '''[//www.mediawiki.org/ MediaWiki]''' تېخنىكىلىق قوللايدۇ، نەشر ھوقۇقى © 2001-$1 $2",
 'version-poweredby-others' => 'باشقا',
 'version-credits-summary' => 'تۆۋەندىكى كىشىنىڭ [[Special:Version|MediaWiki]] غا تۆھپە قوشقانلىقىغا رەھمەت ئېيتىمىز.',
 'version-license-info' => 'MediaWiki ئەركىن يۇمشاق دېتال؛ سىز ئەركىن يۇمشاق دېتال ۋەخپىسىنىڭ ئېلان قىلغان GNU ئاممىباپ ئاممىۋى ئىجازەت ماددىلىرىدىكى بەلگىمىلەرگە ئاساسەن، بۇ پىروگراممىنى قايتا تارقىتىپ ياكى ئۆزگەرتەلەيسىز؛ مەيلى سىز مەزكۇر ئىجازەتنامىنىڭ ئىككىنچى نەشرى ياكى (ئۆزىڭىز تاللىغان) خالىغان كۈندە تارقىتىلغان نەشرىنى ئاساس قىلسىڭىز بولۇۋېرىدۇ.
@@ -3738,13 +3683,6 @@ MediaWiki ئىشلىتىش مەقسىتىنى ئاساس قىلىپ ئېلان �
 'version-entrypoints' => 'كىرىش نۇقتىسىنىڭ URL لىرى',
 'version-entrypoints-header-entrypoint' => 'كىرىش نۇقتىسى',
 'version-entrypoints-header-url' => 'URL',
-
-# Special:FilePath
-'filepath' => 'ھۆججەت يولى',
-'filepath-page' => 'ھۆججەت:',
-'filepath-submit' => 'يۆتكەل',
-'filepath-summary' => '!بۇ ئالاھىدە بەت ھۆججەتنىڭ تولۇق يولىنى قايتۇرىدۇ.
-سۈرەت تولۇق ئېنىقلىقتا كۆرسىتىلىدۇ، باشقا ھۆججەت تىپى بىۋاسىتە ئۇلانغان قوللىنىشچان پروگراممىدا ئېچىلىدۇ',
 
 # Special:FileDuplicateSearch
 'fileduplicatesearch' => 'تەكرار ھۆججەت ئىزدە',
@@ -3840,8 +3778,8 @@ MediaWiki ئىشلىتىش مەقسىتىنى ئاساس قىلىپ ئېلان �
 'sqlite-no-fts' => '$1 پۈتۈن تېكست ئىزدەشنى قوللىمايدۇ',
 
 # New logging system
-'logentry-delete-delete' => '$1 $3 بەتنى {{GENDER:$2|ئۆچۈرىۋەتتى}}',
-'logentry-delete-restore' => '$1 $3 بەتنى {{GENDER:$2|ئەسلىگە قايتۇردى}}',
+'logentry-delete-delete' => '$1 $3 بەتنى ئۆچۈرەتتى',
+'logentry-delete-restore' => '$1 $3 بەتنى ئەسلىگە قايتۇردى',
 'logentry-delete-event' => '$1 ئىشلەتكۈچى $3 دىكى {{PLURAL:$5|خاتىرە ھادىسە}}سىنىڭ كۆۈنۈشچانلىقىنى ئۆزگەرتتى: $4',
 'logentry-delete-revision' => '$1 ئىشلەتكۈچى $3 بەتتىكى {{PLURAL:$5|تۈزىتىلگەن نەشرى}}نىڭ كۆرۈنۈشچانلىقىنى ئۆزگەرتتى: $4',
 'logentry-delete-event-legacy' => '$3 دىكى خاتىرە كۆرۈنۈشچانلىقنى $1 ئۆزگەرتتى',

@@ -177,15 +177,18 @@ class DjVuHandler extends ImageHandler {
 		$srcPath = $image->getLocalRefPath();
 		# Use a subshell (brackets) to aggregate stderr from both pipeline commands
 		# before redirecting it to the overall stdout. This works in both Linux and Windows XP.
-		$cmd = '(' . wfEscapeShellArg( $wgDjvuRenderer ) . " -format=ppm -page={$page}" .
-			" -size={$params['physicalWidth']}x{$params['physicalHeight']} " .
-			wfEscapeShellArg( $srcPath );
+		$cmd = '(' . wfEscapeShellArg(
+			$wgDjvuRenderer,
+			"-format=ppm",
+			"-page={$page}",
+			"-size={$params['physicalWidth']}x{$params['physicalHeight']}",
+			$srcPath );
 		if ( $wgDjvuPostProcessor ) {
 			$cmd .= " | {$wgDjvuPostProcessor}";
 		}
 		$cmd .= ' > ' . wfEscapeShellArg( $dstPath ) . ') 2>&1';
 		wfProfileIn( 'ddjvu' );
-		wfDebug( __METHOD__.": $cmd\n" );
+		wfDebug( __METHOD__ . ": $cmd\n" );
 		$retval = '';
 		$err = wfShellExec( $cmd, $retval );
 		wfProfileOut( 'ddjvu' );
@@ -246,24 +249,23 @@ class DjVuHandler extends ImageHandler {
 			$image->dejaMetaTree = false;
 			$image->djvuTextTree = false;
 			$tree = new SimpleXMLElement( $metadata );
-			if( $tree->getName() == 'mw-djvu' ) {
-				foreach( $tree->children() as $b ) {
-					if( $b->getName() == 'DjVuTxt' ) {
+			if ( $tree->getName() == 'mw-djvu' ) {
+				foreach ( $tree->children() as $b ) {
+					if ( $b->getName() == 'DjVuTxt' ) {
 						$image->djvuTextTree = $b;
-					}
-					elseif ( $b->getName() == 'DjVuXML' ) {
+					} elseif ( $b->getName() == 'DjVuXML' ) {
 						$image->dejaMetaTree = $b;
 					}
 				}
 			} else {
 				$image->dejaMetaTree = $tree;
 			}
-		} catch( Exception $e ) {
+		} catch ( Exception $e ) {
 			wfDebug( "Bogus multipage XML metadata on '{$image->getName()}'\n" );
 		}
 		wfRestoreWarnings();
 		wfProfileOut( __METHOD__ );
-		if( $gettext ) {
+		if ( $gettext ) {
 			return $image->djvuTextTree;
 		} else {
 			return $image->dejaMetaTree;
@@ -294,7 +296,7 @@ class DjVuHandler extends ImageHandler {
 	}
 
 	function isMetadataValid( $image, $metadata ) {
-		return !empty( $metadata ) && $metadata != serialize(array());
+		return !empty( $metadata ) && $metadata != serialize( array() );
 	}
 
 	function pageCount( $image ) {
@@ -311,7 +313,7 @@ class DjVuHandler extends ImageHandler {
 			return false;
 		}
 
-		$o = $tree->BODY[0]->OBJECT[$page-1];
+		$o = $tree->BODY[0]->OBJECT[$page - 1];
 		if ( $o ) {
 			return array(
 				'width' => intval( $o['width'] ),
@@ -328,7 +330,7 @@ class DjVuHandler extends ImageHandler {
 			return false;
 		}
 
-		$o = $tree->BODY[0]->PAGE[$page-1];
+		$o = $tree->BODY[0]->PAGE[$page - 1];
 		if ( $o ) {
 			$txt = $o['value'];
 			return $txt;
