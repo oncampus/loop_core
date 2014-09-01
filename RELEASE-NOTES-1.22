@@ -3,11 +3,112 @@
 Security reminder: MediaWiki does not require PHP's register_globals. If you
 have it on, turn it '''off''' if you can.
 
+== MediaWiki 1.22.10 ==
+
+This is a maintenance release of the MediaWiki 1.22 branch.
+
+=== Changes since 1.22.9 ===
+
+* (bug 64970) Fix support for blobs on DatabaseOracle::update
+* (bug 60719) In MediaWiki 1.22, the job queue execution on each page
+  request was changed (Gerrit change 59797) so, instead of executing
+  the job inside the same PHP process that's rendering the page, a new
+  PHP cli command is spawned to execute runJobs.php in the
+  background. It will only work if $wgPhpCli is set to an actual path
+  or safe mode is off, otherwise, the old method will be used.
+
+  https://www.mediawiki.org/wiki/Manual:Job_queue#Changes_introduced_in_MediaWiki_1.22
+  for more infomation.  This change was in earlier releases of 1.22
+  but was not noted here until now.
+
+== MediaWiki 1.22.9 ==
+
+This is a security and maintenance release of the MediaWiki 1.22 branch.
+
+=== Changes since 1.22.8 ===
+
+* (bug 68187) SECURITY: Prepend jsonp callback with comment.
+* (bug 66608) SECURITY: Fix for XSS issue in bug 66608: Generate the URL used
+  for loading a new page in Javascript,instead of relying on the URL in the link
+  that has been clicked.
+* (bug 65778) SECURITY: Copy prevent-clickjacking between OutputPage and
+  ParserOutput.
+* (bug 59147) The img_metadata field was not being decoded from bytea into text.
+
+== MediaWiki 1.22.8 ==
+
+This is a security and maintenance release of the MediaWiki 1.22 branch.
+
+=== Changes since 1.22.7 ===
+
+* (bug 65839) SECURITY: Prevent external resources in SVG files.
+* (bug 66428) MimeMagic: Don't seek before BOF. This has weird side effects
+  like only extracting the tail of the file partially or not at all.
+
+== MediaWiki 1.22.7 ==
+
+This is a security and maintenance release of the MediaWiki 1.22 branch.
+
+=== Changes since 1.22.6 ===
+
+* (bug 65501) SECURITY: Don't parse usernames as wikitext on
+  Special:PasswordReset.
+* (bug 36356) Add space between two feed links.
+* (bug 63269) Email notifications were not correctly handling the
+  [[MediaWiki:Helppage]] message being set to a full URL. This is a regression
+  from the 1.22.5 point release, which made the default value for it a URL.
+  If you customized [[MediaWiki:Enotif body]] (the text of email notifications),
+  you'll need to edit it locally to include the URL via the new variable
+  $HELPPAGE instead of the parser functions fullurl and canonicalurl; otherwise
+  you don't have to do anything.
+* Add missing uploadstash.us_props for PostgreSQL.
+* (bug 56047) Fixed stream wrapper in PhpHttpRequest.
+
+== MediaWiki 1.22.6 ==
+
+This is a security release of the MediaWiki 1.22 branch.
+
+=== Changes since 1.22.5 ===
+
+* (bug 63251) SECURITY: Escape sortKey in pageInfo.
+
+== MediaWiki 1.22.5 ==
+
+This is a security and maintenance release of the MediaWiki 1.22 branch.
+
+=== Changes since 1.22.4 ===
+
+* (bug 62497) SECURITY: Add CSRF token on Special:ChangePassword.
+* (bug 62467) Set a title for the context during import on the cli.
+* Fix custom local MediaWiki:Helppage values.
+* mediawiki.js: Fix documentation breakage.
+* (bug 58153) Make MySQLi work with non standard port.
+* (bug 53887) Reintroduced a link to help pages in the default sidebar, that
+  any sysop can customize by editing [[MediaWiki:Sidebar]] locally. The link
+  now points to a mediawiki.org page which is guaranteed to exist. Nothing needs
+  to be done on your end, but remember to adjust [[MediaWiki:Sidebar]] for the
+  needs of your wikis. Everyone can help with the shared documentation by
+  translating: https://www.mediawiki.org/wiki/Special:Translate/agg-Help_pages .
+* (bug 53888) Corrected a regression in 1.22 which introduced red links on the
+  login page. If you previously installed 1.22.x and have created a local page
+  to make the red link blue, write its title as in [[MediaWiki:helplogin-url]]
+  if you didn't already. Otherwise, you don't need to do anything, but you can
+  translate the help page at https://www.mediawiki.org/wiki/Help:Logging_in .
+
+== MediaWiki 1.22.4 ==
+
+This is a maintenance release of the MediaWiki 1.22 branch.
+
+=== Changes since 1.22.3 ===
+
+* Use the correct branch of the extensions' git repositories.
+
 == MediaWiki 1.22.3 ==
 
 This is a security and bugfix release of the MediaWiki 1.22 branch.
 
 === Changes since 1.22.2 ===
+
 * (bug 60771) SECURITY: Disallow uploading SVG files using non-whitelisted
   namespaces. Also disallow iframe elements. User will get an error
   including the namespace name if they use a non- whitelisted namespace.

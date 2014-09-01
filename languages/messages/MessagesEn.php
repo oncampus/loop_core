@@ -924,7 +924,7 @@ $1',
 'disclaimerpage'       => 'Project:General disclaimer',
 'edithelp'             => 'Editing help',
 'edithelppage'         => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Editing_pages', # do not translate or duplicate this message to other languages
-'helppage'             => 'Help:Contents',
+'helppage'             => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents',
 'mainpage'             => 'Main Page',
 'mainpage-description' => 'Main page',
 'policy-url'           => 'Project:Policy',
@@ -1143,8 +1143,8 @@ You can change your {{SITENAME}} [[Special:Preferences|preferences]] if you wish
 'gotaccountlink'                  => 'Log in',
 'userlogin-resetlink'             => 'Forgotten your login details?',
 'userlogin-resetpassword-link'    => 'Forgot your password?',
-'helplogin-url'                   => 'Help:Logging in',
-'userlogin-helplink'              => '[[{{MediaWiki:helplogin-url}}|Help with logging in]]',
+'helplogin-url'                   => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Logging_in',
+'userlogin-helplink2'              => 'Help with logging in',
 'userlogin-loggedin'              => 'You are already logged in as {{GENDER:$1|$1}}.
 Use the form below to log in as another user.',
 'userlogin-createanother'         => 'Create another account',
@@ -1445,10 +1445,10 @@ It may have been moved or deleted while you were viewing the page.',
 'accmailtitle'                     => 'Password sent',
 'accmailtext'                      => "A randomly generated password for [[User talk:$1|$1]] has been sent to $2. It can be changed on the ''[[Special:ChangePassword|change password]]'' page upon logging in.",
 'newarticle'                       => '(New)',
-'newarticletext'                   => "You have followed a link to a page that does not exist yet.
-To create the page, start typing in the box below (see the [[{{MediaWiki:Helppage}}|help page]] for more info).
-If you are here by mistake, click your browser's '''back''' button.",
-'newarticletextanon'               => '{{int:newarticletext}}', # do not translate or duplicate this message to other languages
+'newarticletext'                           => "You have followed a link to a page that does not exist yet.
+To create the page, start typing in the box below (see the [$1 help page] for more info).
+If you are here by mistake, click your browser's <strong>back</strong> button.",
+'newarticletextanon'                       => '{{int:newarticletext|$1}}', # do not translate or duplicate this message to other languages
 'talkpagetext'                     => '<!-- MediaWiki:talkpagetext -->', # do not translate or duplicate this message to other languages
 'anontalkpagetext'                 => "----
 ''This is the discussion page for an anonymous user who has not created an account yet, or who does not use it.''
@@ -3043,7 +3043,7 @@ To delete the page from your watchlist, visit
 $UNWATCHURL
 
 Feedback and further assistance:
-{{canonicalurl:{{MediaWiki:Helppage}}}}',
+$HELPPAGE',
 'created'                      => 'created', # only translate this message to other languages if you have to change it
 'changed'                      => 'changed', # only translate this message to other languages if you have to change it
 
