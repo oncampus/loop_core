@@ -121,7 +121,7 @@ $specialPageAliases = array(
 	'BrokenRedirects'           => array( 'Defekte_Weiterleitungen', 'Kaputte_Weiterleitungen' ),
 	'Categories'                => array( 'Kategorien' ),
 	'ChangeEmail'               => array( 'E-Mail-Adresse_ändern' ),
-	'ChangePassword'            => array( 'Passwort_ändern', 'Passwort_zurücksetzen' ),
+	'ChangePassword'            => array( 'Kennwort_ändern', 'Kennwort_zurücksetzen' ),
 	'ComparePages'              => array( 'Seiten_vergleichen' ),
 	'Confirmemail'              => array( 'E-Mail_bestätigen', 'E-Mail_bestaetigen' ),
 	'Contributions'             => array( 'Beiträge' ),
@@ -168,7 +168,7 @@ $specialPageAliases = array(
 	'Newimages'                 => array( 'Neue_Dateien' ),
 	'Newpages'                  => array( 'Neue_Seiten' ),
 	'PagesWithProp'             => array( 'Seiten_mit_Eigenschaften' ),
-	'PasswordReset'             => array( 'Passwort_neu_vergeben' ),
+	'PasswordReset'             => array( 'Kennwort_neu_vergeben' ),
 	'PermanentLink'             => array( 'Permanenter_Link', 'Permalink' ),
 	'Popularpages'              => array( 'Beliebteste_Seiten' ),
 	'Preferences'               => array( 'Einstellungen' ),
@@ -848,18 +848,18 @@ Vergiss nicht, deine [[Special:Preferences|{{SITENAME}}-Einstellungen]] zu ände
 'userlogin-yourname' => 'Benutzername',
 'userlogin-yourname-ph' => 'Gib deinen Benutzernamen ein',
 'createacct-another-username-ph' => 'Benutzername',
-'yourpassword' => 'Passwort:',
-'userlogin-yourpassword' => 'Passwort',
-'userlogin-yourpassword-ph' => 'Gib dein Passwort ein',
-'createacct-yourpassword-ph' => 'Gib dein Passwort ein',
-'yourpasswordagain' => 'Passwort wiederholen:',
-'createacct-yourpasswordagain' => 'Passwort bestätigen',
-'createacct-yourpasswordagain-ph' => 'Gib das Passwort erneut ein',
+'yourpassword' => 'Kennwort:',
+'userlogin-yourpassword' => 'Kennwort',
+'userlogin-yourpassword-ph' => 'Gib dein Kennwort ein',
+'createacct-yourpassword-ph' => 'Gib dein Kennwort ein',
+'yourpasswordagain' => 'Kennwort wiederholen:',
+'createacct-yourpasswordagain' => 'Kennwort bestätigen',
+'createacct-yourpasswordagain-ph' => 'Gib das Kennwort erneut ein',
 'remembermypassword' => 'Mit diesem Browser dauerhaft angemeldet bleiben (maximal $1 {{PLURAL:$1|Tag|Tage}})',
 'userlogin-remembermypassword' => 'Angemeldet bleiben',
 'userlogin-signwithsecure' => 'Sichere Verbindung verwenden',
 'yourdomainname' => 'Deine Domain:',
-'password-change-forbidden' => 'Du kannst auf diesem Wiki keine Passwörter ändern.',
+'password-change-forbidden' => 'Du kannst auf diesem Wiki keine Kennwörter ändern.',
 'externaldberror' => 'Entweder es liegt ein Fehler bei der externen Authentifizierung vor oder du darfst dein externes Benutzerkonto nicht aktualisieren.',
 'login' => 'Anmelden',
 'nav-login-createaccount' => 'Anmelden / Benutzerkonto erstellen',
@@ -877,7 +877,7 @@ Vergiss nicht, deine [[Special:Preferences|{{SITENAME}}-Einstellungen]] zu ände
 'gotaccount' => "Du hast bereits ein Benutzerkonto? '''$1'''.",
 'gotaccountlink' => 'Anmelden',
 'userlogin-resetlink' => 'Die Anmeldedaten vergessen?',
-'userlogin-resetpassword-link' => 'Passwort zurücksetzen',
+'userlogin-resetpassword-link' => 'Kennwort zurücksetzen',
 'helplogin-url' => 'Help:Anmelden',
 'userlogin-helplink' => '[[{{MediaWiki:helplogin-url}}|Hilfe beim Anmelden]]',
 'userlogin-loggedin' => 'Du bist bereits als {{GENDER:$1|$1}} angemeldet.
@@ -889,7 +889,7 @@ Benutze das unten stehende Formular, um sich unter einem anderen Benutzer anzume
 'createacct-emailoptional' => 'E-Mail-Adresse (optional)',
 'createacct-email-ph' => 'Gib deine E-Mail-Adresse ein',
 'createacct-another-email-ph' => 'E-Mail-Adresse',
-'createaccountmail' => 'Ein temporäres Zufallspasswort verwenden und an die angegebene E-Mail-Adresse versenden',
+'createaccountmail' => 'Ein temporäres ZufallsKennwort verwenden und an die angegebene E-Mail-Adresse versenden',
 'createacct-realname' => 'Bürgerlicher Name (optional)',
 'createaccountreason' => 'Grund:',
 'createacct-reason' => 'Begründung',
@@ -902,13 +902,13 @@ Benutze das unten stehende Formular, um sich unter einem anderen Benutzer anzume
 'createacct-benefit-body1' => '{{PLURAL:$1|Bearbeitung|Bearbeitungen}}',
 'createacct-benefit-body2' => '{{PLURAL:$1|Seite|Seiten}}',
 'createacct-benefit-body3' => '{{PLURAL:$1|aktiver Autor|aktive Autoren}}',
-'badretype' => 'Die beiden Passwörter stimmen nicht überein.',
+'badretype' => 'Die beiden Kennwörter stimmen nicht überein.',
 'userexists' => 'Dieser Benutzername ist schon vergeben.
 Bitte wähle einen anderen.',
 'loginerror' => 'Fehler bei der Anmeldung',
 'createacct-error' => 'Fehler beim Erstellen des Benutzerkontos',
 'createaccounterror' => 'Benutzerkonto konnte nicht erstellt werden: $1',
-'nocookiesnew' => 'Der Benutzerzugang wurde erstellt, aber du bist nicht angemeldet. {{SITENAME}} benötigt für diese Funktion Cookies, bitte aktiviere diese und melde dich dann mit deinem neuen Benutzernamen und dem zugehörigen Passwort an.',
+'nocookiesnew' => 'Der Benutzerzugang wurde erstellt, aber du bist nicht angemeldet. {{SITENAME}} benötigt für diese Funktion Cookies, bitte aktiviere diese und melde dich dann mit deinem neuen Benutzernamen und dem zugehörigen Kennwort an.',
 'nocookieslogin' => '{{SITENAME}} benutzt Cookies zur Anmeldung der Benutzer. Du hast Cookies deaktiviert, bitte aktiviere diese und versuche es erneut.',
 'nocookiesfornew' => 'Das Benutzerkonto wurde nicht erstellt, da die Datenherkunft nicht ermittelt werden konnte.
 Es muss sichergestellt sein, dass Cookies aktiviert sind. Danach diese Seite erneut laden und es wieder versuchen.',
@@ -920,30 +920,30 @@ Es muss sichergestellt sein, dass Cookies aktiviert sind. Danach diese Seite ern
 'nosuchusershort' => 'Der Benutzername „$1“ ist nicht vorhanden. Bitte überprüfe die Schreibweise.',
 'nouserspecified' => 'Bitte gib einen Benutzernamen an.',
 'login-userblocked' => '{{GENDER:$1|Dieser Benutzer|Diese Benutzerin|Dieser Benutzer}} ist gesperrt. Die Anmeldung ist nicht erlaubt.',
-'wrongpassword' => 'Das Passwort ist falsch. Bitte versuche es erneut.',
-'wrongpasswordempty' => 'Es wurde kein Passwort eingegeben. Bitte versuche es erneut.',
-'passwordtooshort' => 'Passwörter müssen mindestens {{PLURAL:$1|1 Zeichen|$1 Zeichen}} lang sein.',
-'password-name-match' => 'Dein Passwort muss sich von deinem Benutzernamen unterscheiden.',
-'password-login-forbidden' => 'Die Verwendung dieses Benutzernamens und Passwortes ist nicht erlaubt.',
-'mailmypassword' => 'Neues Passwort zusenden',
-'passwordremindertitle' => 'Neues Passwort für ein {{SITENAME}}-Benutzerkonto',
-'passwordremindertext' => 'Jemand mit der IP-Adresse $1, wahrscheinlich du selbst, hat ein neues Passwort für die Anmeldung bei {{SITENAME}} ($4) angefordert.
+'wrongpassword' => 'Das Kennwort ist falsch. Bitte versuche es erneut.',
+'wrongpasswordempty' => 'Es wurde kein Kennwort eingegeben. Bitte versuche es erneut.',
+'passwordtooshort' => 'Kennwörter müssen mindestens {{PLURAL:$1|1 Zeichen|$1 Zeichen}} lang sein.',
+'password-name-match' => 'Dein Kennwort muss sich von deinem Benutzernamen unterscheiden.',
+'password-login-forbidden' => 'Die Verwendung dieses Benutzernamens und Kennwortes ist nicht erlaubt.',
+'mailmypassword' => 'Neues Kennwort zusenden',
+'passwordremindertitle' => 'Neues Kennwort für ein {{SITENAME}}-Benutzerkonto',
+'passwordremindertext' => 'Jemand mit der IP-Adresse $1, wahrscheinlich du selbst, hat ein neues Kennwort für die Anmeldung bei {{SITENAME}} ($4) angefordert.
 
-Das automatisch generierte Passwort für Benutzer „$2“ lautet nun: $3
+Das automatisch generierte Kennwort für Benutzer „$2“ lautet nun: $3
 
-Falls du dies wirklich gewünscht hast, solltest du dich jetzt anmelden und das Passwort ändern.
-Das neue Passwort ist {{PLURAL:$5|1 Tag|$5 Tage}} gültig.
+Falls du dies wirklich gewünscht hast, solltest du dich jetzt anmelden und das Kennwort ändern.
+Das neue Kennwort ist {{PLURAL:$5|1 Tag|$5 Tage}} gültig.
 
-Bitte ignoriere diese E-Mail, falls du sie nicht selbst angefordert hast. Das alte Passwort bleibt weiterhin gültig.',
+Bitte ignoriere diese E-Mail, falls du sie nicht selbst angefordert hast. Das alte Kennwort bleibt weiterhin gültig.',
 'noemail' => '{{GENDER:$1|Benutzer|Benutzerin|Benutzer}} „$1“ hat keine E-Mail-Adresse angegeben.',
 'noemailcreate' => 'Du musst eine gültige E-Mail-Adresse angeben',
-'passwordsent' => 'Ein neues, temporäres Passwort wurde an die E-Mail-Adresse von Benutzer „$1“ gesandt.
-Bitte melde dich damit an, sobald du es erhalten hast. Das alte Passwort bleibt weiterhin gültig.',
-'blocked-mailpassword' => 'Die von dir verwendete IP-Adresse ist für das Ändern von Seiten gesperrt. Um einen Missbrauch zu verhindern, wurde die Möglichkeit zur Anforderung eines neuen Passwortes ebenfalls gesperrt.',
+'passwordsent' => 'Ein neues, temporäres Kennwort wurde an die E-Mail-Adresse von Benutzer „$1“ gesandt.
+Bitte melde dich damit an, sobald du es erhalten hast. Das alte Kennwort bleibt weiterhin gültig.',
+'blocked-mailpassword' => 'Die von dir verwendete IP-Adresse ist für das Ändern von Seiten gesperrt. Um einen Missbrauch zu verhindern, wurde die Möglichkeit zur Anforderung eines neuen Kennwortes ebenfalls gesperrt.',
 'eauthentsent' => 'Eine Bestätigungs-E-Mail wurde an die angegebene Adresse verschickt.
 
 Bevor eine E-Mail von anderen Benutzern über die E-Mail-Funktion empfangen werden kann, muss die Adresse und ihre tatsächliche Zugehörigkeit zu diesem Benutzerkonto erst bestätigt werden. Bitte befolge die Hinweise in der Bestätigungs-E-Mail.',
-'throttled-mailpassword' => 'Es wurde innerhalb der letzten {{PLURAL:$1|Stunde|$1 Stunden}} bereits eine Passwortzurücksetzungs-E-Mail angefordert. Um einen Missbrauch der Funktion zu verhindern, kann nur {{PLURAL:$1|einmal pro Stunde|alle $1 Stunden}} eine Passwortzurücksetzungs-E-Mail angefordert werden.',
+'throttled-mailpassword' => 'Es wurde innerhalb der letzten {{PLURAL:$1|Stunde|$1 Stunden}} bereits eine Kennwortzurücksetzungs-E-Mail angefordert. Um einen Missbrauch der Funktion zu verhindern, kann nur {{PLURAL:$1|einmal pro Stunde|alle $1 Stunden}} eine Kennwortzurücksetzungs-E-Mail angefordert werden.',
 'mailerror' => 'Fehler beim Senden der E-Mail: $1',
 'acct_creation_throttle_hit' => 'Besucher dieses Wikis, die deine IP-Adresse verwenden, haben innerhalb des letzten Tages {{PLURAL:$1|1 Benutzerkonto|$1 Benutzerkonten}} erstellt, was die maximal erlaubte Anzahl in dieser Zeitperiode ist.
 
@@ -958,7 +958,7 @@ Besucher, die diese IP-Adresse verwenden, können momentan keine Benutzerkonten 
 'accountcreated' => 'Benutzerkonto erstellt',
 'accountcreatedtext' => 'Das Benutzerkonto für [[{{ns:User}}:$1|$1]] ([[{{ns:User talk}}:$1|Diskussion]]) wurde eingerichtet.',
 'createaccount-title' => 'Erstellung eines Benutzerkontos für {{SITENAME}}',
-'createaccount-text' => 'Es wurde für dich ein Benutzerkonto „$2“ auf {{SITENAME}} ($4) erstellt. Das automatisch generierte Passwort für „$2“ ist „$3“. Du solltest dich nun anmelden und das Passwort ändern.
+'createaccount-text' => 'Es wurde für dich ein Benutzerkonto „$2“ auf {{SITENAME}} ($4) erstellt. Das automatisch generierte Kennwort für „$2“ ist „$3“. Du solltest dich nun anmelden und das Kennwort ändern.
 
 Falls das Benutzerkonto irrtümlich angelegt wurde, kannst du diese Nachricht ignorieren.',
 'usernamehasherror' => 'Benutzernamen dürfen kein Rautenzeichen enthalten',
@@ -976,68 +976,68 @@ Wenn du ihn angibst, wird er für die Zuordnung der Beiträge verwendet.',
 'user-mail-no-body' => 'Es wurde versucht, eine E-Mail mit einem leeren oder zu kurzen Textkörper zu versenden.',
 
 # Change password dialog
-'resetpass' => 'Passwort ändern',
-'resetpass_announce' => 'Anmeldung mit dem per E-Mail zugesandten Code. Um die Anmeldung abzuschließen, musst du jetzt ein neues Passwort wählen.',
+'resetpass' => 'Kennwort ändern',
+'resetpass_announce' => 'Anmeldung mit dem per E-Mail zugesandten Code. Um die Anmeldung abzuschließen, musst du jetzt ein neues Kennwort wählen.',
 'resetpass_text' => '<!-- Ergänze den Text hier -->',
-'resetpass_header' => 'Passwort ändern',
-'oldpassword' => 'Altes Passwort:',
-'newpassword' => 'Neues Passwort:',
-'retypenew' => 'Neues Passwort (nochmal):',
-'resetpass_submit' => 'Passwort übermitteln und anmelden',
-'changepassword-success' => 'Dein Passwort wurde erfolgreich geändert!',
-'resetpass_forbidden' => 'Das Passwort kann nicht geändert werden.',
+'resetpass_header' => 'Kennwort ändern',
+'oldpassword' => 'Altes Kennwort:',
+'newpassword' => 'Neues Kennwort:',
+'retypenew' => 'Neues Kennwort (nochmal):',
+'resetpass_submit' => 'Kennwort übermitteln und anmelden',
+'changepassword-success' => 'Dein Kennwort wurde erfolgreich geändert!',
+'resetpass_forbidden' => 'Das Kennwort kann nicht geändert werden.',
 'resetpass-no-info' => 'Du musst dich anmelden, um auf diese Seite direkt zuzugreifen.',
-'resetpass-submit-loggedin' => 'Passwort ändern',
+'resetpass-submit-loggedin' => 'Kennwort ändern',
 'resetpass-submit-cancel' => 'Abbrechen',
-'resetpass-wrong-oldpass' => 'Ungültiges temporäres oder aktuelles Passwort.
-Möglicherweise hast du dein Passwort bereits erfolgreich geändert oder ein neues temporäres Passwort beantragt.',
-'resetpass-temp-password' => 'Temporäres Passwort:',
-'resetpass-abort-generic' => 'Die Passwortänderung wurde durch eine Erweiterung abgebrochen.',
+'resetpass-wrong-oldpass' => 'Ungültiges temporäres oder aktuelles Kennwort.
+Möglicherweise hast du dein Kennwort bereits erfolgreich geändert oder ein neues temporäres Kennwort beantragt.',
+'resetpass-temp-password' => 'Temporäres Kennwort:',
+'resetpass-abort-generic' => 'Die Kennwortänderung wurde durch eine Erweiterung abgebrochen.',
 
 # Special:PasswordReset
-'passwordreset' => 'Passwort zurücksetzen',
-'passwordreset-text-one' => 'Fülle dieses Formular aus, um dein Passwort zurückzusetzen.',
-'passwordreset-text-many' => '{{PLURAL:$1|Füll eines der Felder aus, um dein Passwort zurückzusetzen.}}',
-'passwordreset-legend' => 'Passwort zurücksetzen',
-'passwordreset-disabled' => 'Das Zurücksetzen von Passwörtern wurde in diesem Wiki deaktiviert.',
+'passwordreset' => 'Kennwort zurücksetzen',
+'passwordreset-text-one' => 'Fülle dieses Formular aus, um dein Kennwort zurückzusetzen.',
+'passwordreset-text-many' => '{{PLURAL:$1|Füll eines der Felder aus, um dein Kennwort zurückzusetzen.}}',
+'passwordreset-legend' => 'Kennwort zurücksetzen',
+'passwordreset-disabled' => 'Das Zurücksetzen von Kennwörtern wurde in diesem Wiki deaktiviert.',
 'passwordreset-emaildisabled' => 'Die E-Mail-Funktionen wurden auf diesem Wiki deaktiviert.',
 'passwordreset-username' => 'Benutzername:',
 'passwordreset-domain' => 'Domain:',
 'passwordreset-capture' => 'Die E-Mail-Nachricht ansehen?',
-'passwordreset-capture-help' => 'Wenn du dieses Kästchen ankreuzt, wird die E-Mail-Nachricht mit dem temporären Passwort sowohl dir angezeigt als auch dem Benutzer zugesandt.',
+'passwordreset-capture-help' => 'Wenn du dieses Kästchen ankreuzt, wird die E-Mail-Nachricht mit dem temporären Kennwort sowohl dir angezeigt als auch dem Benutzer zugesandt.',
 'passwordreset-email' => 'E-Mail-Adresse:',
 'passwordreset-emailtitle' => 'Benutzerkontoinformationen auf {{SITENAME}}',
 'passwordreset-emailtext-ip' => 'Jemand mit der IP-Adresse $1, wahrscheinlich du selbst, hat eine Zurücksetzung deines
-Passworts bei {{SITENAME}} angefordert ($4). {{PLURAL:$3|Das folgende Benutzerkonto ist|Die folgenden Benutzerkonten sind}}
+Kennworts bei {{SITENAME}} angefordert ($4). {{PLURAL:$3|Das folgende Benutzerkonto ist|Die folgenden Benutzerkonten sind}}
 mit dieser E-Mail-Adresse verknüpft:
 
 $2
 
-{{PLURAL:$3|Dieses temporäre Passwort läuft|Diese temporären Passwörter laufen}} innerhalb von {{PLURAL:$5|einem Tag|$5 Tagen}} ab.
-Du solltest dich anmelden und ein neues Passwort vergeben. Falls jemand anderes diese
-Anfrage getätigt hat oder du dich wieder an dein ursprüngliches Passwort erinnern kannst und es nicht länger
+{{PLURAL:$3|Dieses temporäre Kennwort läuft|Diese temporären Kennwörter laufen}} innerhalb von {{PLURAL:$5|einem Tag|$5 Tagen}} ab.
+Du solltest dich anmelden und ein neues Kennwort vergeben. Falls jemand anderes diese
+Anfrage getätigt hat oder du dich wieder an dein ursprüngliches Kennwort erinnern kannst und es nicht länger
 ändern möchtest, kannst du diese Nachricht ignorieren und weiterhin dein altes
-Passwort benutzen.',
-'passwordreset-emailtext-user' => 'Benutzer $1 bei {{SITENAME}} hat eine Zurücksetzung deines Passworts bei {{SITENAME}} angefordert ($4). {{PLURAL:$3|Das folgende Benutzerkonto ist|Die folgenden Benutzerkonten sind}} mit dieser E-Mail-Adresse verknüpft:
+Kennwort benutzen.',
+'passwordreset-emailtext-user' => 'Benutzer $1 bei {{SITENAME}} hat eine Zurücksetzung deines Kennworts bei {{SITENAME}} angefordert ($4). {{PLURAL:$3|Das folgende Benutzerkonto ist|Die folgenden Benutzerkonten sind}} mit dieser E-Mail-Adresse verknüpft:
 
 $2
 
-{{PLURAL:$3|Dieses temporäre Passwort läuft|Diese temporären Passwörter laufen}} innerhalb von {{PLURAL:$5|einem Tag|$5 Tagen}} ab. Du solltest dich anmelden und ein neues Passwort vergeben. Falls jemand anderes diese Anfrage getätigt hat oder du dich wieder an dein ursprüngliches Passwort erinnern kannst und es nicht ändern möchtest, kannst du diese Nachricht ignorieren und weiterhin dein altes Passwort benutzen.',
+{{PLURAL:$3|Dieses temporäre Kennwort läuft|Diese temporären Kennwörter laufen}} innerhalb von {{PLURAL:$5|einem Tag|$5 Tagen}} ab. Du solltest dich anmelden und ein neues Kennwort vergeben. Falls jemand anderes diese Anfrage getätigt hat oder du dich wieder an dein ursprüngliches Kennwort erinnern kannst und es nicht ändern möchtest, kannst du diese Nachricht ignorieren und weiterhin dein altes Kennwort benutzen.',
 'passwordreset-emailelement' => 'Benutzername: $1
-Temporäres Passwort: $2',
-'passwordreset-emailsent' => 'Eine Passwortzurücksetzungs-E-Mail wurde versandt.',
-'passwordreset-emailsent-capture' => 'Eine Passwortzurücksetzungs-E-Mail wurde versandt, die unten angezeigt wird.',
-'passwordreset-emailerror-capture' => 'Die unten angezeigte Passwortzurücksetzungs-E-Mail wurde generiert, allerdings ist der Versand an {{GENDER:$2|den Benutzer|die Benutzerin}} gescheitert: $1',
+Temporäres Kennwort: $2',
+'passwordreset-emailsent' => 'Eine Kennwortzurücksetzungs-E-Mail wurde versandt.',
+'passwordreset-emailsent-capture' => 'Eine Kennwortzurücksetzungs-E-Mail wurde versandt, die unten angezeigt wird.',
+'passwordreset-emailerror-capture' => 'Die unten angezeigte Kennwortzurücksetzungs-E-Mail wurde generiert, allerdings ist der Versand an {{GENDER:$2|den Benutzer|die Benutzerin}} gescheitert: $1',
 
 # Special:ChangeEmail
 'changeemail' => 'E-Mail-Adresse ändern',
 'changeemail-header' => 'E-Mail-Adresse ändern',
-'changeemail-text' => 'Fülle dieses Formular vollständig aus, um deine E-Mail-Adresse zu ändern. Du musst dein Passwort angeben, um diese Änderung zu bestätigen.',
+'changeemail-text' => 'Fülle dieses Formular vollständig aus, um deine E-Mail-Adresse zu ändern. Du musst dein Kennwort angeben, um diese Änderung zu bestätigen.',
 'changeemail-no-info' => 'Du musst angemeldet sein, um direkt auf diese Seite zugreifen zu können.',
 'changeemail-oldemail' => 'Aktuelle E-Mail-Adresse:',
 'changeemail-newemail' => 'Neue E-Mail-Adresse:',
 'changeemail-none' => '(keine)',
-'changeemail-password' => 'Dein {{SITENAME}}-Passwort:',
+'changeemail-password' => 'Dein {{SITENAME}}-Kennwort:',
 'changeemail-submit' => 'E-Mail-Adresse ändern',
 'changeemail-cancel' => 'Abbrechen',
 
@@ -1129,8 +1129,8 @@ Vermutlich wurde er verschoben oder gelöscht, nachdem du die Seite aufgerufen h
 'loginreqtitle' => 'Anmeldung erforderlich',
 'loginreqlink' => 'anmelden',
 'loginreqpagetext' => 'Du musst dich $1, um Seiten lesen zu können.',
-'accmailtitle' => 'Passwort wurde verschickt',
-'accmailtext' => "Ein zufällig generiertes Passwort für [[User talk:$1|$1]] wurde an $2 versandt. Es kann auf der Seite ''[[Special:ChangePassword|Passwort ändern]]'' nach der Anmeldung geändert werden.",
+'accmailtitle' => 'Kennwort wurde verschickt',
+'accmailtext' => "Ein zufällig generiertes Kennwort für [[User talk:$1|$1]] wurde an $2 versandt. Es kann auf der Seite ''[[Special:ChangePassword|Kennwort ändern]]'' nach der Anmeldung geändert werden.",
 'newarticle' => '(Neu)',
 'newarticletext' => "Du bist einem Link zu einer Seite gefolgt, die nicht vorhanden ist.
 Um diese Seite anzulegen, trage deinen Text in das untenstehende Bearbeitungsfeld ein (weitere Informationen auf der [[{{MediaWiki:Helppage}}|Hilfeseite]]).
@@ -1541,7 +1541,7 @@ Einzelheiten sind im [{{fullurl:{{#Special:Log}}/delete|page={{FULLPAGENAMEE}}}}
 'prefs-edits' => 'Anzahl der Bearbeitungen:',
 'prefsnologin' => 'Nicht angemeldet',
 'prefsnologintext' => 'Du musst <span class="plainlinks">[{{fullurl:{{#special:UserLogin}}|returnto=$1}} angemeldet]</span> sein, um deine Einstellungen ändern zu können.',
-'changepassword' => 'Passwort ändern',
+'changepassword' => 'Kennwort ändern',
 'prefs-skin' => 'Benutzeroberfläche',
 'skin-preview' => 'Vorschau',
 'datedefault' => 'Standard',
@@ -1558,7 +1558,7 @@ Einzelheiten sind im [{{fullurl:{{#Special:Log}}/delete|page={{FULLPAGENAMEE}}}}
 'prefs-watchlist-edits-max' => 'Maximal 1.000 Einträge',
 'prefs-watchlist-token' => 'Beobachtungslisten-Token:',
 'prefs-misc' => 'Verschiedenes',
-'prefs-resetpass' => 'Passwort ändern',
+'prefs-resetpass' => 'Kennwort ändern',
 'prefs-changeemail' => 'E-Mail-Adresse ändern',
 'prefs-setemail' => 'E-Mail-Adresse festlegen',
 'prefs-email' => 'E-Mail-Optionen',
@@ -1634,7 +1634,7 @@ Die Software nutzt sie, um dich anzureden sowie als Hinweis für andere durch Ve
 Diese Information ist öffentlich.',
 'email' => 'E-Mail',
 'prefs-help-realname' => 'Dies ist eine freiwillige Angabe. Damit kann dein bürgerlicher Name deinen Beiträgen zugeordnet werden.',
-'prefs-help-email' => 'Die Angabe einer E-Mail-Adresse ist optional, ermöglicht aber die Zusendung eines Ersatzpasswortes, sofern du dein Passwort vergessen hast.',
+'prefs-help-email' => 'Die Angabe einer E-Mail-Adresse ist optional, ermöglicht aber die Zusendung eines ErsatzKennwortes, sofern du dein Kennwort vergessen hast.',
 'prefs-help-email-others' => 'Mit anderen Benutzern kannst du auch über die Benutzerdiskussionsseiten Kontakt aufnehmen, ohne dass du deine Identität offenlegen musst.',
 'prefs-help-email-required' => 'Es wird eine gültige E-Mail-Adresse benötigt.',
 'prefs-info' => 'Basisinformationen',
@@ -1777,7 +1777,7 @@ Diese Information ist öffentlich.',
 'right-siteadmin' => 'Datenbank sperren und entsperren',
 'right-override-export-depth' => 'Exportiere Seiten einschließlich verlinkter Seiten bis zu einer Tiefe von 5',
 'right-sendemail' => 'E-Mails an andere Benutzer senden',
-'right-passwordreset' => 'Passwort eines Benutzers zurücksetzen und die dazu verschickte E-Mail einsehen',
+'right-passwordreset' => 'Kennwort eines Benutzers zurücksetzen und die dazu verschickte E-Mail einsehen',
 
 # Special:Log/newusers
 'newuserlogpage' => 'Neuanmeldungs-Logbuch',
@@ -4214,7 +4214,7 @@ Bei entsprechender Einstellung können die Missbrauchfilter beliebige Markierung
 'logentry-newusers-newusers' => 'Benutzerkonto $1 wurde {{GENDER:$2|erstellt}}',
 'logentry-newusers-create' => 'Benutzerkonto $1 wurde {{GENDER:$2|erstellt}}',
 'logentry-newusers-create2' => 'Benutzerkonto $3 wurde von $1 {{GENDER:$2|erstellt}}',
-'logentry-newusers-byemail' => 'Benutzerkonto $3 wurde von $1 {{GENDER:$2|erstellt}} und das Passwort wurde per E-Mail zugesandt',
+'logentry-newusers-byemail' => 'Benutzerkonto $3 wurde von $1 {{GENDER:$2|erstellt}} und das Kennwort wurde per E-Mail zugesandt',
 'logentry-newusers-autocreate' => 'Benutzerkonto $1 wurde automatisch {{GENDER:$2|erstellt}}',
 'logentry-rights-rights' => '$1 {{GENDER:$2|änderte}} die Gruppenzugehörigkeit für $3 von $4 zu $5',
 'logentry-rights-rights-legacy' => '$1 {{GENDER:$2|änderte}} die Gruppenzugehörigkeit für $3',

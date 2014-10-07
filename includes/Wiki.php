@@ -636,7 +636,7 @@ class MediaWiki {
 	 * Do a job from the job queue
 	 */
 	private function doJobs() {
-		global $wgJobRunRate, $wgPhpCli, $IP;
+		global $wgJobRunRate, $wgPhpCli, $IP, $wgServer;
 
 		if ( $wgJobRunRate <= 0 || wfReadOnly() ) {
 			return;
@@ -656,7 +656,16 @@ class MediaWiki {
 			// Start a background process to run some of the jobs
 			wfProfileIn( __METHOD__ . '-exec' );
 			$retVal = 1;
-			$cmd = wfShellWikiCmd( "$IP/maintenance/runJobs.php", array( '--maxjobs', $n ) );
+			
+			// begin changed for loop farm
+			$servername=$_SERVER["SERVER_NAME"];
+			$servername_parts=explode('.',$servername);
+			$host=$servername_parts[0];
+			$custom_config_file="$IP/LocalSettings/LocalSettings_".$host.".php";
+			$cmd = wfShellWikiCmd( "$IP/maintenance/runJobs.php", array( '--maxjobs', $n ,'--conf', $custom_config_file, '--server', $wgServer) );
+			#$cmd = wfShellWikiCmd( "$IP/maintenance/runJobs.php", array( '--maxjobs', $n ) );
+			// end changed for loop farm
+			
 			$cmd .= " >" . wfGetNull() . " 2>&1"; // don't hang PHP on pipes
 			if ( wfIsWindows() ) {
 				// Using START makes this async and also works around a bug where using

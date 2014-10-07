@@ -74,14 +74,14 @@ Nutzen Sie bitte [//translatewiki.net/ translatewiki.net], das Lokalisierungspro
 Sie können {{SITENAME}} jetzt anonym weiternutzen, oder sich erneut unter demselben oder einem anderen Benutzernamen <span class='plainlinks'>[$1 anmelden]</span>.
 Beachten Sie, dass einige Seiten noch anzeigen können, dass Sie angemeldet sind, solange Sie nicht Ihren Browsercache geleert haben.",
 'yourdomainname' => 'Ihre Domain:',
-'password-change-forbidden' => 'Sie können auf diesem Wiki keine Passwörter ändern.',
+'password-change-forbidden' => 'Sie können auf diesem Wiki keine Kennwörter ändern.',
 'externaldberror' => 'Entweder es liegt ein Fehler bei der externen Authentifizierung vor oder Sie dürfen Ihr externes Benutzerkonto nicht aktualisieren.',
 'nologin' => "Sie haben kein Benutzerkonto? '''$1'''.",
 'gotaccount' => "Haben Sie bereits ein Benutzerkonto? '''$1'''.",
 'userexists' => 'Dieser Benutzername ist schon vergeben.
 Bitte wählen Sie einen anderen.',
 'nocookiesnew' => 'Der Benutzerzugang wurde erstellt, aber Sie sind nicht angemeldet.
-{{SITENAME}} benötigt für diese Funktion Cookies, bitte aktivieren Sie diese und melden sich dann mit Ihrem neuen Benutzernamen und dem zugehörigen Passwort an.',
+{{SITENAME}} benötigt für diese Funktion Cookies, bitte aktivieren Sie diese und melden sich dann mit Ihrem neuen Benutzernamen und dem zugehörigen Kennwort an.',
 'nocookieslogin' => '{{SITENAME}} benutzt Cookies zur Anmeldung der Benutzer.
 Sie haben Cookies deaktiviert, bitte aktivieren Sie diese und versuchen Sie es erneut.',
 'noname' => 'Sie müssen einen gültigen Benutzernamen angeben.',
@@ -90,21 +90,21 @@ Sie haben Cookies deaktiviert, bitte aktivieren Sie diese und versuchen Sie es e
 Überprüfen Sie die Schreibweise (Groß-/Kleinschreibung beachten) oder [[Special:UserLogin/signup|melden Sie sich als neuer Benutzer an]].',
 'nosuchusershort' => 'Der Benutzername „$1“ ist nicht vorhanden. Bitte überprüfen Sie die Schreibweise.',
 'nouserspecified' => 'Bitte geben Sie einen Benutzernamen an.',
-'wrongpassword' => 'Das Passwort ist falsch. Bitte versuchen Sie es erneut.',
-'wrongpasswordempty' => 'Es wurde kein Passwort eingegeben. Bitte versuchen Sie es erneut.',
-'password-name-match' => 'Ihr Passwort muss sich von Ihrem Benutzernamen unterscheiden.',
-'passwordremindertext' => 'Jemand mit der IP-Adresse $1, wahrscheinlich Sie selbst, hat ein neues Passwort für die Anmeldung bei {{SITENAME}} ($4) angefordert.
+'wrongpassword' => 'Das Kennwort ist falsch. Bitte versuchen Sie es erneut.',
+'wrongpasswordempty' => 'Es wurde kein Kennwort eingegeben. Bitte versuchen Sie es erneut.',
+'password-name-match' => 'Ihr Kennwort muss sich von Ihrem Benutzernamen unterscheiden.',
+'passwordremindertext' => 'Jemand mit der IP-Adresse $1, wahrscheinlich Sie selbst, hat ein neues Kennwort für die Anmeldung bei {{SITENAME}} ($4) angefordert.
 
-Das automatisch generierte Passwort für Benutzer „$2“ lautet nun: $3
+Das automatisch generierte Kennwort für Benutzer „$2“ lautet nun: $3
 
-Falls Sie dies wirklich gewünscht haben, sollten Sie sich jetzt anmelden und das Passwort ändern.
-Das neue Passwort ist {{PLURAL:$5|1 Tag|$5 Tage}} gültig.
+Falls Sie dies wirklich gewünscht haben, sollten Sie sich jetzt anmelden und das Kennwort ändern.
+Das neue Kennwort ist {{PLURAL:$5|1 Tag|$5 Tage}} gültig.
 
-Bitte ignorieren Sie diese E-Mail, falls Sie sie nicht selbst angefordert haben. Das alte Passwort bleibt weiterhin gültig.',
+Bitte ignorieren Sie diese E-Mail, falls Sie sie nicht selbst angefordert haben. Das alte Kennwort bleibt weiterhin gültig.',
 'noemailcreate' => 'Sie müssen eine gültige E-Mail-Adresse angeben',
-'passwordsent' => 'Ein neues, temporäres Passwort wurde an die E-Mail-Adresse von Benutzer „$1“ gesandt.
-Bitte melden Sie sich damit an, sobald sie es erhalten haben. Das alte Passwort bleibt weiterhin gültig.',
-'blocked-mailpassword' => 'Die von Ihnen verwendete IP-Adresse ist für das Ändern von Seiten gesperrt. Um einen Missbrauch zu verhindern, wurde die Möglichkeit zur Anforderung eines neuen Passwortes ebenfalls gesperrt.',
+'passwordsent' => 'Ein neues, temporäres Kennwort wurde an die E-Mail-Adresse von Benutzer „$1“ gesandt.
+Bitte melden Sie sich damit an, sobald sie es erhalten haben. Das alte Kennwort bleibt weiterhin gültig.',
+'blocked-mailpassword' => 'Die von Ihnen verwendete IP-Adresse ist für das Ändern von Seiten gesperrt. Um einen Missbrauch zu verhindern, wurde die Möglichkeit zur Anforderung eines neuen Kennwortes ebenfalls gesperrt.',
 'eauthentsent' => 'Eine Bestätigungs-E-Mail wurde an die angegebene Adresse verschickt.
 
 Bevor eine E-Mail von anderen Benutzern über die E-Mail-Funktion empfangen werden kann, muss die Adresse und ihre tatsächliche Zugehörigkeit zu diesem Benutzerkonto erst bestätigt werden. Bitte befolgen Sie die Hinweise in der Bestätigungs-E-Mail.',
@@ -115,43 +115,43 @@ Besucher, die diese IP-Adresse verwenden, können momentan keine Benutzerkonten 
 'emailnotauthenticated' => 'Ihre E-Mail-Adresse ist noch nicht bestätigt. Die folgenden E-Mail-Funktionen stehen erst nach erfolgreicher Bestätigung zur Verfügung.',
 'noemailprefs' => 'Geben Sie eine E-Mail-Adresse in den Einstellungen an, damit die nachfolgenden Funktionen zur Verfügung stehen.',
 'invalidemailaddress' => 'Die E-Mail-Adresse wird nicht akzeptiert, weil sie ein ungültiges Format (eventuell ungültige Zeichen) zu haben scheint. Bitte geben Sie eine korrekte Adresse ein oder leeren Sie das Feld.',
-'createaccount-text' => 'Es wurde für Sie ein Benutzerkonto „$2“ auf {{SITENAME}} ($4) erstellt. Das automatisch generierte Passwort für „$2“ ist „$3“. Sie sollten sich nun anmelden und das Passwort ändern.
+'createaccount-text' => 'Es wurde für Sie ein Benutzerkonto „$2“ auf {{SITENAME}} ($4) erstellt. Das automatisch generierte Kennwort für „$2“ ist „$3“. Sie sollten sich nun anmelden und das Kennwort ändern.
 
 Falls das Benutzerkonto irrtümlich angelegt wurde, können Sie diese Nachricht ignorieren.',
 'login-throttled' => 'Sie haben zu oft versucht, sich anzumelden.
 Bitte warten Sie, bevor Sie es erneut probieren.',
 
 # Change password dialog
-'resetpass_announce' => 'Anmeldung mit dem per E-Mail zugesandten Code. Um die Anmeldung abzuschließen, müssen Sie jetzt ein neues Passwort wählen.',
+'resetpass_announce' => 'Anmeldung mit dem per E-Mail zugesandten Code. Um die Anmeldung abzuschließen, müssen Sie jetzt ein neues Kennwort wählen.',
 'resetpass_text' => '<!-- Ergänzen Sie den Text hier -->',
-'resetpass_success' => 'Ihr Passwort wurde erfolgreich geändert. Es folgt die Anmeldung …',
+'resetpass_success' => 'Ihr Kennwort wurde erfolgreich geändert. Es folgt die Anmeldung …',
 'resetpass-no-info' => 'Sie müssen sich anmelden, um auf diese Seite direkt zuzugreifen.',
-'resetpass-wrong-oldpass' => 'Ungültiges temporäres oder aktuelles Passwort.
-Möglicherweise haben Sie Ihr Passwort bereits erfolgreich geändert oder ein neues temporäres Passwort beantragt.',
+'resetpass-wrong-oldpass' => 'Ungültiges temporäres oder aktuelles Kennwort.
+Möglicherweise haben Sie Ihr Kennwort bereits erfolgreich geändert oder ein neues temporäres Kennwort beantragt.',
 
 # Special:PasswordReset
-'passwordreset-text' => 'Bitte dieses Formular ausfüllen, um Ihr Passwort zurückzusetzen.',
+'passwordreset-text' => 'Bitte dieses Formular ausfüllen, um Ihr Kennwort zurückzusetzen.',
 'passwordreset-pretext' => '{{PLURAL:$1||Geben Sie eines der folgenden Daten ein.}}',
-'passwordreset-capture-help' => 'Wenn Sie dieses Kästchen ankreuzen, wird die E-Mail-Nachricht mit dem temporären Passwort sowohl Ihnen angezeigt als auch dem Benutzer zugesandt.',
+'passwordreset-capture-help' => 'Wenn Sie dieses Kästchen ankreuzen, wird die E-Mail-Nachricht mit dem temporären Kennwort sowohl Ihnen angezeigt als auch dem Benutzer zugesandt.',
 'passwordreset-emailtext-ip' => 'Jemand mit der IP-Adresse $1, wahrscheinlich Sie selbst, hat eine Zurücksetzung Ihres
-Passworts bei {{SITENAME}} angefordert ($4). {{PLURAL:$3|Das folgende Benutzerkonto ist|Die folgenden Benutzerkonten sind}}
+Kennworts bei {{SITENAME}} angefordert ($4). {{PLURAL:$3|Das folgende Benutzerkonto ist|Die folgenden Benutzerkonten sind}}
 mit dieser E-Mail-Adresse verknüpft:
 
 $2
 
-{{PLURAL:$3|Dieses temporäre Passwort läuft|Diese temporären Passwörter laufen}} innerhalb von {{PLURAL:$5|einem Tag|$5 Tagen}} ab.
-Sie sollten sich anmelden und ein neues Passwort vergeben. Falls jemand anderes diese
-Anfrage getätigt hat oder Sie sich wieder an Ihr ursprüngliches Passwort erinnern können und es nicht länger
+{{PLURAL:$3|Dieses temporäre Kennwort läuft|Diese temporären Kennwörter laufen}} innerhalb von {{PLURAL:$5|einem Tag|$5 Tagen}} ab.
+Sie sollten sich anmelden und ein neues Kennwort vergeben. Falls jemand anderes diese
+Anfrage getätigt hat oder Sie sich wieder an Ihr ursprüngliches Kennwort erinnern können und es nicht länger
 ändern möchten, können Sie diese Nachricht ignorieren und weiterhin Ihr altes
-Passwort benutzen.',
-'passwordreset-emailtext-user' => 'Benutzer $1 bei {{SITENAME}} hat eine Zurücksetzung Ihres Passworts bei {{SITENAME}} angefordert ($4). {{PLURAL:$3|Das folgende Benutzerkonto ist|Die folgenden Benutzerkonten sind}} mit dieser E-Mail-Adresse verknüpft:
+Kennwort benutzen.',
+'passwordreset-emailtext-user' => 'Benutzer $1 bei {{SITENAME}} hat eine Zurücksetzung Ihres Kennworts bei {{SITENAME}} angefordert ($4). {{PLURAL:$3|Das folgende Benutzerkonto ist|Die folgenden Benutzerkonten sind}} mit dieser E-Mail-Adresse verknüpft:
 
 $2
 
-{{PLURAL:$3|Dieses temporäre Passwort läuft|Diese temporären Passwörter laufen}} innerhalb von {{PLURAL:$5|einem Tag|$5 Tagen}} ab. Sie sollten sich anmelden und ein neues Passwort vergeben. Falls jemand anderes diese Anfrage getätigt hat oder Sie sich wieder an Ihr ursprüngliches Passwort erinnern können und es nicht ändern möchten, können Sie diese Nachricht ignorieren und weiterhin Ihr altes Passwort benutzen.',
+{{PLURAL:$3|Dieses temporäre Kennwort läuft|Diese temporären Kennwörter laufen}} innerhalb von {{PLURAL:$5|einem Tag|$5 Tagen}} ab. Sie sollten sich anmelden und ein neues Kennwort vergeben. Falls jemand anderes diese Anfrage getätigt hat oder Sie sich wieder an Ihr ursprüngliches Kennwort erinnern können und es nicht ändern möchten, können Sie diese Nachricht ignorieren und weiterhin Ihr altes Kennwort benutzen.',
 
 # Special:ChangeEmail
-'changeemail-text' => 'Füllen Sie dieses Formular vollständig aus, um Ihre E-Mail-Adresse zu ändern. Sie müssen Ihr Passwort angeben, um diese Änderung zu bestätigen.',
+'changeemail-text' => 'Füllen Sie dieses Formular vollständig aus, um Ihre E-Mail-Adresse zu ändern. Sie müssen Ihr Kennwort angeben, um diese Änderung zu bestätigen.',
 'changeemail-no-info' => 'Sie müssen angemeldet sein, um direkt auf diese Seite zugreifen zu können.',
 
 # Edit page toolbar
@@ -334,7 +334,7 @@ Hier ein zufällig generierter Wert, den Sie verwenden können: $1',
 'prefs-reset-intro' => 'Sie können diese Seite verwenden, um die Einstellungen auf die Standards zurückzusetzen.
 Dies kann nicht mehr rückgängig gemacht werden.',
 'prefs-help-realname' => 'Optional. Damit kann Ihr bürgerlicher Name Ihren Beiträgen zugeordnet werden.',
-'prefs-help-email' => 'Die Angabe einer E-Mail-Adresse ist optional, ermöglicht aber die Zusendung eines Ersatzpasswortes, sofern Sie Ihr Passwort vergessen haben.',
+'prefs-help-email' => 'Die Angabe einer E-Mail-Adresse ist optional, ermöglicht aber die Zusendung eines ErsatzKennwortes, sofern Sie Ihr Kennwort vergessen haben.',
 'prefs-help-email-others' => 'Mit anderen Benutzern können Sie auch über die Benutzerdiskussionsseiten Kontakt aufnehmen, ohne dass Sie Ihre Identität offenlegen müssen.',
 
 # User rights
