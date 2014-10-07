@@ -71,28 +71,28 @@ Nutzen Sie bitte [//translatewiki.net/ translatewiki.net], das Lokalisierungspro
 # Login and logout pages
 'logouttext' => "'''Sie sind nun abgemeldet.'''
 
-Sie können {{SITENAME}} jetzt anonym weiternutzen, oder sich erneut unter demselben oder einem anderen Benutzernamen <span class='plainlinks'>[$1 anmelden]</span>.
+Sie können {{SITENAME}} jetzt anonym weiternutzen, oder sich erneut unter demselben oder einem anderen Anmeldenamen <span class='plainlinks'>[$1 anmelden]</span>.
 Beachten Sie, dass einige Seiten noch anzeigen können, dass Sie angemeldet sind, solange Sie nicht Ihren Browsercache geleert haben.",
 'yourdomainname' => 'Ihre Domain:',
 'password-change-forbidden' => 'Sie können auf diesem Wiki keine Kennwörter ändern.',
 'externaldberror' => 'Entweder es liegt ein Fehler bei der externen Authentifizierung vor oder Sie dürfen Ihr externes Benutzerkonto nicht aktualisieren.',
 'nologin' => "Sie haben kein Benutzerkonto? '''$1'''.",
 'gotaccount' => "Haben Sie bereits ein Benutzerkonto? '''$1'''.",
-'userexists' => 'Dieser Benutzername ist schon vergeben.
+'userexists' => 'Dieser Anmeldename ist schon vergeben.
 Bitte wählen Sie einen anderen.',
 'nocookiesnew' => 'Der Benutzerzugang wurde erstellt, aber Sie sind nicht angemeldet.
-{{SITENAME}} benötigt für diese Funktion Cookies, bitte aktivieren Sie diese und melden sich dann mit Ihrem neuen Benutzernamen und dem zugehörigen Kennwort an.',
+{{SITENAME}} benötigt für diese Funktion Cookies, bitte aktivieren Sie diese und melden sich dann mit Ihrem neuen Anmeldenamen und dem zugehörigen Kennwort an.',
 'nocookieslogin' => '{{SITENAME}} benutzt Cookies zur Anmeldung der Benutzer.
 Sie haben Cookies deaktiviert, bitte aktivieren Sie diese und versuchen Sie es erneut.',
-'noname' => 'Sie müssen einen gültigen Benutzernamen angeben.',
+'noname' => 'Sie müssen einen gültigen Anmeldenamen angeben.',
 'loginsuccess' => 'Sie sind jetzt als „$1“ bei {{SITENAME}} angemeldet.',
-'nosuchuser' => 'Der Benutzername „$1“ existiert nicht.
+'nosuchuser' => 'Der Anmeldename „$1“ existiert nicht.
 Überprüfen Sie die Schreibweise (Groß-/Kleinschreibung beachten) oder [[Special:UserLogin/signup|melden Sie sich als neuer Benutzer an]].',
-'nosuchusershort' => 'Der Benutzername „$1“ ist nicht vorhanden. Bitte überprüfen Sie die Schreibweise.',
-'nouserspecified' => 'Bitte geben Sie einen Benutzernamen an.',
+'nosuchusershort' => 'Der Anmeldename „$1“ ist nicht vorhanden. Bitte überprüfen Sie die Schreibweise.',
+'nouserspecified' => 'Bitte geben Sie einen Anmeldenamen an.',
 'wrongpassword' => 'Das Kennwort ist falsch. Bitte versuchen Sie es erneut.',
 'wrongpasswordempty' => 'Es wurde kein Kennwort eingegeben. Bitte versuchen Sie es erneut.',
-'password-name-match' => 'Ihr Kennwort muss sich von Ihrem Benutzernamen unterscheiden.',
+'password-name-match' => 'Ihr Kennwort muss sich von Ihrem Anmeldenamen unterscheiden.',
 'passwordremindertext' => 'Jemand mit der IP-Adresse $1, wahrscheinlich Sie selbst, hat ein neues Kennwort für die Anmeldung bei {{SITENAME}} ($4) angefordert.
 
 Das automatisch generierte Kennwort für Benutzer „$2“ lautet nun: $3
@@ -162,7 +162,7 @@ $2
 'missingsummary' => "'''Hinweis:''' Sie haben keine Zusammenfassung angegeben. Wenn Sie erneut auf „{{int:savearticle}}“ klicken, wird Ihre Änderung ohne Zusammenfassung übernommen.",
 'missingcommenttext' => 'Ihr Abschnitt enthält keinen Text.',
 'missingcommentheader' => "'''Achtung:''' Sie haben kein Betreff/Überschrift eingegeben. Wenn Sie erneut auf „{{int:savearticle}}“ klicken, wird Ihre Bearbeitung ohne Überschrift gespeichert.",
-'blockedtext' => "'''Ihr Benutzername oder Ihre IP-Adresse wurde gesperrt.'''
+'blockedtext' => "'''Ihr Anmeldename oder Ihre IP-Adresse wurde gesperrt.'''
 
 Die Sperrung wurde vom Administrator $1 durchgeführt.
 Als Grund wurde ''$2'' angegeben.
@@ -529,11 +529,11 @@ Im [[Special:Log/delete|Lösch-Logbuch]] finden Sie eine Übersicht der gelösch
 'tooltip-namespace_association' => 'Dieses Auswahlfeld anklicken, um den Ihrer Auswahl zugehörigen Diskussionsnamensraum, oder im umgekehrten Fall, den zugehörigen Namensraum, mit einzubeziehen',
 
 # Block/unblock
-'blockiptext' => 'Mit diesem Formular sperren Sie eine IP-Adresse oder einen Benutzernamen, so dass von dort keine Änderungen mehr vorgenommen werden können.
+'blockiptext' => 'Mit diesem Formular sperren Sie eine IP-Adresse oder einen Anmeldenamen, so dass von dort keine Änderungen mehr vorgenommen werden können.
 Dies sollte nur erfolgen, um Vandalismus zu verhindern und in Übereinstimmung mit den [[{{MediaWiki:Policy-url}}|Richtlinien]].
 Bitte geben Sie den Grund für die Sperre an.',
 'ipb-blockingself' => 'Sie sind gerade dabei, sich selbst zu sperren! Möchten Sie das wirklich tun?',
-'ipb-confirmhideuser' => 'Sie sind gerade dabei, einen Benutzer im Modus „Benutzer verstecken“ zu sperren. Dies führt dazu, dass der Benutzername in allen Listen und Logbüchern unterdrückt wird. Möchten Sie das wirklich tun?',
+'ipb-confirmhideuser' => 'Sie sind gerade dabei, einen Benutzer im Modus „Benutzer verstecken“ zu sperren. Dies führt dazu, dass der Anmeldename in allen Listen und Logbüchern unterdrückt wird. Möchten Sie das wirklich tun?',
 'unblockiptext' => 'Mit diesem Formular können Sie eine IP-Adresse oder einen Benutzer freigeben.',
 'autoblocker' => 'Automatische Sperre, da Sie eine gemeinsame IP-Adresse mit [[User:$1|$1]] benutzen. Grund der Benutzersperre: „$2“.',
 'ipb-needreblock' => '„$1“ ist bereits gesperrt. Möchten Sie die Sperrparameter ändern?',
@@ -607,7 +607,7 @@ Bitte besuchen Sie die Seiten [//www.mediawiki.org/wiki/Localisation MediaWiki-L
 
 # Special:Import
 'import-interwiki-text' => 'Wählen Sie ein Wiki und eine Seite zum Importieren aus.
-Die Versionsdaten und Benutzernamen bleiben dabei erhalten.
+Die Versionsdaten und Anmeldenamen bleiben dabei erhalten.
 Alle Transwiki-Import-Aktionen werden im [[Special:Log/import|Import-Logbuch]] protokolliert.',
 'import-token-mismatch' => 'Verlust der Sessiondaten. Bitte versuchen Sie es erneut.',
 'import-error-edit' => 'Die Seite „$1“ wurde nicht importiert, da Sie nicht berechtigt sind, sie zu bearbeiten.',
@@ -716,7 +716,7 @@ Sie können auch die [[Special:EditWatchlist|Standardseite]] zum Bearbeiten benu
 
 # Feedback
 'feedback-bugornote' => 'Sofern Sie detailliert ein technisches Problem beschreiben möchten, melden Sie bitte [$1 einen Fehler].
-Anderenfalls können Sie auch das untenstehende einfache Formular nutzen. Ihr Kommentar wird, zusammen mit Ihrem Benutzernamen und der Version des von Ihnen verwendeten Webbrowsers sowie Betriebssystems, auf der Seite „[$3 $2]“ hinzugefügt.',
+Anderenfalls können Sie auch das untenstehende einfache Formular nutzen. Ihr Kommentar wird, zusammen mit Ihrem Anmeldenamen und der Version des von Ihnen verwendeten Webbrowsers sowie Betriebssystems, auf der Seite „[$3 $2]“ hinzugefügt.',
 'feedback-thanks' => 'Vielen Dank. Ihre Rückmeldung wurde auf der Seite „[$2 $1]“ gespeichert.',
 'feedback-bugcheck' => 'Super! Bitte überprüfen Sie noch, ob es sich hierbei nicht um einen bereits [$1 bekannten Fehler] handelt.',
 

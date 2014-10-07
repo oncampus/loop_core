@@ -844,10 +844,10 @@ Beachte, dass einige Seiten noch anzeigen können, dass du angemeldet bist, sola
 'welcomeuser' => 'Willkommen, $1!',
 'welcomecreation-msg' => 'Dein Benutzerkonto wurde erstellt.
 Vergiss nicht, deine [[Special:Preferences|{{SITENAME}}-Einstellungen]] zu ändern.',
-'yourname' => 'Benutzername:',
-'userlogin-yourname' => 'Benutzername',
-'userlogin-yourname-ph' => 'Gib deinen Benutzernamen ein',
-'createacct-another-username-ph' => 'Benutzername',
+'yourname' => 'Anmeldename:',
+'userlogin-yourname' => 'Anmeldename',
+'userlogin-yourname-ph' => 'Gib deinen Anmeldenamen ein',
+'createacct-another-username-ph' => 'Anmeldename',
 'yourpassword' => 'Kennwort:',
 'userlogin-yourpassword' => 'Kennwort',
 'userlogin-yourpassword-ph' => 'Gib dein Kennwort ein',
@@ -903,28 +903,28 @@ Benutze das unten stehende Formular, um sich unter einem anderen Benutzer anzume
 'createacct-benefit-body2' => '{{PLURAL:$1|Seite|Seiten}}',
 'createacct-benefit-body3' => '{{PLURAL:$1|aktiver Autor|aktive Autoren}}',
 'badretype' => 'Die beiden Kennwörter stimmen nicht überein.',
-'userexists' => 'Dieser Benutzername ist schon vergeben.
+'userexists' => 'Dieser Anmeldename ist schon vergeben.
 Bitte wähle einen anderen.',
 'loginerror' => 'Fehler bei der Anmeldung',
 'createacct-error' => 'Fehler beim Erstellen des Benutzerkontos',
 'createaccounterror' => 'Benutzerkonto konnte nicht erstellt werden: $1',
-'nocookiesnew' => 'Der Benutzerzugang wurde erstellt, aber du bist nicht angemeldet. {{SITENAME}} benötigt für diese Funktion Cookies, bitte aktiviere diese und melde dich dann mit deinem neuen Benutzernamen und dem zugehörigen Kennwort an.',
+'nocookiesnew' => 'Der Benutzerzugang wurde erstellt, aber du bist nicht angemeldet. {{SITENAME}} benötigt für diese Funktion Cookies, bitte aktiviere diese und melde dich dann mit deinem neuen Anmeldenamen und dem zugehörigen Kennwort an.',
 'nocookieslogin' => '{{SITENAME}} benutzt Cookies zur Anmeldung der Benutzer. Du hast Cookies deaktiviert, bitte aktiviere diese und versuche es erneut.',
 'nocookiesfornew' => 'Das Benutzerkonto wurde nicht erstellt, da die Datenherkunft nicht ermittelt werden konnte.
 Es muss sichergestellt sein, dass Cookies aktiviert sind. Danach diese Seite erneut laden und es wieder versuchen.',
-'noname' => 'Du musst einen gültigen Benutzernamen angeben.',
+'noname' => 'Du musst einen gültigen Anmeldenamen angeben.',
 'loginsuccesstitle' => 'Anmeldung erfolgreich',
 'loginsuccess' => 'Du bist jetzt als „$1“ bei {{SITENAME}} angemeldet.',
-'nosuchuser' => 'Der Benutzername „$1“ existiert nicht.
+'nosuchuser' => 'Der Anmeldename „$1“ existiert nicht.
 Überprüfe die Schreibweise (Groß-/Kleinschreibung beachten) oder [[Special:UserLogin/signup|melde dich als neuer Benutzer an]].',
-'nosuchusershort' => 'Der Benutzername „$1“ ist nicht vorhanden. Bitte überprüfe die Schreibweise.',
-'nouserspecified' => 'Bitte gib einen Benutzernamen an.',
+'nosuchusershort' => 'Der Anmeldename „$1“ ist nicht vorhanden. Bitte überprüfe die Schreibweise.',
+'nouserspecified' => 'Bitte gib einen Anmeldenamen an.',
 'login-userblocked' => '{{GENDER:$1|Dieser Benutzer|Diese Benutzerin|Dieser Benutzer}} ist gesperrt. Die Anmeldung ist nicht erlaubt.',
 'wrongpassword' => 'Das Kennwort ist falsch. Bitte versuche es erneut.',
 'wrongpasswordempty' => 'Es wurde kein Kennwort eingegeben. Bitte versuche es erneut.',
 'passwordtooshort' => 'Kennwörter müssen mindestens {{PLURAL:$1|1 Zeichen|$1 Zeichen}} lang sein.',
-'password-name-match' => 'Dein Kennwort muss sich von deinem Benutzernamen unterscheiden.',
-'password-login-forbidden' => 'Die Verwendung dieses Benutzernamens und Kennwortes ist nicht erlaubt.',
+'password-name-match' => 'Dein Kennwort muss sich von deinem Anmeldenamen unterscheiden.',
+'password-login-forbidden' => 'Die Verwendung dieses Anmeldenamens und Kennwortes ist nicht erlaubt.',
 'mailmypassword' => 'Neues Kennwort zusenden',
 'passwordremindertitle' => 'Neues Kennwort für ein {{SITENAME}}-Benutzerkonto',
 'passwordremindertext' => 'Jemand mit der IP-Adresse $1, wahrscheinlich du selbst, hat ein neues Kennwort für die Anmeldung bei {{SITENAME}} ($4) angefordert.
@@ -961,7 +961,7 @@ Besucher, die diese IP-Adresse verwenden, können momentan keine Benutzerkonten 
 'createaccount-text' => 'Es wurde für dich ein Benutzerkonto „$2“ auf {{SITENAME}} ($4) erstellt. Das automatisch generierte Kennwort für „$2“ ist „$3“. Du solltest dich nun anmelden und das Kennwort ändern.
 
 Falls das Benutzerkonto irrtümlich angelegt wurde, kannst du diese Nachricht ignorieren.',
-'usernamehasherror' => 'Benutzernamen dürfen kein Rautenzeichen enthalten',
+'usernamehasherror' => 'Anmeldenamen dürfen kein Rautenzeichen enthalten',
 'login-throttled' => 'Du hast zu oft versucht, dich anzumelden.
 Bitte warte $1, bevor du es erneut probierst.',
 'login-abort-generic' => 'Deine Anmeldung war nicht erfolgreich – Abgebrochen',
@@ -1001,7 +1001,7 @@ Möglicherweise hast du dein Kennwort bereits erfolgreich geändert oder ein neu
 'passwordreset-legend' => 'Kennwort zurücksetzen',
 'passwordreset-disabled' => 'Das Zurücksetzen von Kennwörtern wurde in diesem Wiki deaktiviert.',
 'passwordreset-emaildisabled' => 'Die E-Mail-Funktionen wurden auf diesem Wiki deaktiviert.',
-'passwordreset-username' => 'Benutzername:',
+'passwordreset-username' => 'Anmeldename:',
 'passwordreset-domain' => 'Domain:',
 'passwordreset-capture' => 'Die E-Mail-Nachricht ansehen?',
 'passwordreset-capture-help' => 'Wenn du dieses Kästchen ankreuzt, wird die E-Mail-Nachricht mit dem temporären Kennwort sowohl dir angezeigt als auch dem Benutzer zugesandt.',
@@ -1023,7 +1023,7 @@ Kennwort benutzen.',
 $2
 
 {{PLURAL:$3|Dieses temporäre Kennwort läuft|Diese temporären Kennwörter laufen}} innerhalb von {{PLURAL:$5|einem Tag|$5 Tagen}} ab. Du solltest dich anmelden und ein neues Kennwort vergeben. Falls jemand anderes diese Anfrage getätigt hat oder du dich wieder an dein ursprüngliches Kennwort erinnern kannst und es nicht ändern möchtest, kannst du diese Nachricht ignorieren und weiterhin dein altes Kennwort benutzen.',
-'passwordreset-emailelement' => 'Benutzername: $1
+'passwordreset-emailelement' => 'Anmeldename: $1
 Temporäres Kennwort: $2',
 'passwordreset-emailsent' => 'Eine Kennwortzurücksetzungs-E-Mail wurde versandt.',
 'passwordreset-emailsent-capture' => 'Eine Kennwortzurücksetzungs-E-Mail wurde versandt, die unten angezeigt wird.',
@@ -1092,7 +1092,7 @@ Du solltest dies nur machen, wenn du die Tokens versehentlich mit jemandem getei
 'summary-preview' => 'Vorschau der Zusammenfassungszeile:',
 'subject-preview' => 'Vorschau der Zusammenfassungszeile:',
 'blockedtitle' => 'Benutzer ist gesperrt',
-'blockedtext' => "'''Dein Benutzername oder deine IP-Adresse wurde gesperrt.'''
+'blockedtext' => "'''Dein Anmeldename oder deine IP-Adresse wurde gesperrt.'''
 
 Die Sperrung wurde vom Administrator $1 durchgeführt.
 Als Grund wurde ''$2'' angegeben.
@@ -1312,7 +1312,7 @@ Grund der Sperre: ''$2''",
 'page_last' => 'Ende',
 'histlegend' => 'Zur Anzeige der Änderungen einfach die zu vergleichenden Versionen auswählen und die Schaltfläche „{{int:compareselectedversions}}“ klicken.<br />
 * ({{int:cur}}) = Unterschied zur aktuellen Version, ({{int:last}}) = Unterschied zur vorherigen Version
-* Uhrzeit/Datum = Version zu dieser Zeit, Benutzername/IP-Adresse des Bearbeiters, {{int:minoreditletter}} = Kleine Änderung',
+* Uhrzeit/Datum = Version zu dieser Zeit, Anmeldename/IP-Adresse des Bearbeiters, {{int:minoreditletter}} = Kleine Änderung',
 'history-fieldset-title' => 'In der Versionsgeschichte suchen',
 'history-show-deleted' => 'Nur gelöschte Versionen zeigen',
 'histfirst' => 'älteste',
@@ -1328,9 +1328,9 @@ Grund der Sperre: ''$2''",
 
 # Revision deletion
 'rev-deleted-comment' => '(Zusammenfassung entfernt)',
-'rev-deleted-user' => '(Benutzername entfernt)',
+'rev-deleted-user' => '(Anmeldename entfernt)',
 'rev-deleted-event' => '(Logbuchaktion entfernt)',
-'rev-deleted-user-contribs' => '[Benutzername oder IP-Adresse entfernt – Bearbeitung aus Beiträgen versteckt]',
+'rev-deleted-user-contribs' => '[Anmeldename oder IP-Adresse entfernt – Bearbeitung aus Beiträgen versteckt]',
 'rev-deleted-text-permission' => "Diese Version wurde '''gelöscht'''.
 Nähere Angaben zum Löschvorgang sowie eine Begründung stehen im [{{fullurl:{{#special:Log}}/delete|page={{FULLPAGENAMEE}}}} Lösch-Logbuch].",
 'rev-deleted-text-unhide' => "Diese Version wurde '''gelöscht'''.
@@ -1381,7 +1381,7 @@ Andere Administratoren auf {{SITENAME}} haben Zugriff auf den versteckten Inhalt
 'revdelete-hide-image' => 'Dateiinhalt verstecken',
 'revdelete-hide-name' => 'Logbuchaktion und Ziel verstecken',
 'revdelete-hide-comment' => 'Bearbeitungszusammenfassung verstecken',
-'revdelete-hide-user' => 'Benutzername/IP-Adresse des Bearbeiters verstecken',
+'revdelete-hide-user' => 'Anmeldename/IP-Adresse des Bearbeiters verstecken',
 'revdelete-hide-restricted' => 'Daten sowohl vor Administratoren als auch anderen Benutzern unterdrücken',
 'revdelete-radio-same' => '(nicht ändern)',
 'revdelete-radio-set' => 'Ja',
@@ -1415,7 +1415,7 @@ Bitte prüfe die Logbücher.',
 'revdelete-reason-dropdown' => '*Allgemeine Löschgründe
 ** Urheberrechtsverletzung
 ** Unangebrachte Kommentare oder persönliche Informationen
-** Unangebrachter Benutzername
+** Unangebrachter Anmeldename
 ** Potentiell beleidigende Informationen',
 'revdelete-otherreason' => 'Anderer/ergänzender Grund:',
 'revdelete-reasonotherlist' => 'Anderer Grund',
@@ -1424,8 +1424,8 @@ Bitte prüfe die Logbücher.',
 
 # Suppression log
 'suppressionlog' => 'Oversight-Logbuch',
-'suppressionlogtext' => 'Dies ist das Logbuch der Oversight-Aktionen (Änderungen der Sichtbarkeit von Versionen, Bearbeitungskommentaren, Benutzernamen und Benutzersperren).
-Siehe die [[Special:BlockList|Liste der gesperrten IP-Adressen und Benutzernamen]] für aktuelle Sperren.',
+'suppressionlogtext' => 'Dies ist das Logbuch der Oversight-Aktionen (Änderungen der Sichtbarkeit von Versionen, Bearbeitungskommentaren, Anmeldenamen und Benutzersperren).
+Siehe die [[Special:BlockList|Liste der gesperrten IP-Adressen und Anmeldenamen]] für aktuelle Sperren.',
 
 # History merging
 'mergehistory' => 'Versionsgeschichten vereinen',
@@ -1611,7 +1611,7 @@ Jeder, der ihn kennt, kann deine Beobachtungsliste lesen. Teile ihn deshalb nich
 Dies kann nicht mehr rückgängig gemacht werden.',
 'prefs-emailconfirm-label' => 'E-Mail-Bestätigung:',
 'youremail' => 'E-Mail-Adresse:',
-'username' => '{{GENDER:$1|Benutzername}}:',
+'username' => '{{GENDER:$1|Anmeldename}}:',
 'uid' => '{{GENDER:$1|Benutzerkennung}}:',
 'prefs-memberingroups' => '{{GENDER:$2|Mitglied}} der {{PLURAL:$1|Benutzergruppe|Benutzergruppen}}:',
 'prefs-memberingroups-type' => '$2',
@@ -1663,7 +1663,7 @@ Diese Information ist öffentlich.',
 # User rights
 'userrights' => 'Benutzerrechteverwaltung',
 'userrights-lookup-user' => 'Gruppenzugehörigkeit verwalten',
-'userrights-user-editname' => 'Benutzername:',
+'userrights-user-editname' => 'Anmeldename:',
 'editusergroup' => 'Benutzerrechte bearbeiten',
 'editinguser' => "Ändere Benutzerrechte von '''[[User:$1|$1]]''' $2",
 'userrights-editusergroup' => 'Benutzer-Gruppenzugehörigkeit bearbeiten',
@@ -1744,7 +1744,7 @@ Diese Information ist öffentlich.',
 'right-suppressionlog' => 'Private Logbücher ansehen',
 'right-block' => 'Benutzer sperren (Schreibrecht)',
 'right-blockemail' => 'Benutzer am Versenden von E-Mails hindern',
-'right-hideuser' => 'Benutzernamen sperren und verbergen',
+'right-hideuser' => 'Anmeldenamen sperren und verbergen',
 'right-ipblock-exempt' => 'Ausnahme von IP-Sperren, automatischen Sperren und Rangesperren',
 'right-proxyunbannable' => 'Ausnahme von automatischen Proxysperren',
 'right-unblockself' => 'Sich entsperren',
@@ -2352,7 +2352,7 @@ Jede Zeile enthält Links zur ersten und zweiten Weiterleitung sowie dem Ziel de
 'usereditcount' => '$1 {{PLURAL:$1|Bearbeitung|Bearbeitungen}}',
 'usercreated' => '{{GENDER:$3|Erstellt}} am $1 um $2 Uhr',
 'newpages' => 'Neue Seiten',
-'newpages-username' => 'Benutzername:',
+'newpages-username' => 'Anmeldename:',
 'ancientpages' => 'Seit längerem unbearbeitete Seiten',
 'move' => 'Verschieben',
 'movethispage' => 'Seite verschieben',
@@ -2484,9 +2484,9 @@ Als Absender wird die E-Mail-Adresse aus deinen [[Special:Preferences|Einstellun
 'noemailtext' => 'Dieser Benutzer hat keine gültige E-Mail-Adresse angegeben.',
 'nowikiemailtitle' => 'E-Mail-Versand nicht möglich',
 'nowikiemailtext' => 'Dieser Benutzer möchte keine E-Mails von anderen Benutzern erhalten.',
-'emailnotarget' => 'Nicht vorhandener oder ungültiger Benutzername für den Empfang einer E-Mail.',
-'emailtarget' => 'Benutzernamen des Empfängers eingeben',
-'emailusername' => 'Benutzername:',
+'emailnotarget' => 'Nicht vorhandener oder ungültiger Anmeldename für den Empfang einer E-Mail.',
+'emailtarget' => 'Anmeldenamen des Empfängers eingeben',
+'emailusername' => 'Anmeldename:',
 'emailusernamesubmit' => 'Weiter',
 'email-legend' => 'E-Mail an einen anderen {{SITENAME}}-Benutzer senden',
 'emailfrom' => 'Von:',
@@ -2783,7 +2783,7 @@ $1',
 'sp-contributions-blocked-notice-anon' => 'Diese IP-Adresse ist zurzeit gesperrt.
 Zur Information folgt der aktuelle Auszug aus dem Sperr-Logbuch:',
 'sp-contributions-search' => 'Suche nach Benutzerbeiträgen',
-'sp-contributions-username' => 'IP-Adresse oder Benutzername:',
+'sp-contributions-username' => 'IP-Adresse oder Anmeldename:',
 'sp-contributions-toponly' => 'Nur aktuelle Versionen zeigen',
 'sp-contributions-submit' => 'Suchen',
 
@@ -2813,10 +2813,10 @@ Zur Information folgt der aktuelle Auszug aus dem Sperr-Logbuch:',
 'blockip' => 'IP-Adresse/Benutzer sperren',
 'blockip-title' => 'Benutzer sperren',
 'blockip-legend' => 'IP-Adresse/Benutzer sperren',
-'blockiptext' => 'Mit diesem Formular sperrst du eine IP-Adresse oder einen Benutzernamen, so dass von dort keine Änderungen mehr vorgenommen werden können.
+'blockiptext' => 'Mit diesem Formular sperrst du eine IP-Adresse oder einen Anmeldenamen, so dass von dort keine Änderungen mehr vorgenommen werden können.
 Dies sollte nur erfolgen, um Vandalismus zu verhindern und in Übereinstimmung mit den [[{{MediaWiki:Policy-url}}|Richtlinien]].
 Bitte gib den Grund für die Sperre an.',
-'ipadressorusername' => 'IP-Adresse oder Benutzername:',
+'ipadressorusername' => 'IP-Adresse oder Anmeldename:',
 'ipbexpiry' => 'Sperrdauer:',
 'ipbreason' => 'Grund:',
 'ipbreasonotherlist' => 'Anderer Grund',
@@ -2827,7 +2827,7 @@ Bitte gib den Grund für die Sperre an.',
 ** Einstellen unsinniger Inhalte in Seiten
 ** Ungebührliches Verhalten
 ** Missbrauch mit mehreren Benutzerkonten
-** Ungeeigneter Benutzername',
+** Ungeeigneter Anmeldename',
 'ipb-hardblock' => 'Angemeldete Benutzer daran hindern, Bearbeitungen unter dieser IP-Adresse vorzunehmen',
 'ipbcreateaccount' => 'Erstellung von Benutzerkonten verhindern',
 'ipbemailban' => 'E-Mail-Versand sperren',
@@ -2837,7 +2837,7 @@ Bitte gib den Grund für die Sperre an.',
 'ipboptions' => '2 Stunden:2 hours,1 Tag:1 day,3 Tage:3 days,1 Woche:1 week,2 Wochen:2 weeks,1 Monat:1 month,3 Monate:3 months,6 Monate:6 months,1 Jahr:1 year,unbeschränkt:infinite',
 'ipbotheroption' => 'Andere Dauer',
 'ipbotherreason' => 'Anderer/ergänzender Grund:',
-'ipbhidename' => 'Benutzername in Bearbeitungen und Listen verstecken',
+'ipbhidename' => 'Anmeldename in Bearbeitungen und Listen verstecken',
 'ipbwatchuser' => 'Benutzer(diskussions)seite beobachten',
 'ipb-disableusertalk' => 'Diesen Benutzer daran hindern seine eigene Diskussionsseite zu bearbeiten, solange er gesperrt ist',
 'ipb-change-block' => 'Sperre mit diesen Sperrparametern erneuern',
@@ -2847,7 +2847,7 @@ Bitte gib den Grund für die Sperre an.',
 'blockipsuccesstext' => 'Der Benutzer / die IP-Adresse [[Special:Contributions/$1|$1]] wurde gesperrt.<br />
 Zur Aufhebung der Sperre siehe die [[Special:BlockList|Liste aller aktiven Sperren]].',
 'ipb-blockingself' => 'Du bist gerade dabei, dich selbst zu sperren! Möchtest du das wirklich tun?',
-'ipb-confirmhideuser' => 'Du bist gerade dabei, einen Benutzer im Modus „Benutzer verstecken“ zu sperren. Dies führt dazu, dass der Benutzername in allen Listen und Logbüchern unterdrückt wird. Möchtest du das wirklich tun?',
+'ipb-confirmhideuser' => 'Du bist gerade dabei, einen Benutzer im Modus „Benutzer verstecken“ zu sperren. Dies führt dazu, dass der Anmeldename in allen Listen und Logbüchern unterdrückt wird. Möchtest du das wirklich tun?',
 'ipb-edit-dropdown' => 'Sperrgründe bearbeiten',
 'ipb-unblock-addr' => '„$1“ freigeben',
 'ipb-unblock' => 'IP-Adresse/Benutzer freigeben',
@@ -2883,7 +2883,7 @@ Zur Aufhebung der Sperre siehe die [[Special:BlockList|Liste aller aktiven Sperr
 'emailblock' => 'E-Mail-Versand gesperrt',
 'blocklist-nousertalk' => 'darf eigene Diskussionsseite nicht bearbeiten',
 'ipblocklist-empty' => 'Die Liste enthält keine Einträge.',
-'ipblocklist-no-results' => 'Die gesuchte IP-Adresse/der Benutzername ist nicht gesperrt.',
+'ipblocklist-no-results' => 'Die gesuchte IP-Adresse/der Anmeldename ist nicht gesperrt.',
 'blocklink' => 'Sperren',
 'unblocklink' => 'Freigeben',
 'change-blocklink' => 'Sperre ändern',
@@ -2898,7 +2898,7 @@ Es folgt der Eintrag aus dem Unterdrückungs-Logbuch:',
 'reblock-logentry' => 'änderte die Sperre von „[[$1]]“ für den Zeitraum: $2 $3',
 'blocklogtext' => 'Dies ist das Logbuch über Sperrungen und Entsperrungen von Benutzern und IP-Adressen.
 Automatisch gesperrte IP-Adressen werden nicht erfasst.
-Siehe die [[Special:BlockList|Liste der gesperrten IP-Adressen und Benutzernamen]] für alle aktiven Sperren.',
+Siehe die [[Special:BlockList|Liste der gesperrten IP-Adressen und Anmeldenamen]] für alle aktiven Sperren.',
 'unblocklogentry' => 'hob die Sperre von „$1“ auf',
 'block-log-flags-anononly' => 'nur Anonyme',
 'block-log-flags-nocreate' => 'Erstellung von Benutzerkonten gesperrt',
@@ -2906,15 +2906,15 @@ Siehe die [[Special:BlockList|Liste der gesperrten IP-Adressen und Benutzernamen
 'block-log-flags-noemail' => 'E-Mail-Versand gesperrt',
 'block-log-flags-nousertalk' => 'darf eigene Diskussionsseite nicht bearbeiten',
 'block-log-flags-angry-autoblock' => 'erweiterter Autoblock aktiviert',
-'block-log-flags-hiddenname' => 'Benutzername versteckt',
+'block-log-flags-hiddenname' => 'Anmeldename versteckt',
 'range_block_disabled' => 'Die Möglichkeit, ganze Adressräume zu sperren, ist nicht aktiviert.',
 'ipb_expiry_invalid' => 'Die eingegebene Dauer ist ungültig.',
-'ipb_expiry_temp' => 'Benutzernamens-Sperren mit der Verstecken-Option müssen permanent sein.',
+'ipb_expiry_temp' => 'Anmeldenamens-Sperren mit der Verstecken-Option müssen permanent sein.',
 'ipb_hide_invalid' => 'Dieses Konto kann nicht unterdrückt werden, da es zu viele Bearbeitungen aufweist.',
 'ipb_already_blocked' => '„$1“ ist bereits gesperrt',
 'ipb-needreblock' => '„$1“ ist bereits gesperrt. Möchtest du die Sperrparameter ändern?',
 'ipb-otherblocks-header' => 'Andere {{PLURAL:$1|Sperre|Sperren}}',
-'unblock-hideuser' => 'Dieser Benutzer kann nicht entsperrt werden, da dessen Benutzername versteckt wurde.',
+'unblock-hideuser' => 'Dieser Benutzer kann nicht entsperrt werden, da dessen Anmeldename versteckt wurde.',
 'ipb_cant_unblock' => 'Fehler: Sperr-ID $1 nicht gefunden. Die Sperre wurde bereits aufgehoben.',
 'ipb_blocked_as_range' => 'Fehler: Die IP-Adresse $1 wurde als Teil der Bereichssperre $2 indirekt gesperrt. Eine Entsperrung von $1 alleine ist nicht möglich.',
 'ip_range_invalid' => 'Ungültiger IP-Adressbereich.',
@@ -3101,7 +3101,7 @@ $2',
 'import' => 'Seiten importieren',
 'importinterwiki' => 'Transwiki-Import',
 'import-interwiki-text' => 'Wähle ein Wiki und eine Seite zum Importieren aus.
-Die Versionsdaten und Benutzernamen bleiben dabei erhalten.
+Die Versionsdaten und Anmeldenamen bleiben dabei erhalten.
 Alle Transwiki-Import-Aktionen werden im [[Special:Log/import|Import-Logbuch]] protokolliert.',
 'import-interwiki-source' => 'Quell-Wiki/-Seite:',
 'import-interwiki-history' => 'Alle Versionen dieser Seite importieren',
@@ -4199,10 +4199,10 @@ Bei entsprechender Einstellung können die Missbrauchfilter beliebige Markierung
 'logentry-suppress-revision-legacy' => '$1 {{GENDER:$2|änderte}} diskret die Sichtbarkeit von Versionen der Seite $3',
 'revdelete-content-hid' => 'Inhalt versteckt',
 'revdelete-summary-hid' => 'Zusammenfassung versteckt',
-'revdelete-uname-hid' => 'Benutzername versteckt',
+'revdelete-uname-hid' => 'Anmeldename versteckt',
 'revdelete-content-unhid' => 'Inhalt freigegeben',
 'revdelete-summary-unhid' => 'Zusammenfassung freigegeben',
-'revdelete-uname-unhid' => 'Benutzername freigegeben',
+'revdelete-uname-unhid' => 'Anmeldename freigegeben',
 'revdelete-restricted' => 'Einschränkungen gelten auch für Administratoren',
 'revdelete-unrestricted' => 'Einschränkungen für Administratoren aufgehoben',
 'logentry-move-move' => '$1 {{GENDER:$2|verschob}} die Seite $3 nach $4',
@@ -4223,7 +4223,7 @@ Bei entsprechender Einstellung können die Missbrauchfilter beliebige Markierung
 
 # Feedback
 'feedback-bugornote' => 'Sofern du detailliert ein technisches Problem beschreiben möchtest, melde bitte [$1 einen Fehler].
-Anderenfalls kannst du auch das untenstehende einfache Formular nutzen. Dein Kommentar wird, zusammen mit deinem Benutzernamen und der Version des von dir verwendeten Webbrowsers sowie Betriebssystems, auf der Seite „[$3 $2]“ hinzugefügt.',
+Anderenfalls kannst du auch das untenstehende einfache Formular nutzen. Dein Kommentar wird, zusammen mit deinem Anmeldenamen und der Version des von dir verwendeten Webbrowsers sowie Betriebssystems, auf der Seite „[$3 $2]“ hinzugefügt.',
 'feedback-subject' => 'Betreff:',
 'feedback-message' => 'Nachricht:',
 'feedback-cancel' => 'Abbrechen',
