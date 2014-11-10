@@ -126,9 +126,7 @@ if ( defined( 'MW_CONFIG_CALLBACK' ) ) {
 		# define( 'MW_CONFIG_FILE', MWInit::interpretedPath( 'LocalSettings.php' ) );
 		
 		$servername=$_SERVER["SERVER_NAME"];
-		$servername_parts=explode('.',$servername);
-		$host=$servername_parts[0];
-		$loop_exists = file_exists( "$IP/LocalSettings/LocalSettings_".$host.".php" );
+		$loop_exists = file_exists( "$IP/LocalSettings/LocalSettings_".$servername.".php" );
 		if (!$loop_exists) {
 			define('MW_CONFIG_FILE', MWInit::interpretedPath( 'dontexist.php' ) );
 		} else {

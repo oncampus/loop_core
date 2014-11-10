@@ -32,9 +32,9 @@
  */
 
 # edit by oncampus
-$k = array_search("--hashtag", $_SERVER['argv']);
-if($k)
-	$_SERVER['SERVER_NAME'] = strtolower($_SERVER['argv'][$k+1]).".oncampus.de";
+$fqdn = array_search("--fqdn", $_SERVER['argv']);
+if($fqdn)
+	$_SERVER['SERVER_NAME'] = strtolower($_SERVER['argv'][$fqdn+1]);
 # end edit
 
 $optionsWithArgs = array(

@@ -51,6 +51,75 @@ if ( !function_exists( 'session_name' ) ) {
 	error_reporting( $oldReporting );
 	$installerStarted = ( $success && isset( $_SESSION['installData'] ) );
 }
+
+
+
+if (!$installerStarted) {
+
+$q = $_SERVER['SERVER_NAME'];
+#$q=$_GET['q'];
+$q=explode('.', $q);
+$hashtag = $q[0];
+$domain = $q[1].'.'.$q[2];
+
+$params=array();
+define('LDAP_salt','jf|w6[PUa60A2D|lH&hz!]^w,|QS;-UMQWtP3R -uAa!`F$)Ws4J1{/@9^UZFy(q');
+$params['token'] = md5(LDAP_salt.$hashtag);
+
+$params['hashtag'] = $hashtag;
+$params['domain'] = $domain;
+
+$url = "https://moodalis.oncampus.de/admin/service.php";
+#$url = "https://moodalis2.oncampus.de/admin/service.php";
+$postfields = array(
+	"lang"=>"de",
+	"username"=>"admin",
+	"password"=>"dA-PfocMoOdalis!",
+	"TRIGGER_login"=>"1",
+	"host"=>"webservice",
+	"svc"=>"func",
+	"func"=>"loop_exist",
+	"ret"=>"phpa",
+	"report"=>"1_",
+	"elevel"=>"4_",
+	"service_params"=>array(0=>$params)
+);
+$postfields = http_build_query($postfields);
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL,$url);
+curl_setopt($ch, CURLOPT_FAILONERROR, 1);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
+curl_setopt($ch, CURLOPT_TIMEOUT, 3);
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $postfields);
+
+$cookiefile = '/tmp/'.uniqid().'cookies.tmp';
+curl_setopt ($ch, CURLOPT_COOKIEFILE, $cookiefile);
+curl_setopt ($ch, CURLOPT_COOKIEJAR, $cookiefile);
+
+$result = curl_exec($ch);
+
+curl_close($ch);
+unlink($cookiefile);
+
+$tmp = (array) unserialize($result);
+$webservice_result = $tmp["webservice/func"];
+
+if ($webservice_result) {
+	?>
+	<html><head></head><body><h2>Bitte haben Sie noch ein wenig Geduld.</h2>
+<br/>
+Sie werden von uns benachrichtigt, sobald Ihr persönliches LOOP konfiguriert wurde. Danach können Sie sofort starten. Schauen Sie doch gleich in die sozialen Netzwerke oder informieren Sie sich mit unseren Videos über die Möglichkeiten von LOOP:
+</body></html>
+	<?php
+} else {
+?><html><head><meta http-equiv="refresh" content="0; URL=http://newloop.oncampus.de"></head><body></body></html><?php
+	exit(0);
+}
+
+
+} else {
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -89,3 +158,6 @@ if ( !function_exists( 'session_name' ) ) {
 		</div>
 	</body>
 </html>
+<?php
+}
+?>

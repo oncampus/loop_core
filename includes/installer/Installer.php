@@ -522,9 +522,7 @@ abstract class Installer {
 		# $_lsExists = file_exists( "$IP/LocalSettings.php" );
 		
 		$servername=$_SERVER["SERVER_NAME"];
-		$servername_parts=explode('.',$servername);
-		$host=$servername_parts[0];
-		$_lsExists = file_exists( "$IP/LocalSettings/LocalSettings_".$host.".php" );		
+		$_lsExists = file_exists( "$IP/LocalSettings/LocalSettings_".$servername.".php" );		
 		
 		wfRestoreWarnings();
 
