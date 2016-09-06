@@ -39,6 +39,7 @@ sftp-config.json
 /maintenance/dev/data
 /AdminSettings.php
 /LocalSettings.php
+/LoopSettings.php
 /StartProfiler.php
 
 # Building & testing
@@ -76,3 +77,4 @@ Thumbs.db
 /images
 /skins
 /extensions
+/debug.txt
