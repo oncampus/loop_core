@@ -1,0 +1,33 @@
+From aa3ddf5e62934fe6fbbdf59e65592c8a3da6df9d Mon Sep 17 00:00:00 2001
+From: oncampus <education@oncampus.de>
+Date: Thu, 8 Sep 2016 11:33:20 +0200
+Subject: [PATCH] added TitleBeforeNewMainPage Hook
+
+---
+ includes/Title.php | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+diff --git a/includes/Title.php b/includes/Title.php
+index 589130d..374d2ff 100644
+--- a/includes/Title.php
++++ b/includes/Title.php
+@@ -572,6 +572,16 @@ class Title implements LinkTarget {
+ 		if ( !$title ) {
+ 			$title = Title::newFromText( 'Main Page' );
+ 		}
++		
++		// added for Loop extension
++		if (Hooks::run( 'TitleBeforeNewMainPage',array(&$title))) {
++			$title = Title::newFromText( wfMessage( 'mainpage' )->inContentLanguage()->text() );
++			// Don't give fatal errors if the message is broken
++			if ( !$title ) {
++				$title = Title::newFromText( 'Main Page' );
++			}
++		}		
++		
+ 		return $title;
+ 	}
+ 
+-- 
+1.8.3.1
+
