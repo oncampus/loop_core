@@ -572,6 +572,16 @@ class Title implements LinkTarget {
 		if ( !$title ) {
 			$title = Title::newFromText( 'Main Page' );
 		}
+		
+		// added for Loop extension
+		if (Hooks::run( 'TitleBeforeNewMainPage',array(&$title))) {
+			$title = Title::newFromText( wfMessage( 'mainpage' )->inContentLanguage()->text() );
+			// Don't give fatal errors if the message is broken
+			if ( !$title ) {
+				$title = Title::newFromText( 'Main Page' );
+			}
+		}		
+		
 		return $title;
 	}
 
