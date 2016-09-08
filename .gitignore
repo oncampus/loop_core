@@ -71,3 +71,10 @@ Thumbs.db
 /tags
 /.htaccess
 /.htpasswd
+
+# Custom
+/images
+/skins
+/extensions
+/debug.txt
+/LoopSettings.php
